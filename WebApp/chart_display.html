@@ -14,6 +14,8 @@
     <script>
       var stock_value = [];
       var date = [];
+      var ctx = document.getElementById("myChart");
+
       $(document).ready(function () {
         // FETCHING DATA FROM JSON FILE
         $.getJSON("Export_DataFrame.json", function (data) {
@@ -25,32 +27,24 @@
               date.push(key2);
             });
           });
-
-          //INSERTING ROWS INTO TABLE
-        });
-      });
-      var ctx = document.getElementById("myChart");
-      var red = "#f00";
-      var orange = "#f50";
-      var yellow = "#ff0";
-      var green = "#0f0";
-      var blue = "#00f";
-      var myPieChart = new Chart(ctx, {
-        type: "line",
-        data: {
-          labels: date,
-          datasets: [
-            {
-              label: "StockN",
-              data: stock_value,
-              fill: false,
-              borderColor: "rgb(75, 192, 192)",
+          var myPieChart = new Chart(ctx, {
+            type: "line",
+            data: {
+              labels: date,
+              datasets: [
+                {
+                  label: "StockN",
+                  data: stock_value,
+                  fill: false,
+                  borderColor: "rgb(75, 192, 192)",
+                },
+              ],
             },
-          ],
-        },
-        options: {
-          responsive: true,
-        },
+            options: {
+              responsive: true,
+            },
+          });
+        });
       });
     </script>
   </body>
