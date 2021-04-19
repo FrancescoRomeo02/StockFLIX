@@ -23,7 +23,6 @@ include('./html/obj/header.php');
 </head>
 
 <body>
-  <h1>TIRONI</h1>
   <!--BARRA DI NAVIGAZIONE-->
   <?php include('./html/obj/nav.php'); ?>
   <!--BARRA DI NAVIGAZIONE-->
