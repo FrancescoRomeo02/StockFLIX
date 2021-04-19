@@ -1,3 +1,12 @@
+modificare lo stile della scritta che chiede di controllare la mail 
+
+Sistemare file app.js e cambiare nome, solo per css
+
+sistarmare file css, troppo grande
+
+Fr4nc3sc0.2002
+
+
 caricare file json con py a php da php su server e aggiornare il db CAZZO SI PUOÀ FARE --> a fine progetto se avanza tempo fare le API
 |
 |
@@ -15,3 +24,6 @@ nome del file == nome azione, no file doppi, drop table se l'azione non e' segui
 |
 v 
 Usare scss al posto di css (non importante)
+
+
+
