@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="myChart" width="150" height="50"></canvas>
+    <script>
+      var stock_value = [];
+      var date = [];
+      $(document).ready(function () {
+        // FETCHING DATA FROM JSON FILE
+        $.getJSON("Export_DataFrame.json", function (data) {
+          // ITERATING THROUGH OBJECTS
+          $.each(data, function (key, value) {
+            // ITERATING THROUGH SUB OBJECTS
+            $.each(value, function (key2, value2) {
+              stock_value.push(value2["1. open"]);
+              date.push(key2);
+            });
+          });
+
+          //INSERTING ROWS INTO TABLE
+        });
+      });
+      var ctx = document.getElementById("myChart");
+      var red = "#f00";
+      var orange = "#f50";
+      var yellow = "#ff0";
+      var green = "#0f0";
+      var blue = "#00f";
+      var myPieChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: date,
+          datasets: [
+            {
+              label: "StockN",
+              data: stock_value,
+              fill: false,
+              borderColor: "rgb(75, 192, 192)",
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+        },
+      });
+    </script>
+  </body>
+</html>
