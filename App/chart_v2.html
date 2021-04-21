@@ -78,11 +78,13 @@
 
             function generateChartData() {
               var chartData = [];
-              alert(date)
-              chartData.push({
-                  date: newDate,
-                  visits: visits,
-                });
+              var firstDate = new Date();
+              firstDate.setDate(firstDate.getDate() - 1000);
+              var visits = 1200;
+              for (var i = 0; i < 500; i++) {
+                for (var i = 0; i < date.length; i++) {
+                  chartData.push({ date: date[i], value: stock_value[i] });
+                }
               }
               return chartData;
             }
