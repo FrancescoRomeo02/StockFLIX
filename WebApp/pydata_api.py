@@ -27,7 +27,7 @@ loop.close()
 jsonObj = json.dumps(results)
 
 if (type_data == 'y'):
-    with open('/Data/year.json', 'w') as f:
+    with open('/home/romeo/StockN/Data/year.json', 'w') as f:
         f.write(jsonObj)
 
 if (type_data == 'd'):
