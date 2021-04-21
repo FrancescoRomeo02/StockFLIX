@@ -25,7 +25,6 @@
       var stock_volume = [];
       var date = [];
 
-      temp = 15;
       $(document).ready(function () {
         // FETCHING DATA FROM JSON FILE
         $.getJSON("temp.json", function (data) {
@@ -62,7 +61,7 @@
 
         // Create series
         var series = chart.series.push(new am4charts.LineSeries());
-        series.dataFields.valueY = "visits";
+        series.dataFields.valueY = "value";
         series.dataFields.dateX = "date";
         series.strokeWidth = 2;
         series.minBulletDistance = 10;
@@ -81,6 +80,7 @@
         chart.cursor.xAxis = dateAxis;
         chart.cursor.snapToSeries = series;
 
+        //INUTILE
         function generateChartData() {
           var chartData = [];
           var firstDate = new Date();
@@ -96,11 +96,13 @@
             visits += Math.round(
               (Math.random() < 0.5 ? 1 : -1) * Math.random() * 10
             );
-
+            //INUTiLE FINO A QUI
+            //basta questo con  i miei dati
             chartData.push({
               date: newDate,
               visits: visits,
             });
+            // FINE
           }
           return chartData;
         }
