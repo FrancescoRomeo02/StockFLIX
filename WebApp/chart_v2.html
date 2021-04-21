@@ -25,7 +25,7 @@
       var stock_volume = [];
       var date = [];
 
-      $(document).ready(function () {
+      $(document).ready(function (stock_value, stock_volume, date) {
         // FETCHING DATA FROM JSON FILE
         $.getJSON("Export_DataFrame.json", function (data) {
           // ITERATING THROUGH OBJECTS
@@ -39,6 +39,8 @@
           });
         });
       });
+
+      alert(lenght(stock_value));
 
       am4core.ready(function () {
         // Themes begin
