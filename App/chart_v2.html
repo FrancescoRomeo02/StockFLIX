@@ -25,18 +25,8 @@
       var stock_volume = [];
       var date = [];
 
-      $(document).ready(function () {
-        // FETCHING DATA FROM JSON FILE
-        $.getJSON("../Data/year.json", function (data) {
-          // ITERATING THROUGH OBJECTS
-          $.each(data, function (key, value) {
-            // ITERATING THROUGH SUB OBJECTS
-            $.each(value, function (key2, value2) {
-              stock_value.push(value2["1. open"]);
-              stock_volume.push(value2["6. volume"]);
-              date.push(new Date(key2));
-            });
-          });
+
+
           // QUI DENTRO
           am4core.ready(function () {
             // Themes begin
