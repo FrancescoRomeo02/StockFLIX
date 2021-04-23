@@ -40,7 +40,7 @@
 
         // Load external data
         chart.dataSource.url =
-          "https://www.amcharts.com/wp-content/uploads/assets/stock/MSFT.csv";
+          "http://romeofrancesco.altervista.org/Data/AAPL_y.csv";
         chart.dataSource.parser = new am4core.CSVParser();
         chart.dataSource.parser.options.useColumnNames = true;
         chart.dataSource.parser.options.reverse = true;
@@ -89,8 +89,8 @@
         valueAxis.renderer.fontSize = "0.8em";
 
         var series = chart.series.push(new am4charts.LineSeries());
-        series.dataFields.dateX = "Date";
-        series.dataFields.valueY = "Adj Close";
+        series.dataFields.dateX = "date";
+        series.dataFields.valueY = "close";
         series.tooltipText = "{valueY.value}";
         series.name = "MSFT: Value";
         series.defaultState.transitionDuration = 0;
@@ -115,8 +115,8 @@
         valueAxis2.renderer.gridContainer.background.fillOpacity = 0.05;
 
         var series2 = chart.series.push(new am4charts.ColumnSeries());
-        series2.dataFields.dateX = "Date";
-        series2.dataFields.valueY = "Volume";
+        series2.dataFields.dateX = "date";
+        series2.dataFields.valueY = "volume";
         series2.yAxis = valueAxis2;
         series2.tooltipText = "{valueY.value}";
         series2.name = "MSFT: Volume";
