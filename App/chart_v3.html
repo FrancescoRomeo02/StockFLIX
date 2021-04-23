@@ -19,6 +19,12 @@
         overflow: hidden;
         padding-bottom: 3px;
       }
+
+      .amcharts-range-selector-top button,
+      .amcharts-range-selector-bottom button {
+        border-radius: 30px;
+        padding: 15px;
+      }
     </style>
 
     <!-- Resources -->
@@ -26,6 +32,7 @@
     <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/plugins/rangeSelector.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="//www.amcharts.com/lib/4/lang/it_IT.js"></script>
 
     <!-- Chart code -->
     <script>
@@ -36,6 +43,7 @@
 
         // Create chart
         var chart = am4core.create("chartdiv", am4charts.XYChart);
+        chart.language.locale = am4lang_it_IT;
         chart.padding(0, 15, 0, 15);
 
         // Load external data
@@ -45,11 +53,7 @@
         chart.dataSource.parser.options.useColumnNames = true;
         chart.dataSource.parser.options.reverse = true;
 
-        // the following line makes value axes to be arranged vertically.
         chart.leftAxesContainer.layout = "vertical";
-
-        // uncomment this line if you want to change order of axes
-        //chart.bottomAxesContainer.reverseOrder = true;
 
         var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
         dateAxis.renderer.grid.template.location = 0;
@@ -66,10 +70,6 @@
         dateAxis.groupData = true;
         dateAxis.minZoomCount = 5;
 
-        // these two lines makes the axis to be initially zoomed-in
-        // dateAxis.start = 0.7;
-        // dateAxis.keepSelection = true;
-
         var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
         valueAxis.tooltip.disabled = true;
         valueAxis.zIndex = 1;
@@ -78,7 +78,7 @@
         valueAxis.height = am4core.percent(65);
 
         valueAxis.renderer.gridContainer.background.fill = am4core.color(
-          "#000000"
+          "#ffffff"
         );
         valueAxis.renderer.gridContainer.background.fillOpacity = 0.05;
         valueAxis.renderer.inside = true;
