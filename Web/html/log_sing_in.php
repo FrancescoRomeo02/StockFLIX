@@ -1,6 +1,6 @@
 <?php
 include('./obj/header.php');
-include("./libreria.php");
+include("./obj/libreria.php");
 ?>
 <!DOCTYPE html>
 <html lang="it">
