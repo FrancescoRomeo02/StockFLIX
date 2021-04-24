@@ -115,7 +115,7 @@ if (isset($_POST['registrati'])) {
           <a href="./pswreset.php">Password dimenticata</a>
           <?php
           if (isset($errore)) echo '<br><div class="alert"><span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> <strong>ATTENZIONE!</strong> ' . $errore .  '</div>';
-          if (isset($msr2) && !isset($errore)) '<br><div class="mail"><span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> <strong>ATTENZIONE!</strong> ' . $msr2 .  '</div>';;
+          if (isset($msr2) && !isset($errore)) '<br><div class="mail"><span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> <strong>ATTENZIONE!</strong> ' . $msr2 .  '</div>';
           ?>
         </form>
         <!-------------------
