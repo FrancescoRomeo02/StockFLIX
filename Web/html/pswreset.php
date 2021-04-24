@@ -47,7 +47,6 @@ if (isset($_POST['invia']) && $_POST['email'] != '') {
                         <input required type="password" placeholder="Ultima password utilizzata" name="password" class="pass" />
                     </div>
                     <input required type="submit" value="invia" name="accedi" class="btn solid" />
-                    <a href="./pswreset.php">Password dimenticata</a>
                     <?php
                     if (isset($errore)) echo '<br><div class="alert"><span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> <strong>ATTENZIONE!</strong> ' . $errore .  '</div>';
                     if (isset($msr2) && !isset($errore)) echo "<br><p>$msr2</p>";
