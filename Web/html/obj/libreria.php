@@ -14,5 +14,3 @@ function mail_send($mail_mittente, $mail_destinatario, $mail_link, $messaggio)
     $message .= '<a href=" ' . $mail_link . '"class="button" style="display: block;width: 8rem;height: auto;background: #4e9caf;padding: 10px;text-align: center;border-radius: 5px;color: white;font-weight: bold;line-height: 25px;margin: 2%;text-decoration: none;">Clicca qui</a><br><br>';
     mail($to, $subject, $message, $headers);
 }
-
-echo ('libreria');
