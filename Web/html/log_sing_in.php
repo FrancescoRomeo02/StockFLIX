@@ -1,4 +1,4 @@
-<?php include('../oggetti/header.php') ?>
+<?php include('../obj/header.php') ?>
 <!DOCTYPE html>
 <html lang="it">
 
