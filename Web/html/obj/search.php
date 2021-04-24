@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>jQuery UI autocomplete</title>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
     <script>
@@ -26,37 +25,14 @@
                     });
                 }
             });
-            var italianTeams = [{
-                    label: "Juventus",
-                    category: "North"
-                },
-                {
-                    label: "Inter",
-                    category: "North"
-                },
-                {
-                    label: "Milan",
-                    category: "North"
-                },
-                {
-                    label: "Roma",
-                    category: "Center"
-                },
-                {
-                    label: "Lazio",
-                    category: "Center"
-                },
-                {
-                    label: "Napoli",
-                    category: "South"
-                },
-                {
-                    label: "Palermo",
-                    category: "South"
-                }
-            ];
+
+            $importer = new CsvImporter("../../../Data/stock.csv", true);
+            while ($data = $importer) {
+                print_r($data);
+            }
+
             $("#tags").autocompleteCategory({
-                source: italianTeams
+                source: stocks
             });
         });
     </script>
@@ -64,7 +40,7 @@
 
 <body>
     <div class="ui-widget">
-        <label for="tags">Squadre: </label>
+        <label for="tags"></label>
         <input id="tags">
     </div>
 </body>
