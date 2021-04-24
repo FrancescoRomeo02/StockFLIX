@@ -5,49 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-    <head>Search</head>
-    <script>
-        $(function() {
-            var availableTags = [
-                "ActionScript",
-                "AppleScript",
-                "Asp",
-                "BASIC",
-                "C",
-                "C++",
-                "Clojure",
-                "COBOL",
-                "ColdFusion",
-                "Erlang",
-                "Fortran",
-                "Groovy",
-                "Haskell",
-                "Java",
-                "JavaScript",
-                "Lisp",
-                "Perl",
-                "PHP",
-                "Python",
-                "Ruby",
-                "Scala",
-                "Scheme"
-            ];
-            $("#tags").autocomplete({
-                source: availableTags
-            });
-        });
-    </script>
+    <title>Document</title>
 </head>
 
 <body>
-
-    <div class="ui-widget">
-        <label for="tags">Tags: </label>
-        <input id="tags">
+    <div class="frmSearch">
+        <input type="text" id="search-box" placeholder="Country Name" />
+        <div id="suggesstion-box"></div>
     </div>
 </body>
+<script>
+    $(document).ready(function() {
+        $("#search-box").keyup(function() {
+            $.ajax({
+                type: "POST",
+                url: "readCountry.php",
+                data: 'keyword=' + $(this).val(),
+                beforeSend: function() {
+                    $("#search-box").css("background", "#FFF url(LoaderIcon.gif) no-repeat 165px");
+                },
+                success: function(data) {
+                    $("#suggesstion-box").show();
+                    $("#suggesstion-box").html(data);
+                    $("#search-box").css("background", "#FFF");
+                }
+            });
+        });
+    });
+    //To select country name
+    function selectCountry(val) {
+        $("#search-box").val(val);
+        $("#suggesstion-box").hide();
+    }
+</script>
 
 </html>
