@@ -41,7 +41,7 @@ if (isset($_POST['accedi']) && $_POST['email'] != '' && $_POST['password'] != ''
     if (isset($_POST['cookie'])) {
       setcookie('login', 'True', time() + 86400);
     }
-    header("Location: " . 'Web/home_page.php');
+    header('Web/home_page.php');
   } else {
     $errore =  'Dati errati, riprovare';
     $color = 'rgb(129, 3, 3)';
