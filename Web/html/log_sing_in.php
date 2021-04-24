@@ -1,4 +1,7 @@
-<?php include('./obj/header.php') ?>
+<?php
+include('./obj/header.php');
+include("./libreria.php");
+?>
 <!DOCTYPE html>
 <html lang="it">
 
