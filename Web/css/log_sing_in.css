@@ -243,6 +243,13 @@ a {
   border-radius: 5px;
 }
 
+.mail {
+  padding: 20px;
+  background-color: rgb(3, 129, 55);
+  color: white;
+  border-radius: 5px;
+}
+
 .closebtn {
   margin-left: 15px;
   color: white;
