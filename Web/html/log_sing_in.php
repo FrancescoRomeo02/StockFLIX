@@ -77,7 +77,7 @@ if (isset($_POST['registrati'])) {
         $msr2 = 'Controlla la mail ed attiva il tuo account ';
       } else {
         $errore_account = True;
-        $errore =  'Email già in uso';
+        $errore =  'Errore del DB';
         $color = 'rgb(159, 3, 3)';
         $msr2 = '<a href="./html/pswreset.php">Recupera la password</a>';
       }
