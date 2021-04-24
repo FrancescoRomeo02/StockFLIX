@@ -74,7 +74,7 @@ if (isset($_POST['registrati'])) {
       (0,'$nome', '$cognome', '$email', '$password', '$pro', 'a', 'a', 'a', '$hash')";
 
       if (mysqli_query($con, $query_add)) {
-        $link = "http://romeofrancesco.altervista.org/html/oggetti/datacheck.php?email=$email&hash=$hash";
+        $link = "https://romeofrancesco.altervista.org/Web/html/obj/datacheck.php?email=$email&hash=$hash";
         mail_send('stockN@info.com', $email, $link, 'Attiva il tuo account');
         $_SESSION['link'] = $link;
         $msr2 = 'Controlla la mail ed attiva il tuo account ';
