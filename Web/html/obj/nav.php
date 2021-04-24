@@ -6,9 +6,9 @@ echo '
     </div>
     <ul class="nav_links">
         <li><a href="#">Home</a></li>
-        <li><a href="html/Web/log_sing_in.php">Accedi</a></li>
-        <li><a href="html/Web/services/stocks_data.php">Azioni</a></li>
-        <li><a href="html/Web/ettings.php">Impostazioni</a></li>
+        <li><a href="Web/html/log_sing_in.php">Accedi</a></li>
+        <li><a href="Web/html/services/stocks_data.php">Azioni</a></li>
+        <li><a href="Web/html/ettings.php">Impostazioni</a></li>
     </ul>
     <div id="burger">
         <div class="line1"></div>
