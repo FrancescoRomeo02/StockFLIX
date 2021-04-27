@@ -33,7 +33,7 @@
           var query = $(this).val();
           if (query != "") {
             $.ajax({
-              url: "ajax-db-search.php",
+              url: "ajax_db_search.php",
               method: "POST",
               data: { query: query },
               success: function (data) {
