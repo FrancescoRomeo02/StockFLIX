@@ -7,15 +7,17 @@ if (isset($_POST['query'])) {
     $result = mysqli_query($con, $query);
     $count = 1;
     if (mysqli_num_rows($result) > 0) {
+        echo "<ul class='output'>";
         while ($stock = mysqli_fetch_array($result)) {
             $count += 1;
             echo "
             <li class='item'>
-                <p class='symbol" . "p" . $count . ">" . $stock['Symbol'] . "</p>
-                <p class='sec_name'>" . $stock['Security Name'] . "</p>
+                <p class=symbol p" . $count . ">" . $stock['Symbol'] . "</p>
+                <p class=sec_name>" . $stock['Security Name'] . "</p>
             </li>
             ";
-        }
+        };
+        echo "</ul>";
     } else {
         echo "<li class='item'><p class='not_in'>Azione inesistente</p></li>";
     }
