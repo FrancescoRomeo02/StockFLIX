@@ -1,11 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body {
+
+html {
+  font-family: "Poppins", sans-serif;
   background-color: #e0e4eb;
+  overflow-x: hidden;
 }
+/* STILE BARRA DI RICERCA */
 input[type="checkbox"] {
   display: none;
 }
@@ -62,4 +68,68 @@ input[type="checkbox"] {
 }
 #check:checked + .box > label:hover {
   transform: scale(1);
+}
+
+/* STILE RISULTATI */
+ul.output {
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 60px;
+  transition: 0.5s;
+  list-style: none;
+}
+li.item {
+  padding-top: 5%;
+  margin-bottom: 2%;
+  font-weight: 400;
+  line-height: 1;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-around;
+  background-color: #edeff1;
+  border: 1px solid #a1a1a1;
+  border-radius: 5px;
+}
+li > p.symbol {
+  padding-bottom: 5%;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+li > p.symbol.p1 {
+  color: #2a4858;
+}
+li > p.symbol.p2 {
+  color: #20536f;
+}
+li > p.symbol.p3 {
+  color: #125e88;
+}
+li > p.symbol.p4 {
+  color: #0068a1;
+}
+li > p.symbol.p5 {
+  color: #0472ba;
+}
+li > p.symbol.p6 {
+  color: #247ad3;
+}
+li > p.symbol.p7 {
+  color: #4481eb;
+}
+li > p.sec_name {
+  padding-bottom: 1%;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 25ch;
+}
+.not_in {
+  font-size: 2rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  color: #72070c;
 }
