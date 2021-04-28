@@ -37,8 +37,8 @@ def get_ts(symbol, data_type):
     nice_data.to_csv(fname)
 
 
-symbols = [a, p, s]  #get name from php
-data_input = [d, y]  #get type from php
+symbols = ['NIO', 'XPEV', 'BYND']  #get name from php
+data_input = ['y']
 i = 0
 for s in symbols:
     for data in data_input:
