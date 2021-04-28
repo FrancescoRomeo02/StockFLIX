@@ -11,6 +11,7 @@ include("./obj/libreria.php");
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <!-- js per le icone -->
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/home_page.css">
     <link rel="stylesheet" href="../../css/search.css" />
     <link rel="stylesheet" href="../../css/stocks_data.css" />
     <title> StockN </title>
