@@ -19,7 +19,7 @@ include("./obj/libreria.php");
 
 <body>
     <!--BARRA DI NAVIGAZIONE-->
-    <?php include('./html/obj/nav.php'); ?>
+    <?php include('../obj/nav.php'); ?>
     <!--BARRA DI NAVIGAZIONE-->
     <br /><br />
     <!-- MAIN -->
@@ -34,7 +34,7 @@ include("./obj/libreria.php");
     </div>
     <!-- MAIN -->
     <!-- FOOTER -->
-    <?php include('./html/obj/footer.php'); ?>
+    <?php include('../obj/footer.php'); ?>
     <!-- FOOTER -->
     <!-- js animazioni -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
