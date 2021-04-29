@@ -33,43 +33,70 @@ include("./obj/libreria.php");
     <div id="output">
         <ul class="output"></ul>
     </div>
-    <h1>abba</h1>
-    <!-- MAIN -->
-    <!-- FOOTER -->
-    <?php include('../obj/footer.php'); ?>
-    <!-- FOOTER -->
-    <!-- js animazioni -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- js ricerca -->
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $("#search").keyup(function() {
-                var query = $(this).val();
-                if (query != "") {
-                    $.ajax({
-                        url: "ajax_db_search.php",
-                        method: "POST",
-                        data: {
-                            query: query
-                        },
-                        success: function(data) {
-                            $("#output").html(data);
-                            $("#output").css("display", "block");
+    <!-- RICERCA AZIONI -->
+    <!-- CARDS DIV SERVIZI -->
+    <section id="services">
+        <div class="services container">
+            <div class="service_top">
+                <h1 class="section_title">
+                    <span>noi</span> siamo Stock<span>N</span>
+                </h1>
+                <p>
+                    Ecco cosa ti offriamo, leggi, informati e <span>capisci</span> se
+                    fa per te.
+                    <br />
+                    Non lasciarti sfuggire questa <span>occasione</span>.
+                </p>
+            </div>
+            <div class="service_bottom">
+                <!-- CARD -->
+                <div class="service_item graph" data-aos="fade-up-left">
+                    <div class="icon"><i class="fas fa-chart-area fa-3x" style="color: rgb(146, 64, 253);"></i></i></div>
+                    <h2>Grafici</h2>
+                    <p>
+                        Avrai la possibilità di visionare in tutta comodità gli andamnti
+                        di <span>ogni azione</span><br />
+                        Teniamo particolarmente alle TUE azioni, loro avranno un
+                        trattamento <span>speciale</span>.
+                    </p>
+                </div>
+                <!-- CARD -->
+                <!-- MAIN -->
+                <!-- FOOTER -->
+                <?php include('../obj/footer.php'); ?>
+                <!-- FOOTER -->
+                <!-- js animazioni -->
+                <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                <!-- js ricerca -->
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $("#search").keyup(function() {
+                            var query = $(this).val();
+                            if (query != "") {
+                                $.ajax({
+                                    url: "ajax_db_search.php",
+                                    method: "POST",
+                                    data: {
+                                        query: query
+                                    },
+                                    success: function(data) {
+                                        $("#output").html(data);
+                                        $("#output").css("display", "block");
 
-                            $("#search").focusout(function() {
+                                        $("#search").focusout(function() {
+                                            $("#output").css("display", "none");
+                                        });
+                                        $("#search").focusin(function() {
+                                            $("#output").css("display", "block");
+                                        });
+                                    },
+                                });
+                            } else {
                                 $("#output").css("display", "none");
-                            });
-                            $("#search").focusin(function() {
-                                $("#output").css("display", "block");
-                            });
-                        },
+                            }
+                        });
                     });
-                } else {
-                    $("#output").css("display", "none");
-                }
-            });
-        });
-    </script>
+                </script>
 </body>
 
 </html>
