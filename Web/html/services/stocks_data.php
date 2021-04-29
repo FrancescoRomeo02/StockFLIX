@@ -33,6 +33,7 @@ include("./obj/libreria.php");
     <div id="output">
         <ul class="output"></ul>
     </div>
+    <h1>abba</h1>
     <!-- MAIN -->
     <!-- FOOTER -->
     <?php include('../obj/footer.php'); ?>
