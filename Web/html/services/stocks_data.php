@@ -61,6 +61,18 @@ include("./obj/libreria.php");
                     </p>
                 </div>
                 <!-- CARD -->
+                <!-- CARD -->
+                <div class="service_item graph" data-aos="fade-up-left">
+                    <div class="icon"><i class="fas fa-chart-area fa-3x" style="color: rgb(146, 64, 253);"></i></i></div>
+                    <h2>Grafici</h2>
+                    <p>
+                        Avrai la possibilità di visionare in tutta comodità gli andamnti
+                        di <span>ogni azione</span><br />
+                        Teniamo particolarmente alle TUE azioni, loro avranno un
+                        trattamento <span>speciale</span>.
+                    </p>
+                </div>
+                <!-- CARD -->
                 <!-- MAIN -->
                 <!-- FOOTER -->
                 <?php include('../obj/footer.php'); ?>
