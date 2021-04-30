@@ -12,12 +12,13 @@ include('../obj/header.php');
     <link rel="stylesheet" href="../../css/search.css" />
     <link rel="stylesheet" href="../../css/home_page.css" />
     <link rel="stylesheet" href="../../css/button.css" />
-
     <!-- css animazioni -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
     <!-- js icone  -->
     <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
+    <!-- js query  -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
 
     <title> StockN </title>
 </head>
@@ -83,6 +84,35 @@ include('../obj/header.php');
                 });
             }
         };
+
+        /* Query azioni */
+        $(document).ready(function() {
+            $("#search").keyup(function() {
+                var query = $(this).val();
+                if (query != "") {
+                    $.ajax({
+                        url: "ajax_db_search.php",
+                        method: "POST",
+                        data: {
+                            query: query
+                        },
+                        success: function(data) {
+                            $("#output").html(data);
+                            $("#output").css("display", "block");
+
+                            $("#search").focusout(function() {
+                                $("#output").css("display", "none");
+                            });
+                            $("#search").focusin(function() {
+                                $("#output").css("display", "block");
+                            });
+                        },
+                    });
+                } else {
+                    $("#output").css("display", "none");
+                }
+            });
+        });
     </script>
 </body>
 
