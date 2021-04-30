@@ -91,7 +91,7 @@ include('../obj/header.php');
                 var query = $(this).val();
                 if (query != "") {
                     $.ajax({
-                        url: "ajax_db_search.php",
+                        url: "https://romeofrancesco.altervista.org/Web/html/obj/ajax_db_search.php",
                         method: "POST",
                         data: {
                             query: query
