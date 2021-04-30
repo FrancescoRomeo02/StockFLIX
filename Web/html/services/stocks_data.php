@@ -50,7 +50,7 @@ include('../obj/header.php');
                 <h3>Non lasciare che il tempo sgretoli i tuoi risparmi</h3>
                 <p style="color: blueviolet;">Presto saranno disponibili nuove azioni</p>
                 <h4>Dai un occhio alle tue azioni</h4>
-                <button type="button" class="offset">WALLET</button>
+                <button type="button" class="slide">WALLET</button>
             </div>
         </div>
         <!-- SEZIONE IMMAGINE E TESTO -->
@@ -91,7 +91,7 @@ include('../obj/header.php');
                 var query = $(this).val();
                 if (query != "") {
                     $.ajax({
-                        url: "https://romeofrancesco.altervista.org/Web/html/obj/ajax_db_search.php",
+                        url: "http://romeofrancesco.altervista.org/Web/html/obj/ajax_db_search.php",
                         method: "POST",
                         data: {
                             query: query
