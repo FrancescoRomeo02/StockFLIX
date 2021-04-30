@@ -9,17 +9,16 @@ include('../obj/header.php');
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../css/search.css" />
     <link rel="stylesheet" href="../../css/home_page.css" />
     <link rel="stylesheet" href="../../css/button.css" />
+    <link rel="stylesheet" href="../../css/search.css" />
+    <link rel="stylesheet" href="../../css/stocks_data.css" />
     <!-- css animazioni -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- js icone  -->
     <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
     <!-- js query  -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-
-
     <title> StockN </title>
 </head>
 
@@ -29,7 +28,7 @@ include('../obj/header.php');
     <!--BARRA DI NAVIGAZIONE-->
     <br /><br />
     <!-- MAIN -->
-    <div class="container">
+    <div class="container" style="width: 75%;">
         <!-- RICERCA AZIONI -->
         <input type="checkbox" name="" id="check" />
         <div class="box">
@@ -47,9 +46,9 @@ include('../obj/header.php');
                     Le azioni Americane, <br />
                     Il mercato più importante del mondo
                 </h2>
-                <h3>Scopri ogni giorno nuove possibilità</h3>
-                <p style="color: blueviolet;">Presto saranno disponibili nuove azioni<span style="color: yellow;"><b>!</b></span></p>
-                <h4>Dai un occhio alle tue azioni </h4>
+                <h3>Scopri ogni giorno <span style="color: #59b4ff;">nuove</span> possibilità</h3>
+                <p style="color: blueviolet;">Presto saranno disponibili nuove azioni</p>
+                <h4>Dai un occhio alle tue azioni</h4>
                 <button type="button" class="slide">WALLET</button>
             </div>
         </div>
@@ -61,12 +60,10 @@ include('../obj/header.php');
     <!-- FOOTER -->
     <!-- js animazioni -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <script src="../../js/app.js" type="text/javascript"></script>
     <script>
         AOS.init();
         navSlide();
-
         /* stile scroll navbar */
         window.onscroll = () => {
             const nav = document.querySelector("nav");
@@ -84,7 +81,6 @@ include('../obj/header.php');
                 });
             }
         };
-
         /* Query azioni */
         $(document).ready(function() {
             $("#search").keyup(function() {
