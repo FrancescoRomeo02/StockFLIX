@@ -48,7 +48,7 @@ include('../obj/header.php');
                     Il mercato più importante del mondo
                 </h2>
                 <h3>Scopri ogni giorno nuove possibilità</h3>
-                <p style="color: blueviolet;">Presto saranno disponibili nuove azioni<span style="color: yellow;">!</span></p>
+                <p style="color: blueviolet;">Presto saranno disponibili nuove azioni<span style="color: yellow;"><b>!</b></span></p>
                 <h4>Dai un occhio alle tue azioni </h4>
                 <button type="button" class="slide">WALLET</button>
             </div>
