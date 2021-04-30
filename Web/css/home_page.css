@@ -312,14 +312,14 @@ button {
   z-index: 1;
   overflow: hidden;
   background: repeating-linear-gradient(
-      -45deg,
+      45deg,
       transparent 0,
       transparent 25%,
       #ff355e 0,
       #ff007c 50%
     ),
     repeating-linear-gradient(
-      45deg,
+      -45deg,
       #a7a7a7 0,
       #a7a7a7 25%,
       #8fd400 0,
