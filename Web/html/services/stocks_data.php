@@ -44,13 +44,13 @@ include('../obj/header.php');
         <div data-aos="fade-up" class="row">
             <div class="col_1">
                 <h2>
-                    Tutte le azioni Americane <br />
+                    Le azioni Americane, <br />
                     Il mercato più importante del mondo
                 </h2>
                 <h3>Non lasciare che il tempo sgretoli i tuoi risparmi</h3>
                 <p style="color: blueviolet;">Presto saranno disponibili nuove azioni</p>
                 <h4>Dai un occhio alle tue azioni</h4>
-                <button type="button" class="slide">WALLET</button>
+                <button type="button" class="raise">WALLET</button>
             </div>
         </div>
         <!-- SEZIONE IMMAGINE E TESTO -->
