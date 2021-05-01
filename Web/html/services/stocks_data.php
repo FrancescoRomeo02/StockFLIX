@@ -30,15 +30,13 @@ include('../obj/header.php');
     <!-- MAIN -->
     <div class="container" style="width: 75%;">
         <!-- RICERCA AZIONI -->
-        <div class="on_top">
-            <input type="checkbox" name="" id="check" />
-            <div class="box">
-                <input type="text" placeholder="Cerca azioni" id="search" autocomplete="off" />
-                <label for="check"><i class="fas fa-search"></i></label>
-            </div>
-            <div id="output">
-                <ul class="output"></ul>
-            </div>
+        <input type="checkbox" name="" id="check" />
+        <div class="box">
+            <input type="text" placeholder="Cerca azioni" id="search" autocomplete="off" />
+            <label for="check"><i class="fas fa-search"></i></label>
+        </div>
+        <div id="output">
+            <ul class="output"></ul>
         </div>
         <!-- RICERCA AZIONI -->
         <!-- SEZIONE IMMAGINE E TESTO -->
