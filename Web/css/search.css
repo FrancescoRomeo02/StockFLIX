@@ -1,17 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-family: "Poppins", sans-serif;
-  background-color: #e0e4eb;
-  overflow-x: hidden;
-}
 /* STILE BARRA DI RICERCA */
+.on_top {
+  z-index: 100;
+}
 input[type="checkbox"] {
   display: none;
 }
@@ -50,12 +42,12 @@ input[type="checkbox"] {
   font-size: 19px;
   padding-left: 20px;
   color: gray;
-  box-shadow: -10px -10px 15px #edeff1, 10px 10px 15px #cacfd8;
+  box-shadow: -10px -10px 15px #a175f338, 10px 10px 15px #59b4ff38;
   transform: 0.5s;
   opacity: 0;
 }
 .box input:focus {
-  box-shadow: -10px -10px 40px #edeff1, 10px 10px 40px #cacfd8;
+  box-shadow: -10px -10px 40px #a175f338, 10px 10px 40px #59b4ff38;
 }
 #check:checked + .box {
   width: 500px;
@@ -73,13 +65,15 @@ input[type="checkbox"] {
 /* STILE RISULTATI */
 ul.output {
   position: absolute;
-  top: 100%;
+  top: 60%;
   left: 85%;
   transform: translate(-85%, -85%);
   width: auto;
   transition: 0.5s;
   list-style: none;
-  background-color: white;
+  background-color: #00000007;
+  box-shadow: -5px -5px 8px #a175f338, 5px 5px 10px #59b4ff38;
+  border-radius: 10px;
 }
 li.item {
   padding-top: 5%;
@@ -89,6 +83,9 @@ li.item {
   font-size: 1.2rem;
   display: flex;
   justify-content: space-around;
+}
+li.item:hover {
+  background-color: #b99fc8;
 }
 li > p.symbol {
   padding-bottom: 5%;
