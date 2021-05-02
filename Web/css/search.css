@@ -58,7 +58,6 @@ input[type="checkbox"] {
 #check:checked + .box > label:hover {
   transform: scale(1);
 }
-
 /* STILE RISULTATI */
 ul.output {
   position: fixed;
@@ -71,6 +70,7 @@ ul.output {
   background-color: #00000007;
   box-shadow: -5px -5px 8px #a175f338, 5px 5px 10px #59b4ff38;
   border-radius: 10px;
+  z-index: 10;
 }
 li.item {
   padding-top: 5%;
