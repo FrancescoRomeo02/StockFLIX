@@ -61,11 +61,11 @@ input[type="checkbox"] {
 
 /* STILE RISULTATI */
 ul.output {
-  position: absolute;
-  top: 60%;
-  left: 85%;
-  transform: translate(-85%, -85%);
+  position: fixed;
+  margin-top: 15vh;
+  left: 70%;
   width: auto;
+  min-width: 350px;
   transition: 0.5s;
   list-style: none;
   background-color: #00000007;

@@ -100,7 +100,7 @@ nav {
 }
 
 .col_1 {
-  flex-basis: 40%;
+  flex-basis: 100%;
   position: relative;
   margin-left: 50px;
 }
