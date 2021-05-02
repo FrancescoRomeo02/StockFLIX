@@ -38,9 +38,8 @@ if (isset($_POST['accedi']) && $_POST['email'] != '' && $_POST['password'] != ''
   $data = mysqli_fetch_array($temp);
   //controllo coincidenza campi
   if ($data != null && $_POST['email'] == $data['email'] && $_POST['password'] == $data['password']) {
-    if (isset($_POST['cookie'])) {
-      setcookie('login', 'True', time() + 86400);
-    }
+    $value = 'True';
+    setcookie("lamp", $value, time() + 86400);
     header("Location: ../home_page.php");
   } else {
     $errore =  'Dati errati, riprovare';
