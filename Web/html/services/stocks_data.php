@@ -28,7 +28,7 @@ include('../obj/header.php');
     <!--BARRA DI NAVIGAZIONE-->
     <br /><br />
     <!-- MAIN -->
-    <div class="container" style="width: 75%;">
+    <div class="container">
         <!-- RICERCA AZIONI -->
         <input type="checkbox" name="" id="check" />
         <div class="box">
