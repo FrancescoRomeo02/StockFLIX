@@ -1,6 +1,6 @@
 <?php
 include('../obj/header.php');
-//print_r($_SESSION)
+$_SESSION['url_file'] = 'NIO_y.csv'
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -28,17 +28,17 @@ include('../obj/header.php');
     <!--BARRA DI NAVIGAZIONE-->
     <br /><br />
     <!-- MAIN -->
+    <!-- RICERCA AZIONI -->
+    <input type="checkbox" name="" id="check" />
+    <div class="box">
+        <input type="text" placeholder="Cerca azioni" id="search" autocomplete="off" />
+        <label for="check"><i class="fas fa-search"></i></label>
+    </div>
+    <div id="output">
+        <ul class="output"></ul>
+    </div>
+    <!-- RICERCA AZIONI -->
     <div class="container">
-        <!-- RICERCA AZIONI -->
-        <input type="checkbox" name="" id="check" />
-        <div class="box">
-            <input type="text" placeholder="Cerca azioni" id="search" autocomplete="off" />
-            <label for="check"><i class="fas fa-search"></i></label>
-        </div>
-        <div id="output">
-            <ul class="output"></ul>
-        </div>
-        <!-- RICERCA AZIONI -->
         <!-- SEZIONE IMMAGINE E TESTO -->
         <div data-aos="fade-up" class="row">
             <div class="col_1">
@@ -53,6 +53,9 @@ include('../obj/header.php');
             </div>
         </div>
         <!-- SEZIONE IMMAGINE E TESTO -->
+        <!-- CHART RANDOM -->
+        <?php include('../obj/chart_page.php') ?>
+        <!-- CHART RANDOM -->
     </div>
     <!-- MAIN -->
     <!-- FOOTER -->

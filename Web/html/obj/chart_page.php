@@ -19,7 +19,7 @@
 <body>
   <script src="./"></script>
   <script>
-    get_chart(url_file);
+    get_chart(<?php $_SESSION['url_file'] ?>);
   </script>
   <div id="controls"></div>
   <div id="chartdiv"></div>
