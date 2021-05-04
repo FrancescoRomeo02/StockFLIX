@@ -43,10 +43,10 @@
         var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
         dateAxis.renderer.grid.template.location = 0;
         dateAxis.renderer.minGridDistance = 30;
-        dateAxis.dateFormats.setKey("second", "ss");
-        dateAxis.periodChangeDateFormats.setKey("second", "[bold]h:mm a");
+        dateAxis.dateFormats.setKey("secondi", "ss");
+        dateAxis.periodChangeDateFormats.setKey("secondi", "[bold]h:mm a");
         dateAxis.periodChangeDateFormats.setKey("minute", "[bold]h:mm a");
-        dateAxis.periodChangeDateFormats.setKey("hour", "[bold]h:mm a");
+        dateAxis.periodChangeDateFormats.setKey("ore", "[bold]h:mm a");
         dateAxis.renderer.inside = true;
         dateAxis.renderer.axisFills.template.disabled = true;
         dateAxis.renderer.ticks.template.disabled = true;
@@ -94,7 +94,7 @@
         function startInterval() {
             interval = setInterval(function() {
                 visits =
-                    visits + Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 5);
+                    visits + Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 50);
                 var lastdataItem = series.dataItems.getIndex(series.dataItems.length - 1);
                 chart.addData({
                         date: new Date(lastdataItem.dateX.getTime() + 1000),
@@ -131,7 +131,7 @@
         // this makes date axis labels which are at equal minutes to be rotated
         dateAxis.renderer.labels.template.adapter.add("rotation", function(rotation, target) {
             var dataItem = target.dataItem;
-            if (dataItem.date && dataItem.date.getTime() == am4core.time.round(new Date(dataItem.date.getTime()), "minute").getTime()) {
+            if (dataItem.date && dataItem.date.getTime() == am4core.time.round(new Date(dataItem.date.getTime()), "minuti").getTime()) {
                 target.verticalCenter = "middle";
                 target.horizontalCenter = "left";
                 return -90;
