@@ -43,9 +43,9 @@
         var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
         dateAxis.renderer.grid.template.location = 0;
         dateAxis.renderer.minGridDistance = 30;
-        dateAxis.dateFormats.setKey("secondi", "ss");
+        dateAxis.dateFormats.setKey("second", "ss");
         dateAxis.periodChangeDateFormats.setKey("secondi", "[bold]h:mm a");
-        dateAxis.periodChangeDateFormats.setKey("minute", "[bold]h:mm a");
+        dateAxis.periodChangeDateFormats.setKey("minuti", "[bold]h:mm a");
         dateAxis.periodChangeDateFormats.setKey("ore", "[bold]h:mm a");
         dateAxis.renderer.inside = true;
         dateAxis.renderer.axisFills.template.disabled = true;
