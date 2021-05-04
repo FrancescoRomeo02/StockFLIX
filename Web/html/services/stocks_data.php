@@ -1,6 +1,6 @@
 <?php
 include('../obj/header.php');
-$_SESSION['url_file'] = 'NIO_y.csv'
+$_SESSION['url'] = 'http://romeofrancesco.altervista.org/Data/csv/NIO_y.csv';
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -54,7 +54,7 @@ $_SESSION['url_file'] = 'NIO_y.csv'
         </div>
         <!-- SEZIONE IMMAGINE E TESTO -->
         <!-- CHART RANDOM -->
-        <?php include('../obj/chart_page.php') ?>
+        <?php include('../obj/example_chart.php'); ?>
         <!-- CHART RANDOM -->
     </div>
     <!-- MAIN -->
