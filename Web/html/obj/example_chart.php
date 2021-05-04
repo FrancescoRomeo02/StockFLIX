@@ -94,7 +94,7 @@
         function startInterval() {
             interval = setInterval(function() {
                 visits =
-                    visits + Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 5) * 10;
+                    visits + Math.round((Math.random() < 0.5 ? 2 : 1) * Math.random() * 5) * 10;
                 var lastdataItem = series.dataItems.getIndex(series.dataItems.length - 1);
                 chart.addData({
                         date: new Date(lastdataItem.dateX.getTime() + 1000),
