@@ -168,12 +168,10 @@ include('./html/obj/header.php');
     </div>
   </section>
   <!-- CARDS DIV PIANI -->
-
+  <!-- MAIN -->
   <!-- FOOTER -->
   <?php include('./html/obj/footer.php'); ?>
   <!-- FOOTER -->
-
-  <!-- MAIN -->
   <!-- js animazioni -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 

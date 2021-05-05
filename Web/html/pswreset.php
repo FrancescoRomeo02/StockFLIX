@@ -2,8 +2,6 @@
 session_start();
 include("./obj/libreria.php")
 ?>
-
-
 <!DOCTYPE html>
 <html lang="it">
 

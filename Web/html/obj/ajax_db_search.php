@@ -1,8 +1,6 @@
 <?php
 include("header.php");
-
 if (isset($_POST['query'])) {
-
     $query = "SELECT * FROM stock_name WHERE Symbol LIKE '{$_POST['query']}%' LIMIT 7";
     $result = mysqli_query($con, $query);
     if (mysqli_num_rows($result) > 0) {

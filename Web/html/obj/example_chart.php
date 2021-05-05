@@ -44,9 +44,9 @@
         dateAxis.renderer.grid.template.location = 0;
         dateAxis.renderer.minGridDistance = 30;
         dateAxis.dateFormats.setKey("second", "ss");
-        dateAxis.periodChangeDateFormats.setKey("secondi", "[bold]h:mm a");
-        dateAxis.periodChangeDateFormats.setKey("minuti", "[bold]h:mm a");
-        dateAxis.periodChangeDateFormats.setKey("ore", "[bold]h:mm a");
+        dateAxis.periodChangeDateFormats.setKey("second", "[bold]h:mm a");
+        dateAxis.periodChangeDateFormats.setKey("minute", "[bold]h:mm a");
+        dateAxis.periodChangeDateFormats.setKey("hour", "[bold]h:mm a");
         dateAxis.renderer.inside = true;
         dateAxis.renderer.axisFills.template.disabled = true;
         dateAxis.renderer.ticks.template.disabled = true;
@@ -95,6 +95,7 @@
             interval = setInterval(function() {
                 visits =
                     visits + Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 5);
+
                 var lastdataItem = series.dataItems.getIndex(series.dataItems.length - 1);
                 chart.addData({
                         date: new Date(lastdataItem.dateX.getTime() + 1000),

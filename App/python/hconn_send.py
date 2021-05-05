@@ -11,7 +11,11 @@ def hconn_send(name):
 
 
 # main
-os.chdir("/home/romeo/StockN/Data")
-for file in glob.glob("*.csv"):
-    name = "/home/romeo/StockN/Data/" + file
-    hconn_send(name)
+def main():
+    os.chdir("/home/romeo/StockN/Data")
+    for file in glob.glob("*.csv"):
+        name = "/home/romeo/StockN/Data/" + file
+        hconn_send(name)
+
+
+main()

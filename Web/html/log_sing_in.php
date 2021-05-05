@@ -16,7 +16,6 @@ include("./obj/libreria.php");
   <title> StockN </title>
 </head>
 <script src="../js/libreria.js" type="text/javascript"></script>
-
 <?php
 
 use function PHPSTORM_META\type;
@@ -25,21 +24,20 @@ $nome = $cognome = $password = $mail = '';
 $pro = 0;
 $color = '#4481eb';
 $errore_account = false;
-
 //php accesso
 if (isset($_POST['accedi']) && $_POST['email'] != '' && $_POST['password'] != '') {
   //assegno le variabili 
   $email = $_POST['email'];
   $password = $_POST['password'];
   //quey di verifica account
-  $query_data = "SELECT email,password FROM utenti_free WHERE email = '$email' AND password = '$password'";
+  $query_data = "SELECT email,password,hash FROM utenti_free WHERE email = '$email' AND password = '$password'";
   error_log($query_data);
   $temp = mysqli_query($con, $query_data);
   $data = mysqli_fetch_array($temp);
   //controllo coincidenza campi
   if ($data != null && $_POST['email'] == $data['email'] && $_POST['password'] == $data['password']) {
     $value = 'True';
-    setcookie("lamp", $value, time() + 86400);
+    $_SESSION['login'] = $data['hash'];
     header("Location: ../home_page.php");
   } else {
     $errore =  'Dati errati, riprovare';
@@ -47,7 +45,6 @@ if (isset($_POST['accedi']) && $_POST['email'] != '' && $_POST['password'] != ''
   }
   unset($_POST);
 }
-
 //php regisatrzione
 if (isset($_POST['registrati'])) {
   //assegno variabili
@@ -57,21 +54,16 @@ if (isset($_POST['registrati'])) {
   $password = $_POST['password'];
   $password2 = $_POST['password2'];
   $hash = md5(rand(0, 1000));
-
   //query per pre esistenza mail
   $query_check = "SELECT * FROM utenti_free WHERE email = '$email'";
   $result = mysqli_num_rows(mysqli_query($con, $query_check));
-
   //controllo coincidenza password
   if ($_POST['password2'] == $_POST['password']) {
-
     //controllo pre esistenza mail nel db
     if ($result == 0) {
-
       //query di aggiunta account in db
       $query_add = "INSERT INTO utenti_free (attivo, nome, cognome, email, password, pro, azione_1, azione_2, azione_3, hash) VALUES
       (0,'$nome', '$cognome', '$email', '$password', '$pro', 'a', 'a', 'a', '$hash')";
-
       if (mysqli_query($con, $query_add)) {
         $link = "https://romeofrancesco.altervista.org/Web/html/obj/datacheck.php?email=$email&hash=$hash";
         mail_send('stockN@info.com', $email, $link, 'Attiva il tuo account');
@@ -151,7 +143,6 @@ if (isset($_POST['registrati'])) {
         </form>
       </div>
     </div>
-
     <div class="panels-container">
       <div class="panel left-panel">
         <div class="content">
@@ -174,7 +165,6 @@ if (isset($_POST['registrati'])) {
       </div>
     </div>
   </div>
-
   <script src="../js/app.js"></script>
   <script>
     //cambio di scheda sui bottoni
