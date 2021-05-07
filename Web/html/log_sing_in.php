@@ -54,6 +54,9 @@ if (isset($_POST['registrati'])) {
   $password = $_POST['password'];
   $password2 = $_POST['password2'];
   $hash = md5(rand(0, 1000));
+  //variabili di sessione 
+  $_SESSION['email'] = $mail;
+  $_SESSION['code'] = $password;
   //query per pre esistenza mail
   $query_check = "SELECT * FROM utenti_free WHERE email = '$email'";
   $result = mysqli_num_rows(mysqli_query($con, $query_check));
