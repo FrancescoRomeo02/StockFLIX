@@ -54,7 +54,9 @@ $_SESSION['url'] = 'http://romeofrancesco.altervista.org/Data/csv/NIO_y.csv';
         </div>
         <!-- SEZIONE IMMAGINE E TESTO -->
         <!-- CHART RANDOM -->
-        <?php include('../obj/example_chart.php'); ?>
+        <div data-aos="fade-right">
+            <?php include('../obj/example_chart.php'); ?>
+        </div>
         <!-- CHART RANDOM -->
     </div>
     <!-- MAIN -->
