@@ -133,7 +133,3 @@
     selector.axis = dateAxis;
   }); // end am4core.ready()
 </script>
-
-<!-- HTML -->
-<div id="controls"></div>
-<div id="chartdiv"></div>

@@ -41,61 +41,13 @@ $_SESSION['url'] = 'http://romeofrancesco.altervista.org/Data/csv/NIO_y.csv';
         <!-- SEZIONE IMMAGINE E TESTO -->
         <!-- CHART STOCKS -->
         <div class="container_stock">
-            <div class="pos1">
-                <div class="wrapper">
-                    <div class="news">
-                        <figure class="article">
-                            <div class="stock">
-                                <?php
-                                include('../obj/chart_page.php')
-                                ?>
-                            </div>
-                            <figcaption>
-                                <h3>New Item</h3>
-                                <p>
-                                    In today’s update, two heads are better than one, and three heads are better than that,
-                                    as the all-new Flockheart’s Gamble Arcana item for Ogre Magi makes its grand debut.
-                                </p>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-            <div class="pos3">
-                <div class="wrapper">
-                    <div class="news">
-                        <figure class="article">
-                            <img src="https://mrreiha.keybase.pub/codepen/hover-fx/news1.jpg" />
-                            <figcaption>
-                                <h3>New Item</h3>
-                                <p>
-                                    In today’s update, two heads are better than one, and three heads are better than that,
-                                    as the all-new Flockheart’s Gamble Arcana item for Ogre Magi makes its grand debut.
-                                </p>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-            <div class="pos2">
-                <div class="wrapper">
-                    <div class="news">
-                        <figure class="article">
-                            <img src="https://mrreiha.keybase.pub/codepen/hover-fx/news1.jpg" />
-                            <figcaption>
-                                <h3>New Item</h3>
-                                <p>
-                                    In today’s update, two heads are better than one, and three heads are better than that,
-                                    as the all-new Flockheart’s Gamble Arcana item for Ogre Magi makes its grand debut.
-                                </p>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </div>
+            <!--  CHART DINAMICI   -->
+            <div id="controls"></div>
+            <div id="chartdiv"></div>
+            <!--  CHART DINAMICI -->
+            <?php include('../obj/chart_page.php') ?>
         </div>
-    </div>
-    <!-- CHART STOCKS-->
+        <!-- CHART STOCKS-->
     </div>
     <!-- MAIN -->
     <!-- FOOTER -->

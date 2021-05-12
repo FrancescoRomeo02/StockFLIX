@@ -66,7 +66,7 @@ if (isset($_POST['registrati'])) {
     if ($result == 0) {
       //query di aggiunta account in db
       $query_add = "INSERT INTO utenti_free (attivo, nome, cognome, email, password, pro, azione_1, azione_2, azione_3, hash) VALUES
-      (0,'$nome', '$cognome', '$email', '$password', '$pro', 'a', 'a', 'a', '$hash')";
+      (0,'$nome', '$cognome', '$email', '$password', '$pro', 'NULL', 'NULL', 'NULL', '$hash')";
       if (mysqli_query($con, $query_add)) {
         $link = "https://romeofrancesco.altervista.org/Web/html/obj/datacheck.php?email=$email&hash=$hash";
         mail_send('stockN@info.com', $email, $link, 'Attiva il tuo account');
