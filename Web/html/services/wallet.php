@@ -1,6 +1,16 @@
 <?php
 include('../obj/header.php');
-$_SESSION['url'] = 'http://romeofrancesco.altervista.org/Data/csv/NIO_y.csv';
+$glob_url = 'http://romeofrancesco.altervista.org/Data/csv/';
+/* STOCKS NAME FROM DB */
+$query_stocks = "SELECT azione_1, azione_2, azione_3 FROM utenti_free WHERE email = '$_SESSION[email]' AND password = '$_SESSION[code]'";
+$temp = mysqli_query($con, $query_stocks);
+$row = mysqli_fetch_array($temp, MYSQLI_ASSOC);
+$data_file = fopen("../../../Data/stockname.txt", "w") or die("Errore nella comunicazione con il server!");
+fwrite($data_file, $row['azione_1']  . "\n");
+fwrite($data_file, $row['azione_2']  . "\n");
+fwrite($data_file, $row['azione_3']  . "\n");
+fclose($data_file);
+/* STOCKS NAME FROM DB  */
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -29,7 +39,7 @@ $_SESSION['url'] = 'http://romeofrancesco.altervista.org/Data/csv/NIO_y.csv';
     <!-- MAIN -->
     <div class="container">
         <!-- SEZIONE IMMAGINE E TESTO -->
-        <div data-aos="fade-up" class="row">
+        <div data-aos="fade-left" class="row">
             <div class="col_1">
                 <h2>
                     Ecco il tuo wallet<span style="color: #59b4ff;">!</span>
@@ -41,11 +51,46 @@ $_SESSION['url'] = 'http://romeofrancesco.altervista.org/Data/csv/NIO_y.csv';
         <!-- SEZIONE IMMAGINE E TESTO -->
         <!-- CHART STOCKS -->
         <div class="container_stock">
-            <!--  CHART DINAMICI   -->
-            <div id="controls"></div>
-            <div id="chartdiv"></div>
-            <!--  CHART DINAMICI -->
-            <?php include('../obj/chart_page.php') ?>
+            <!--    CHART DINAMICO    -->
+            <div class="one_stock">
+                <?php
+                $_SESSION['url_file'] = $glob_url . $row['azione_1'] . '_y.csv';
+                $_SESSION['div_id'] = "chartdiv1";
+                ?>
+                <div data-aos="fade-right">
+                    <h2> <?php echo $row['azione_1'] ?> </h2>
+                    <div id="chartdiv1"></div>
+                    <?php include('../obj/chart_page.php') ?>
+                </div>
+            </div>
+            <!--    CHART DINAMICO    -->
+            <!--    CHART DINAMICO    -->
+            <div class="one_stock">
+                <?php
+                $_SESSION['url_file'] = $glob_url . $row['azione_2'] . '_y.csv';
+                $_SESSION['div_id'] = "chartdiv2";
+                ?>
+                <div data-aos="fade-left">
+                    <h2> <?php echo $row['azione_2'] ?> </h2>
+                    <div id="chartdiv2"></div>
+                    <?php include('../obj/chart_page.php') ?>
+                </div>
+            </div>
+            <!--    CHART DINAMICO    -->
+            <!--    CHART DINAMICO    -->
+            <div class="one_stock">
+
+                <?php
+                $_SESSION['url_file'] = $glob_url . $row['azione_3'] . '_y.csv';
+                $_SESSION['div_id'] = "chartdiv3";
+                ?>
+                <div data-aos="fade-right">
+                    <h2> <?php echo $row['azione_3'] ?> </h2>
+                    <div id="chartdiv3"></div>
+                    <?php include('../obj/chart_page.php') ?>
+                </div>
+            </div>
+            <!--    CHART DINAMICO    -->
         </div>
         <!-- CHART STOCKS-->
     </div>

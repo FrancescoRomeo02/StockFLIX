@@ -1,9 +1,3 @@
-.container_stock {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto 20%;
-  grid-column-gap: 2%;
-  grid-row-gap: 2%;
-  justify-items: center;
-  align-items: center;
+.one_stock {
+  padding-bottom: 5%;
 }

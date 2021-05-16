@@ -1,6 +1,6 @@
 <?php
 include('../obj/header.php');
-$_SESSION['url'] = 'http://romeofrancesco.altervista.org/Data/csv/NIO_y.csv';
+$_SESSION['url_file'] = 'http://romeofrancesco.altervista.org/Data/csv/NIO_y.csv';
 ?>
 <!DOCTYPE html>
 <html lang="it">
