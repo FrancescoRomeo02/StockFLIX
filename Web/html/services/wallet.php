@@ -28,7 +28,7 @@ fclose($data_file);
     <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
     <!-- js query  -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <title> StockN </title>
+    <title> StockN - Wallet</title>
 </head>
 
 <body>
@@ -72,6 +72,7 @@ fclose($data_file);
                 ?>
                 <div data-aos="fade-left">
                     <h2> <?php echo $row['azione_2'] ?> </h2>
+                    <?php include('../obj/data_card.php'); ?>
                     <div id="chartdiv2"></div>
                     <?php include('../obj/chart_page.php') ?>
                 </div>
@@ -79,7 +80,6 @@ fclose($data_file);
             <!--    CHART DINAMICO    -->
             <!--    CHART DINAMICO    -->
             <div class="one_stock">
-
                 <?php
                 $_SESSION['url_file'] = $glob_url . $row['azione_3'] . '_y.csv';
                 $_SESSION['div_id'] = "chartdiv3";

@@ -16,7 +16,7 @@ include('../obj/header.php');
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- js icone  -->
     <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
-    <title> StockN </title>
+    <title> StockN - Impostazioni</title>
 </head>
 
 <body>

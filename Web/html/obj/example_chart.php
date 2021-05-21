@@ -14,22 +14,16 @@
 <!-- Chart code -->
 <script>
     am4core.ready(function() {
-
         // Themes begin
         am4core.useTheme(am4themes_animated);
         // Themes end
-
         var chart = am4core.create("chartdiv", am4charts.XYChart);
         chart.hiddenState.properties.opacity = 0;
-
         chart.padding(0, 0, 0, 0);
-
         chart.zoomOutButton.disabled = true;
-
         var data = [];
         var visits = 10;
         var i = 0;
-
         for (i = 0; i <= 30; i++) {
             visits -= Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);
             data.push({
@@ -37,9 +31,7 @@
                 value: visits
             });
         }
-
         chart.data = data;
-
         var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
         dateAxis.renderer.grid.template.location = 0;
         dateAxis.renderer.minGridDistance = 30;

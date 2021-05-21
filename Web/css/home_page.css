@@ -315,15 +315,15 @@ button {
       45deg,
       transparent 0,
       transparent 25%,
-      #ff355e 0,
-      #ff007c 50%
+      #fbb4c9 0,
+      #fee0cc 50%
     ),
     repeating-linear-gradient(
       -45deg,
-      #a7a7a7 0,
-      #a7a7a7 25%,
-      #8fd400 0,
-      #87ff2a 50%
+      #fff4e8 0,
+      #fff4e8 25%,
+      #aff1f1 0,
+      #8dd1f1 50%
     );
   color: #141414;
 }
@@ -344,15 +344,15 @@ button {
       -45deg,
       transparent 0,
       transparent 25%,
-      #ff355e 0,
-      #ff6037 50%
+      #e4ed85 0,
+      #a9cbd7 50%
     ),
     repeating-linear-gradient(
       45deg,
-      #a7a7a7 0,
-      #a7a7a7 25%,
-      #e936a7 0,
-      #e936a7 50%
+      #fcc3c3 0,
+      #fcc3c3 25%,
+      #f7f2d8 0,
+      #c5ace5 50%
     );
   color: #141414;
 }

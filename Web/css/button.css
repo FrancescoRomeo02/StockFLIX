@@ -92,5 +92,5 @@ button {
 button:hover,
 button:focus {
   border-color: var(--hover);
-  color: #fff;
+  color: #333;
 }

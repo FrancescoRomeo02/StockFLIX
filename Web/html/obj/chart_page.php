@@ -2,7 +2,7 @@
 session_start();
 $url = $_SESSION['url_file'];
 $div_id = $_SESSION['div_id'];
-$div_id_style = $div_id . '{
+$div_id_style =  '#' . $div_id . '{
   width: 100%;
   height: 500px;
   max-width: 100%;

@@ -19,7 +19,7 @@ $_SESSION['url_file'] = 'http://romeofrancesco.altervista.org/Data/csv/NIO_y.csv
     <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
     <!-- js query  -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <title> StockN </title>
+    <title> StockN - Azioni</title>
 </head>
 
 <body>

@@ -1,6 +1,5 @@
 <?php
 include('./html/obj/header.php');
-//print_r($_SESSION)
 ?>
 <!DOCTYPE html>
 <html lang="it">

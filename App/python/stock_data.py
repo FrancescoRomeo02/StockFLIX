@@ -1,9 +1,11 @@
 from alpha_vantage.timeseries import TimeSeries
 import pandas as pd
 import numpy as np
-from hconn_send import main
+import os
 
 api_key = "D99JTY63MSIF56G9"
+symbols = []
+data_input = 'y'
 
 
 def get_ts(symbol, data_type):
@@ -21,25 +23,21 @@ def get_ts(symbol, data_type):
             '6. volume': 'volume'
         },
                                  inplace=False)
-    if (data_type == 'd'):
-        data, meta_data = ts.get_intraday(symbol=symbol,
-                                          interval='1min',
-                                          outputsize='full')
-        data2 = data.drop(['1. open', '2. high', '3. low', '4. close'], axis=1)
-        nice_data = data2.rename(columns={
-            '4. close': 'Adj Close',
-            '5. volume': 'volume'
-        },
-                                 inplace=False)
 
     fname = f"/home/romeo/StockN/Data/{symbol}_{data_type}.csv"
     nice_data.to_csv(fname)
 
 
-symbols = []  #get symbols from php
-data_input = []  #get data_type from php
-for s in symbols:
-    for data in data_input:
-        get_ts(s, data)
+def main():
+    with open("/home/romeo/StockN/Data/stockname.txt") as file:
+        for line in file:
+            line = line.strip()
+            symbols.append(line)
+
+    for symbol in symbols:
+        get_ts(symbol, data_input)
+
 
 main()
+
+os.system('python3 App/python/file_up.py')

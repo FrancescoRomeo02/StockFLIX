@@ -15,6 +15,6 @@ if (isset($_POST['query'])) {
         };
         echo "</ul>";
     } else {
-        echo "<ul><li class='item'><p class='not_in'>Azione inesistente</p></li></ul>";
+        echo "<ul class='output'><li class='item'><p class='not_in'>Azione inesistente</p></li></ul>";
     }
 }

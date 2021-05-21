@@ -1,10 +1,6 @@
 import pandas as pd
 
-with open("/home/romeo/StockN/stock.txt") as f:
-    lines = f.readlines()
-
-with open("/home/romeo/StockN/Data/stock_format.csv", "w") as f:
-    for line in lines:
-        res = line.split('|', 2)
-        data = res[0] + ', ' + res[1] + '\n'
-        f.writelines(data)
+f = pd.read_csv("/home/romeo/StockN/Data/nasdaq_screener_1621449789936.csv")
+keep_col = ['Symbol', 'Name']
+new_f = f[keep_col]
+new_f.to_csv("newFile.csv")

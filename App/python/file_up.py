@@ -10,12 +10,12 @@ def hconn_send(name):
     r = requests.post(url, files=file)
 
 
-# main
 def main():
     os.chdir("/home/romeo/StockN/Data")
     for file in glob.glob("*.csv"):
         name = "/home/romeo/StockN/Data/" + file
         hconn_send(name)
+        os.remove(name)
 
 
 main()

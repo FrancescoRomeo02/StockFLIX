@@ -10,7 +10,7 @@ include("./obj/libreria.php")
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/log_sing_in.css">
-    <title>StockN-Recupera dati</title>
+    <title>StockN - Recupera dati</title>
 </head>
 <?php
 if (isset($_POST['invia']) && $_POST['email'] != '') {
