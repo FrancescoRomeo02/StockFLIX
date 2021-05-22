@@ -1,16 +1,25 @@
+<?php
+include('./html/obj/header.php');
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <link rel="stylesheet" href="../css/home_page.css">
   <link rel="stylesheet" href="../css/pay.css" />
-  <title>Document</title>
+  <title> StockN - Pagameneto </title>
 </head>
 
 <body>
+  <!--BARRA DI NAVIGAZIONE-->
+  <?php include('./html/obj/nav.php'); ?>
+  <!--BARRA DI NAVIGAZIONE-->
+  <br /><br />
+  <!-- MAIN -->
   <div class="container">
     <div class="payment">
       <form class="form">
@@ -73,6 +82,11 @@
       <ion-icon name="logo-dribbble"></ion-icon>
     </a>
   </div>
+  <!-- MAIN -->
+  <!-- FOOTER -->
+  <?php include('./html/obj/footer.php'); ?>
+  <!-- FOOTER -->
+  <!-- js controllo campi -->
   <script src="../js/app.js"></script>
 </body>
 

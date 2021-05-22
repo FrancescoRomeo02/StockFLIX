@@ -1,5 +1,5 @@
 <?php
-include('./html/obj/header.php');
+include('./obj/header.php');
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -19,7 +19,7 @@ include('./html/obj/header.php');
 
 <body>
   <!--BARRA DI NAVIGAZIONE-->
-  <?php include('./html/obj/nav.php'); ?>
+  <?php include('./obj/nav.php'); ?>
   <!--BARRA DI NAVIGAZIONE-->
   <br /><br />
   <!-- MAIN -->
@@ -136,12 +136,12 @@ include('./html/obj/header.php');
   <!-- CARDS DIV PIANI -->
   <!-- MAIN -->
   <!-- FOOTER -->
-  <?php include('./html/obj/footer.php'); ?>
+  <?php include('./obj/footer.php'); ?>
   <!-- FOOTER -->
   <!-- js animazioni e toggle -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <script src="./js/app.js" type="text/javascript"></script>
+  <script src="../js/app.js" type="text/javascript"></script>
   <script>
     AOS.init();
     navSlide();
