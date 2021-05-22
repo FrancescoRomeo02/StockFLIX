@@ -49,7 +49,7 @@ $_SESSION['url_file'] = 'http://romeofrancesco.altervista.org/Data/csv/NIO_y.csv
                 <h3>Scopri ogni giorno <span style="color: #59b4ff;">nuove</span> possibilità</h3>
                 <p style="color: blueviolet;">Presto saranno disponibili nuove azioni</p>
                 <h4>Dai un occhio alle tue azioni</h4>
-                <button type="button" class="slide">WALLET</button>
+                <a href="./wallet.php"> <button type="button" class="slide">WALLET</button></a>
             </div>
         </div>
         <!-- SEZIONE IMMAGINE E TESTO -->

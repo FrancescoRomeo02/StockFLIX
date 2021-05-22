@@ -132,7 +132,7 @@ button {
   border: 0;
   padding: 12px 10px;
   outline: none;
-  color: rgb(255, 255, 255);
+  color: #333;
   text-transform: uppercase;
 }
 

@@ -38,7 +38,7 @@ include('./html/obj/header.php');
         <h3>Non lasciare che il tempo sgretoli i tuoi risparmi</h3>
         <p>Iniziare non è mai facile</p>
         <h4>Lascia che qualcuno ti aiuti</h4>
-        <button type="button" class="offset">iniziamo</button>
+        <a href="#services"><button type="button" class="offset">iniziamo</button></a>
       </div>
 
       <div class="col_2">
@@ -120,7 +120,7 @@ include('./html/obj/header.php');
         <h3>Decidi tu come investire il tuo denaro.</h3>
         <p>Non tutto è gratis, questo vale anche per noi.</p>
         <h4>Prendi la tua decisione</h4>
-        <button type="button" class="pulse">ABBONATI</button>
+        <a href="../Web/html/abbonamenti.php"><button type="button" class="pulse">ABBONATI</button></a>
       </div>
 
       <div class="col_2">

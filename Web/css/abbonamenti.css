@@ -13,7 +13,6 @@
   border-radius: 40px;
   box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
     -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
-  cursor: pointer;
   transition: 0.4s;
 }
 
@@ -158,7 +157,7 @@ label {
 
 .button2 {
   background-color: #59b4ff;
-  box-shadow: 0 0 10px 0 #59b4ff inset, 0 0 20px 2px #59b4ff;
+  box-shadow: 0 0 10px 0 #ef8f6e inset, 0 0 20px 2px #ef8f6e;
 }
 
 .switch {
@@ -202,11 +201,11 @@ label {
 }
 
 input:checked + .slider {
-  background-color: #ef8f6e;
+  background-color: #59b4ff;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #ef8f6e;
+  box-shadow: 0 0 1px #59b4ff;
 }
 
 input:checked + .slider:before {
