@@ -30,7 +30,7 @@ if (isset($_POST['accedi']) && $_POST['email'] != '' && $_POST['password'] != ''
   $email = $_POST['email'];
   $password = $_POST['password'];
   //quey di verifica account
-  $query_data = "SELECT email,password,hash FROM utenti_free WHERE email = '$email' AND password = '$password'";
+  $query_data = "SELECT email,password,hash FROM user WHERE email = '$email' AND password = '$password'";
   error_log($query_data);
   $temp = mysqli_query($con, $query_data);
   $data = mysqli_fetch_array($temp);
@@ -58,15 +58,14 @@ if (isset($_POST['registrati'])) {
   $password2 = $_POST['password2'];
   $hash = md5(rand(0, 1000));
   //query per pre esistenza mail
-  $query_check = "SELECT * FROM utenti_free WHERE email = '$email'";
+  $query_check = "SELECT * FROM user WHERE email = '$email'";
   $result = mysqli_num_rows(mysqli_query($con, $query_check));
   //controllo coincidenza password
   if ($_POST['password2'] == $_POST['password']) {
     //controllo pre esistenza mail nel db
     if ($result == 0) {
       //query di aggiunta account in db
-      $query_add = "INSERT INTO utenti_free (attivo, nome, cognome, email, password, pro, azione_1, azione_2, azione_3, hash) VALUES
-      (0,'$nome', '$cognome', '$email', '$password', '$pro', 'NULL', 'NULL', 'NULL', '$hash')";
+      $query_add = "INSERT INTO user (`nome`, `cognome`, `email`, `password`, `hash`) VALUES ('$nome', '$cognome', '$email', '$password', '$hash')";
       if (mysqli_query($con, $query_add)) {
         $link = "https://romeofrancesco.altervista.org/Web/html/obj/datacheck.php?email=$email&hash=$hash";
         mail_send('stockN@info.com', $email, $link, 'Attiva il tuo account');

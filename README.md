@@ -2,6 +2,7 @@
 
 Progetto esame di maturita' 2020/2021
 -fare il pdf
+-rifare query nome azioni
 -aggiungere possibilita' di decidere le azioni
 -finire pagina di impostazioni
 -css per utenti pro
@@ -12,7 +13,9 @@ Progetto esame di maturita' 2020/2021
 -css fix browser diversi
 -sistemare css pagina azioni
 -controllo grammatica
--aaaa
+-testo pagina home
+-css pagina abbonamento
+-css php pagina pay
 
 ---
 

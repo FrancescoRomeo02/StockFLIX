@@ -15,7 +15,7 @@ include("./obj/libreria.php")
 <?php
 if (isset($_POST['invia']) && $_POST['email'] != '') {
     $email = $_POST['email'];
-    $query_data = "SELECT email FROM utenti_free WHERE email = '$email' ";
+    $query_data = "SELECT email FROM user WHERE email = '$email' ";
     $temp = mysqli_query($con, $query_data);
     $data = mysqli_fetch_array($temp);
     if ($data != null && $_POST['email'] == $data['email']) {
