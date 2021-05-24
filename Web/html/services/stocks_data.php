@@ -1,6 +1,6 @@
 <?php
 include('../obj/header.php');
-$_SESSION['url_file'] = 'http://romeofrancesco.altervista.org/Data/csv/NIO_y.csv';
+$_SESSION['url_file'] = 'query';
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -44,10 +44,10 @@ $_SESSION['url_file'] = 'http://romeofrancesco.altervista.org/Data/csv/NIO_y.csv
             <div class="col_1">
                 <h2>
                     Le azioni Americane, <br />
-                    Il mercato più importante del mondo
+                    Il mercato più importante <br /> mondo
                 </h2>
                 <h3>Scopri ogni giorno <span style="color: #59b4ff;">nuove</span> possibilità</h3>
-                <p style="color: blueviolet;">Presto saranno disponibili nuove azioni</p>
+                <p style="color: blueviolet;">Presto disponibili nuove azioni</p>
                 <h4>Dai un occhio alle tue azioni</h4>
                 <a href="./wallet.php"> <button type="button" class="slide">WALLET</button></a>
             </div>
@@ -86,7 +86,7 @@ $_SESSION['url_file'] = 'http://romeofrancesco.altervista.org/Data/csv/NIO_y.csv
                 });
             }
         };
-        /* Query azioni */
+        // Query azioni
         $(document).ready(function() {
             $("#search").keyup(function() {
                 var query = $(this).val();
@@ -114,6 +114,18 @@ $_SESSION['url_file'] = 'http://romeofrancesco.altervista.org/Data/csv/NIO_y.csv
                 }
             });
         });
+        //  Follow not Follow
+        function myAjax() {
+            var name = $(this).val();
+            $.ajax({
+                type: "POST",
+                url: 'http://romeofrancesco.altervista.org/Web/html/obj/ajax_db_search.php',
+                data: {
+                    action: 'follow',
+                    name: name
+                }
+            });
+        }
     </script>
 </body>
 

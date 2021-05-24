@@ -186,7 +186,6 @@ include('./html/obj/header.php');
       if (this.scrollY >= 10) {
         nav.classList.add("dark");
         nav_link.forEach((link) => {
-          console.log(link);
           link.classList.add("white_text");
         });
       } else {
