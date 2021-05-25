@@ -12,7 +12,7 @@ if (!$_SESSION['state']) {
     </div>
     <ul class="nav_links">
         <li><a href="http://romeofrancesco.altervista.org/Web/home_page.php">Home</a></li>
-        <?php echo ' . $title . ' ?>
+        <?php echo  $title ?>
         <li><a href="http://romeofrancesco.altervista.org/Web/html/services/stocks_data.php">Azioni</a></li>
         <li><a href="http://romeofrancesco.altervista.org/Web/html/settings.php">Impostazioni</a></li>
     </ul>

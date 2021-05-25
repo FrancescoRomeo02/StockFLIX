@@ -124,8 +124,12 @@ $_SESSION['url_file'] = 'query';
             });
         });
         //  Follow not Follow
+
         function follow(val) {
-            var nome = nome_id;
+            console.log(val.getAttribute('value'));
+            showBanner('.banner.info');
+            setTimeout(hideBanners, 3000);
+
             $.ajax({
                 type: "POST",
                 url: 'http://romeofrancesco.altervista.org/Web/html/obj/follow.php',
@@ -135,13 +139,6 @@ $_SESSION['url_file'] = 'query';
                 }
             });
         }
-
-        function follow(val) {
-            console.log(val.getAttribute('value'));
-            showBanner('.banner.info');
-            setTimeout(hideBanners, 3000);
-        }
-        // Pssst, I've created a github package - https://github.com/brookesb91/dismissible
 
         const showBanner = (selector) => {
             hideBanners();
