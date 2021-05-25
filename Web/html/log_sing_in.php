@@ -30,7 +30,7 @@ if (isset($_POST['accedi']) && $_POST['email'] != '' && $_POST['password'] != ''
   $email = $_POST['email'];
   $password = $_POST['password'];
   //quey di verifica account
-  $query_data = "SELECT email,password,hash FROM user WHERE email = '$email' AND password = '$password'";
+  $query_data = "SELECT user_id,email,password,hash FROM user WHERE email = '$email' AND password = '$password'";
   error_log($query_data);
   $temp = mysqli_query($con, $query_data);
   $data = mysqli_fetch_array($temp);
@@ -38,6 +38,7 @@ if (isset($_POST['accedi']) && $_POST['email'] != '' && $_POST['password'] != ''
   if ($data != null && $_POST['email'] == $data['email'] && $_POST['password'] == $data['password']) {
     $value = 'True';
     $_SESSION['login'] = $data['hash'];
+    $_SESSION['user_id'] = $data['user_id'];
     header("Location: ../home_page.php");
   } else {
     $errore =  'Dati errati, riprovare';

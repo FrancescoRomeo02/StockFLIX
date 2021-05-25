@@ -134,8 +134,8 @@ $_SESSION['url_file'] = 'query';
                 type: "POST",
                 url: 'http://romeofrancesco.altervista.org/Web/html/obj/follow.php',
                 data: {
-                    action: 'follow',
-                    name: val.getAttribute('value')
+                    name: val.getAttribute('value'),
+                    user_id: $_SESSION['user_id']
                 }
             });
         }
