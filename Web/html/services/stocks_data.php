@@ -4,6 +4,9 @@ $_SESSION['url_file'] = 'query';
 ?>
 <!DOCTYPE html>
 <html lang="it">
+<style>
+
+</style>
 
 <head>
     <meta charset="UTF-8" />
@@ -12,13 +15,13 @@ $_SESSION['url_file'] = 'query';
     <link rel="stylesheet" href="../../css/home_page.css" />
     <link rel="stylesheet" href="../../css/button.css" />
     <link rel="stylesheet" href="../../css/search.css" />
-    <link rel="stylesheet" href="../../css/stocks_data.css" />
     <!-- css animazioni -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- js icone  -->
     <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
     <!-- js query  -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://unpkg.com/eva-icons" onload="eva.replace()"></script>
     <title> StockN - Azioni</title>
 </head>
 
@@ -29,6 +32,16 @@ $_SESSION['url_file'] = 'query';
     <br /><br />
     <!-- MAIN -->
     <!-- RICERCA AZIONI -->
+    <div class="banners-container">
+        <div class="banners">
+            <div class="banner info">
+                <div class="banner-icon">
+                    <i data-eva="info-outline" data-eva-fill="#ffffff" data-eva-height="48" data-eva-width="48"></i>
+                </div>
+                <div class="banner-message">Azzione aggiunta al tuo wallet</div>
+            </div>
+        </div>
+    </div>
     <input type="checkbox" name="" id="check" />
     <div class="box">
         <input type="text" placeholder="Cerca azioni" id="search" autocomplete="off" />
@@ -100,10 +113,6 @@ $_SESSION['url_file'] = 'query';
                         success: function(data) {
                             $("#output").html(data);
                             $("#output").css("display", "block");
-
-                            $("#search").focusout(function() {
-                                $("#output").css("display", "none");
-                            });
                             $("#search").focusin(function() {
                                 $("#output").css("display", "block");
                             });
@@ -115,17 +124,39 @@ $_SESSION['url_file'] = 'query';
             });
         });
         //  Follow not Follow
-        function myAjax() {
-            var name = $(this).val();
+        function follow(val) {
+            var nome = nome_id;
             $.ajax({
                 type: "POST",
-                url: 'http://romeofrancesco.altervista.org/Web/html/obj/ajax_db_search.php',
+                url: 'http://romeofrancesco.altervista.org/Web/html/obj/follow.php',
                 data: {
                     action: 'follow',
-                    name: name
+                    name: val.getAttribute('value')
                 }
             });
         }
+
+        function follow(val) {
+            console.log(val.getAttribute('value'));
+            showBanner('.banner.info');
+            setTimeout(hideBanners, 3000);
+        }
+        // Pssst, I've created a github package - https://github.com/brookesb91/dismissible
+
+        const showBanner = (selector) => {
+            hideBanners();
+            // Ensure animation plays even if the same alert type is triggered.
+            requestAnimationFrame(() => {
+                const banner = document.querySelector(selector);
+                banner.classList.add("visible");
+            });
+        };
+
+        const hideBanners = (e) => {
+            document
+                .querySelectorAll(".banner.visible")
+                .forEach((b) => b.classList.remove("visible"));
+        };
     </script>
 </body>
 

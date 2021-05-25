@@ -17,6 +17,8 @@
           <div class="stat-value">Cost</div>
         </div>
       </div>
-    </div> <!-- end clash-card barbarian-->
+    </div>
+    <!-- end card -->
   </div>
-</div> <!-- end container -->
+</div>
+<!-- end container -->

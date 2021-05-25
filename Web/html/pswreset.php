@@ -14,18 +14,22 @@ include("./obj/libreria.php")
 </head>
 <?php
 if (isset($_POST['invia']) && $_POST['email'] != '') {
+    //controllo i dati inviati tramite form 
     $email = $_POST['email'];
-    $query_data = "SELECT email FROM user WHERE email = '$email' ";
+    $query_data = "SELECT email, hash FROM user WHERE email = '$email' ";
     $temp = mysqli_query($con, $query_data);
     $data = mysqli_fetch_array($temp);
     if ($data != null && $_POST['email'] == $data['email']) {
-        $link = md5(rand(0, 100));
-        $body = $link;
+        $body = $data['hash'];
+        //invoco la funzione per l'invio della mail per il reset della password
         mail_send('stockN@assistenza.com', $email, 'Modifica della password', $body);
     } else {
         echo '<br> <h3>La mail non e\' presente nel database</h3>';
     }
-} ?>
+}
+// Una volta che l'utente premerà sul link della mail riceverà una nuova mail 
+// con una passowrd generata dal sito chje potrà essere cambiata dalle impostazioni 
+?>
 
 <body>
     <div class="container">

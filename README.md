@@ -2,20 +2,23 @@
 
 Progetto esame di maturita' 2020/2021
 -fare il pdf
--rifare query nome azioni
 -aggiungere possibilita' di decidere le azioni
 -finire pagina di impostazioni
+-pagina delle referenze
+-fix recupero password
+-pagina mercato demo
+
 -css per utenti pro
 -controllo sul file per evitare azioni doppie
 -modifiche file per utenti pro
 -fix grafico home azioni
--pagina delle referenze
 -css fix browser diversi
 -sistemare css pagina azioni
 -controllo grammatica
 -testo pagina home
 -css pagina abbonamento
--css php pagina pay
+-css php pagina pay (invio mail conferma abbonamento e cambio css)
+-cambiare numero di azioni possibili
 
 ---
 

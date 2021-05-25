@@ -53,7 +53,7 @@ function showError(element, error) {
     }
 };
 
-/*  NOMR  */
+/*  NOME  */
 name.addEventListener('input', function() {
     let alert1 = document.getElementById('alert-1');
     let error = this.value === '';

@@ -92,12 +92,12 @@ include('./obj/header.php');
       <div class="top">
         <h1 class="section_title">Scegli il tuo <span>piano</span></h1>
         <div class="toggle-btn">
-          <span style="margin: 0.8em">Annuale</span>
+          <span style="margin: 0.8em">Società</span>
           <label class="switch">
             <input type="checkbox" id="checbox" onclick="check()" ; />
             <span class="slider round"></span>
           </label>
-          <span style="margin: 0.8em">Mensile</span>
+          <span style="margin: 0.8em">Privato</span>
         </div>
       </div>
     </div>
@@ -120,7 +120,7 @@ include('./obj/header.php');
       <div data-aos="fade-left">
         <div class="packages">
           <h1 style="color: #ef8f6e">PRO</h1>
-          <h2 class="text1">19.99 &euro;</h2>
+          <h2 class="text1">119.99 &euro;</h2>
           <h2 class="text2">239.99 &euro;</h2>
           <ul class="list">
             <li class="first">5 Azioni</li>

@@ -68,10 +68,8 @@ include('./html/obj/header.php');
             <div class="icon"><i class="fas fa-chart-area fa-3x" style="color: rgb(146, 64, 253);"></i></i></div>
             <h2>Grafici</h2>
             <p>
-              Avrai la possibilità di visionare in tutta comodità gli andamnti
-              di <span>ogni azione</span><br />
-              Teniamo particolarmente alle TUE azioni, loro avranno un
-              trattamento <span>speciale</span>.
+              Visione l'andamento delle <span>tue</span> azioni attraverso comodi grafici. <br>
+              Tieni sotto controlle le tue azioni su qualsiasi dispositivo grazie alla versione <span>mobile</span> del nostro servizio.
             </p>
           </div>
           <!-- CARD -->

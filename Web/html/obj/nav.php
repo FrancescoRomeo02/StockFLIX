@@ -5,14 +5,14 @@ if (!$_SESSION['state']) {
 } else {
     $title = '<li><a href="http://romeofrancesco.altervista.org/Web/html/services/wallet.php">Wallet</a></li>';
 }
-echo '
+?>
 <nav>
     <div class="logo">
         <h4>Stock<span>N</span></h4>
     </div>
     <ul class="nav_links">
         <li><a href="http://romeofrancesco.altervista.org/Web/home_page.php">Home</a></li>
-        ' . $title . '
+        <?php echo ' . $title . ' ?>
         <li><a href="http://romeofrancesco.altervista.org/Web/html/services/stocks_data.php">Azioni</a></li>
         <li><a href="http://romeofrancesco.altervista.org/Web/html/settings.php">Impostazioni</a></li>
     </ul>
@@ -22,4 +22,3 @@ echo '
         <div class="line3"></div>
     </div>
 </nav>
-';

@@ -38,9 +38,6 @@ if (isset($_POST['accedi']) && $_POST['email'] != '' && $_POST['password'] != ''
   if ($data != null && $_POST['email'] == $data['email'] && $_POST['password'] == $data['password']) {
     $value = 'True';
     $_SESSION['login'] = $data['hash'];
-    //variabili di sessione 
-    $_SESSION['email'] = $email;
-    $_SESSION['code'] = $password;
     header("Location: ../home_page.php");
   } else {
     $errore =  'Dati errati, riprovare';
@@ -81,7 +78,6 @@ if (isset($_POST['registrati'])) {
       $errore =  'Email già in uso';
       $color = 'rgb(159, 3, 3)';
     }
-  } else {
   }
   unset($_POST);
 }

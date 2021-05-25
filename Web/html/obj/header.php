@@ -8,7 +8,7 @@ $con_db = (mysqli_select_db($con, $_SESSION['db_name']));
 
 $query_data = "SELECT hash FROM user WHERE email = '$_SESSION[email]' AND password = '$_SESSION[code]'";
 $temp = mysqli_query($con, $query_data);
-$data = mysqli_fetch_array($temp);;
+$data = mysqli_fetch_array($temp);
 if (isset($_SESSION['login']) && $_SESSION['login'] == $data['hash']) {
     $_SESSION['state'] = 1;
 } else {
