@@ -10,4 +10,5 @@ FTP.login("romeofrancesco", "cJhMDN9VF3Hd")
 FTP.cwd('Data/')
 FTP.retrbinary("RETR " + 'stockname.txt', open(file, 'wb').write)
 
+print('dati recuperati con successo. Avvio raccolta dati da Alpha Vantage.')
 os.system('python App/python/stock_data.py')

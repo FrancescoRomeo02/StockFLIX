@@ -14,10 +14,6 @@ foreach ($data2 as $key => $value) {
     $query_stock_id = "SELECT `symbol` FROM `stock` WHERE `stock_id` = '$value[stock_id]'";
     $temp = mysqli_query($con, $query_stock_id);
     $data3 = mysqli_fetch_array($temp, MYSQLI_ASSOC);
-    $data_file = fopen("../../../Data/stockname.txt", "a") or die("Errore nella comunicazione con il server!");
-    fwrite($data_file, $data3['symbol']  . "\n");
-    fclose($data_file);
-
     $_SESSION['url_file'] = $glob_url . $data3['symbol'] . '_y.csv';
     $_SESSION['div_id'] = "chartdiv" . $data3['symbol'];
     $chart_name = $data3['symbol'];

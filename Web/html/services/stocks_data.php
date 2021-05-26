@@ -1,7 +1,5 @@
 <?php
 include('../obj/header.php');
-if (!isset($_SESSION['url_file']))   $_SESSION['url_file'] = 'query';
-if (!isset($_SESSION['user_id'])) $_SESSION['user_id'] = 0;
 if (!isset($_SESSION['type'])) $_SESSION['type'] = 'error';
 if (!isset($_SESSION['txt'])) $_SESSION['txt'] = 'Qualcosa è andato storto';
 if (!isset($_SESSION['icon'])) $_SESSION['icon'] = 'fa-bug';
@@ -131,8 +129,6 @@ if (!isset($_SESSION['icon'])) $_SESSION['icon'] = 'fa-bug';
 
         //  Follow unFollow
         function follow(val) {
-            console.log(val.getAttribute('value'));
-
             $.ajax({
                 method: "POST",
                 url: 'http://romeofrancesco.altervista.org/Web/html/obj/follow.php',
@@ -140,14 +136,16 @@ if (!isset($_SESSION['icon'])) $_SESSION['icon'] = 'fa-bug';
                     name: val.getAttribute('value'),
                     user_id: <?php echo $_SESSION['user_id'] ?>,
                 },
+                success: function(params) {
+                    showBanner('.banner.<?php echo $_SESSION['type'] ?>');
+                    setTimeout(hideBanners, 3000);
+                }
+
             });
 
-            showBanner('.banner.<?php echo $_SESSION['type'] ?>');
-            setTimeout(hideBanners, 3000);
         }
 
         function unfollow(val) {
-            console.log(val.getAttribute('value'));
 
             $.ajax({
                 method: "POST",
@@ -156,10 +154,11 @@ if (!isset($_SESSION['icon'])) $_SESSION['icon'] = 'fa-bug';
                     name: val.getAttribute('value'),
                     user_id: <?php echo $_SESSION['user_id'] ?>,
                 },
+                success: function(params) {
+                    showBanner('.banner.<?php echo $_SESSION['type'] ?>');
+                    setTimeout(hideBanners, 3000)
+                }
             });
-
-            showBanner('.banner.<?php echo $_SESSION['type'] ?>');
-            setTimeout(hideBanners, 3000);
         }
 
         // animazioni banner

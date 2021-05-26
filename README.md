@@ -26,10 +26,8 @@ Progetto esame di maturita' 2020/2021
 -fix css buy
 -fix css banner azioni
 -css wallet vuoto
--chiede al prof
--rivedere modo in cui salvo il nome azioni (wallet.php)
 
----
+## -ottimizzare tempi py
 
 1. ANALISI GENERALE DEL PROBLEMA
 2. DESCRIZIONE DELL'ARCHITETTURA DEL PROGETTO
@@ -39,3 +37,16 @@ Progetto esame di maturita' 2020/2021
 4. DESCRIZIONE DELL' APPLICAZIONE <progetto di una parte significativa in php>
    APPROFONDIMENTO DI SISTEMI E RETI
    iG9uvSgT4uaTS6F
+
+    <!-- BANNER AZIONI -->
+    <div class="banners-container">
+        <div class="banners">
+            <div class="banner <?php echo $_SESSION['type'] ?>">
+                <div class="banner-icon">
+                    <i class="fas <?php echo $_SESSION['icon'] ?>"></i>
+                </div>
+                <div class="banner-message"><?php echo $_SESSION['txt'] ?></div>
+            </div>
+        </div>
+    </div>
+    <!-- BANNER AZIONI -->

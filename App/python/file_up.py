@@ -16,6 +16,8 @@ def main():
         name = "C:/Users/Francesco Romeo/Documents/Scuola/StockN/Data/" + file
         hconn_send(name)
         os.remove(name)
+    print('upload completato.')
+    print('Script concluso')
 
 
 main()

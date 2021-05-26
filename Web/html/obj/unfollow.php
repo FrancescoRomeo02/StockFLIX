@@ -16,6 +16,8 @@ if (mysqli_query($con, $query_rem)) {
     $_SESSION['icon'] = 'fa-plus-circle';
 } else {
     $_SESSION['type'] = 'error';
-    $_SESSION['txt'] = 'Non è stato possibile rimuovere l\'azione';
+    $_SESSION['txt'] = 'Non è stato possibile rimuovere la tua azione';
     $_SESSION['icon'] = 'fa-exclamation-triangle';
 }
+
+echo 'ci siamo';

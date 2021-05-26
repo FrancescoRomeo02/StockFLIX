@@ -1,3 +1,4 @@
+import time
 from alpha_vantage.timeseries import TimeSeries
 import pandas as pd
 import numpy as np
@@ -26,9 +27,11 @@ def get_ts(symbol, data_type):
 
     fname = f"C:/Users/Francesco Romeo/Documents/Scuola/StockN/Data/{symbol}_{data_type}.csv"
     nice_data.to_csv(fname)
+    print(f'Dati di {symbol} raccolti con successo.')
 
 
 def main():
+    count = 0
 
     lines_seen = set()
     outfile = open(
@@ -47,9 +50,15 @@ def main():
             symbols.append(line)
 
     for symbol in symbols:
+
+        if(count == 4):
+            time.sleep(90)
+            print('attendo risposta dal server')
         get_ts(symbol, data_input)
+        count += 1
 
 
 main()
 
+print('Raccolta dati terminata. Avvio upload file.')
 os.system('python App/python/file_up.py')
