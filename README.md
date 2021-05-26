@@ -8,6 +8,7 @@ Progetto esame di maturita' 2020/2021
 -fix recupero password
 -pagina mercato demo
 -controllo se utente loggato/verificato
+-fix navbar
 
 -css per utenti pro
 -controllo sul file per evitare azioni doppie

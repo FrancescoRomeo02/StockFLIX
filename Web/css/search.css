@@ -119,11 +119,12 @@ i:hover {
 .fa-search {
   color: #333;
 }
-
-i {
-  color: inherit;
+#unfollow {
+  color: #0b22e2;
 }
-
+#unfollow:hover {
+  color: #333;
+}
 /* BANNER CSS */
 
 .banners-container {
@@ -140,6 +141,7 @@ i {
   display: flex;
   flex-direction: row;
   align-items: center;
+  border-radius: 5%;
 }
 
 .banner .banner-message {

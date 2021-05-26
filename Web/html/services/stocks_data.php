@@ -1,6 +1,10 @@
 <?php
 include('../obj/header.php');
-$_SESSION['url_file'] = 'query';
+if (!isset($_SESSION['url_file']))   $_SESSION['url_file'] = 'query';
+if (!isset($_SESSION['user_id'])) $_SESSION['user_id'] = 0;
+if (!isset($_SESSION['type'])) $_SESSION['type'] = 'error';
+if (!isset($_SESSION['txt'])) $_SESSION['txt'] = 'Qualcosa è andato storto';
+if (!isset($_SESSION['icon'])) $_SESSION['icon'] = 'fa-bug';
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -35,9 +39,9 @@ $_SESSION['url_file'] = 'query';
         <div class="banners">
             <div class="banner <?php echo $_SESSION['type'] ?>">
                 <div class="banner-icon">
-                    <i class="fas fa-plus-circle"></i>
+                    <i class="fas <?php echo $_SESSION['icon'] ?>"></i>
                 </div>
-                <div class="banner-message"><?php echo $_SESSION['banner_txt'] ?></div>
+                <div class="banner-message"><?php echo $_SESSION['txt'] ?></div>
             </div>
         </div>
     </div>
@@ -125,7 +129,7 @@ $_SESSION['url_file'] = 'query';
             });
         });
 
-        //  Follow not Follow
+        //  Follow unFollow
         function follow(val) {
             console.log(val.getAttribute('value'));
 
@@ -134,7 +138,23 @@ $_SESSION['url_file'] = 'query';
                 url: 'http://romeofrancesco.altervista.org/Web/html/obj/follow.php',
                 data: {
                     name: val.getAttribute('value'),
-                    user_id: <?php echo $_SESSION['user_id'] ?> "",
+                    user_id: <?php echo $_SESSION['user_id'] ?>,
+                },
+            });
+
+            showBanner('.banner.<?php echo $_SESSION['type'] ?>');
+            setTimeout(hideBanners, 3000);
+        }
+
+        function unfollow(val) {
+            console.log(val.getAttribute('value'));
+
+            $.ajax({
+                method: "POST",
+                url: 'http://romeofrancesco.altervista.org/Web/html/obj/unfollow.php',
+                data: {
+                    name: val.getAttribute('value'),
+                    user_id: <?php echo $_SESSION['user_id'] ?>,
                 },
             });
 

@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!$_SESSION['state']) {
+if (!$_SESSION['login']) {
     $title = '<li><a href="http://romeofrancesco.altervista.org/Web/html/log_sing_in.php">Accedi</a></li>';
 } else {
     $title = '<li><a href="http://romeofrancesco.altervista.org/Web/html/services/wallet.php">Wallet</a></li>';

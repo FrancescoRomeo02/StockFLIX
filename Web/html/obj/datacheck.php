@@ -13,10 +13,8 @@ if (isset($_GET['email']) && !empty($_GET['email']) and isset($_GET['hash']) && 
         mysqli_query($con, $query);
         $query =  "INSERT INTO `wallet`(`user_id`) VALUES ('$data[user_id]')";
         mysqli_query($con, $query);
-        $_SESSION['stato_account'] = 1;
         header("Location: " . '../log_sing_in.php');
     } else {
-        $_SESSION['stato_account'] = 0;
         header("Location: " . '../log_sing_in.php');
     }
 }
