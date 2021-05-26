@@ -1,10 +1,13 @@
 import ftplib
 import os
 
-file = ('/home/romeo/StockN/Data/stockname.txt')
-server = ftplib.FTP_TLS("ftp.romeofrancesco.altervista.org", "romeofrancesco",
-                        "cJhMDN9VF3Hd")
-server.cwd('Data/')
-server.retrbinary("RETR " + 'stockname.txt', open(file, 'wb').write)
+file = ('C:/Users/Francesco Romeo/Documents/Scuola/StockN/Data/stockname.txt')
+FTP_host = "ftp.romeofrancesco.altervista.org"
+FTP = ftplib.FTP()
+FTP.encoding = "latin-1"
+FTP.connect(FTP_host)
+FTP.login("romeofrancesco", "cJhMDN9VF3Hd")
+FTP.cwd('Data/')
+FTP.retrbinary("RETR " + 'stockname.txt', open(file, 'wb').write)
 
-os.system('python3 App/python/stock_data.py')
+os.system('python App/python/stock_data.py')

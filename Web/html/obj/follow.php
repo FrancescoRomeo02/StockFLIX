@@ -1,5 +1,4 @@
 <?php
-
 include('header.php');
 $query_wallet_id = "SELECT `wallet_id` FROM `wallet` WHERE `user_id` = '$_POST[user_id]'";
 $temp = mysqli_query($con, $query_wallet_id);
@@ -16,6 +15,6 @@ if (mysqli_query($con, $query_add)) {
     $_SESSION['icon'] = 'fa-plus-circle';
 } else {
     $_SESSION['type'] = 'error';
-    $_SESSION['txt'] = 'Non è stato possibile aggiunger l\'azione';
+    $_SESSION['txt'] = 'Non è stato possibile aggiungere la tua azione';
     $_SESSION['icon'] = 'fa-exclamation-triangle';
 }

@@ -11,9 +11,9 @@ def hconn_send(name):
 
 
 def main():
-    os.chdir("/home/romeo/StockN/Data")
+    os.chdir("C:/Users/Francesco Romeo/Documents/Scuola/StockN/Data")
     for file in glob.glob("*.csv"):
-        name = "/home/romeo/StockN/Data/" + file
+        name = "C:/Users/Francesco Romeo/Documents/Scuola/StockN/Data/" + file
         hconn_send(name)
         os.remove(name)
 

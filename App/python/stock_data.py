@@ -17,19 +17,31 @@ def get_ts(symbol, data_type):
             '1. open', '2. high', '3. low', '4. close', '7. dividend amount',
             '8. split coefficient'
         ],
-                          axis=1)
+            axis=1)
         nice_data = data2.rename(columns={
             '5. adjusted close': 'Adj Close',
             '6. volume': 'volume'
         },
-                                 inplace=False)
+            inplace=False)
 
-    fname = f"/home/romeo/StockN/Data/{symbol}_{data_type}.csv"
+    fname = f"C:/Users/Francesco Romeo/Documents/Scuola/StockN/Data/{symbol}_{data_type}.csv"
     nice_data.to_csv(fname)
 
 
 def main():
-    with open("/home/romeo/StockN/Data/stockname.txt") as file:
+
+    lines_seen = set()
+    outfile = open(
+        'C:/Users/Francesco Romeo/Documents/Scuola/StockN/Data/new_stockname.txt', "w")
+    infile = open(
+        'C:/Users/Francesco Romeo/Documents/Scuola/StockN/Data/stockname.txt', "r")
+    for line in infile:
+        if line not in lines_seen:
+            outfile.write(line)
+            lines_seen.add(line)
+    outfile.close()
+
+    with open("C:/Users/Francesco Romeo/Documents/Scuola/StockN/Data/new_stockname.txt") as file:
         for line in file:
             line = line.strip()
             symbols.append(line)
@@ -40,4 +52,4 @@ def main():
 
 main()
 
-os.system('python3 App/python/file_up.py')
+os.system('python App/python/file_up.py')

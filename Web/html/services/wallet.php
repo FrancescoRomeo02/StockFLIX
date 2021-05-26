@@ -1,15 +1,35 @@
 <?php
 include('../obj/header.php');
 $glob_url = 'http://romeofrancesco.altervista.org/Data/csv/';
+$chart_div_array = array();
 /* STOCKS NAME FROM DB */
-$query_stocks = "SELECT azione_1, azione_2, azione_3 FROM utenti_free WHERE email = '$_SESSION[email]' AND password = '$_SESSION[code]'";
-$temp = mysqli_query($con, $query_stocks);
-$row = mysqli_fetch_array($temp, MYSQLI_ASSOC);
-$data_file = fopen("../../../Data/stockname.txt", "w") or die("Errore nella comunicazione con il server!");
-fwrite($data_file, $row['azione_1']  . "\n");
-fwrite($data_file, $row['azione_2']  . "\n");
-fwrite($data_file, $row['azione_3']  . "\n");
-fclose($data_file);
+$query_wallet_id = "SELECT `wallet_id` FROM `wallet` WHERE `user_id` = '$_SESSION[user_id]'";
+$temp = mysqli_query($con, $query_wallet_id);
+$data = mysqli_fetch_array($temp);
+$query_stock  = "SELECT `stock_id` FROM `wallet_stock` WHERE wallet_id=  '$data[wallet_id]'";
+$temp = mysqli_query($con, $query_stock);
+$data2 = mysqli_fetch_all($temp, MYSQLI_ASSOC);
+
+foreach ($data2 as $key => $value) {
+    $query_stock_id = "SELECT `symbol` FROM `stock` WHERE `stock_id` = '$value[stock_id]'";
+    $temp = mysqli_query($con, $query_stock_id);
+    $data3 = mysqli_fetch_array($temp, MYSQLI_ASSOC);
+    $data_file = fopen("../../../Data/stockname.txt", "a") or die("Errore nella comunicazione con il server!");
+    fwrite($data_file, $data3['symbol']  . "\n");
+    fclose($data_file);
+
+    $_SESSION['url_file'] = $glob_url . $data3['symbol'] . '_y.csv';
+    $_SESSION['div_id'] = "chartdiv" . $data3['symbol'];
+    $chart_name = $data3['symbol'];
+    $div = "<div class='one_stock'>";
+    $div .= "<div data-aos='fade-right'>";
+    $div .= "<h2>" . $chart_name . "</h2>";
+    $div .= "<div id='$_SESSION[div_id]'></div>";
+    $div .= include('../obj/chart_page.php');
+    $div .= " </div></div>";
+    array_push($chart_div_array, $div);
+}
+
 /* STOCKS NAME FROM DB  */
 ?>
 <!DOCTYPE html>
@@ -52,44 +72,11 @@ fclose($data_file);
         <!-- CHART STOCKS -->
         <div class="container_stock">
             <!--    CHART DINAMICO    -->
-            <div class="one_stock">
-                <?php
-                $_SESSION['url_file'] = $glob_url . $row['azione_1'] . '_y.csv';
-                $_SESSION['div_id'] = "chartdiv1";
-                ?>
-                <div data-aos="fade-right">
-                    <h2> <?php echo $row['azione_1'] ?> </h2>
-                    <div id="chartdiv1"></div>
-                    <?php include('../obj/chart_page.php') ?>
-                </div>
-            </div>
-            <!--    CHART DINAMICO    -->
-            <!--    CHART DINAMICO    -->
-            <div class="one_stock">
-                <?php
-                $_SESSION['url_file'] = $glob_url . $row['azione_2'] . '_y.csv';
-                $_SESSION['div_id'] = "chartdiv2";
-                ?>
-                <div data-aos="fade-left">
-                    <h2> <?php echo $row['azione_2'] ?> </h2>
-                    <?php include('../obj/data_card.php'); ?>
-                    <div id="chartdiv2"></div>
-                    <?php include('../obj/chart_page.php') ?>
-                </div>
-            </div>
-            <!--    CHART DINAMICO    -->
-            <!--    CHART DINAMICO    -->
-            <div class="one_stock">
-                <?php
-                $_SESSION['url_file'] = $glob_url . $row['azione_3'] . '_y.csv';
-                $_SESSION['div_id'] = "chartdiv3";
-                ?>
-                <div data-aos="fade-right">
-                    <h2> <?php echo $row['azione_3'] ?> </h2>
-                    <div id="chartdiv3"></div>
-                    <?php include('../obj/chart_page.php') ?>
-                </div>
-            </div>
+            <?php
+            foreach ($chart_div_array as $chart_div) {
+                echo $chart_div;
+            }
+            ?>
             <!--    CHART DINAMICO    -->
         </div>
         <!-- CHART STOCKS-->

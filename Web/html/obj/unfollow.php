@@ -8,9 +8,9 @@ $data = mysqli_fetch_array($temp);
 $query_stock_id = "SELECT `stock_id` FROM `stock` WHERE `symbol` = '$_POST[name]'";
 $temp = mysqli_query($con, $query_stock_id);
 $data2 = mysqli_fetch_array($temp);
+$query_rem = "DELETE FROM `wallet_stock` WHERE `wallet_id` = '$data[wallet_id]' AND `stock_id` = '$data2[stock_id]'";
 
-$query_add = "DELETE FROM `wallet_stock` WHERE `wallet_id` = '$data[wallet_id]' AND , `stock_id` = '$data2[stock_id]'";
-if (mysqli_query($con, $query_add)) {
+if (mysqli_query($con, $query_rem)) {
     $_SESSION['type'] = 'info';
     $_SESSION['txt'] = 'Azione rimossa con successo';
     $_SESSION['icon'] = 'fa-plus-circle';
