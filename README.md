@@ -2,12 +2,12 @@
 
 Progetto esame di maturita' 2020/2021
 -fare il pdf
--aggiungere possibilita' di decidere le azioni
+-finire pagina azioni
 -finire pagina di impostazioni
 -pagina delle referenze
 -fix recupero password
 -pagina mercato demo
--creare wallet a conferma mail
+-controllo se utente loggato/verificato
 
 -css per utenti pro
 -controllo sul file per evitare azioni doppie
@@ -21,6 +21,7 @@ Progetto esame di maturita' 2020/2021
 -css php pagina pay (invio mail conferma abbonamento e cambio css)
 -cambiare numero di azioni possibili
 -modifica testo pagina buy
+-css azioni possedute
 
 ---
 

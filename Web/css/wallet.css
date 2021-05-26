@@ -2,22 +2,7 @@
   padding-bottom: 5%;
 }
 /* CARD */
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
-*,
-:after,
-:before {
-  box-sizing: border-box;
-}
-body {
-  background: linear-gradient(to bottom, #8c7a7a 0, #af877c 65%, #af877c 100%)
-    fixed;
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/coc-background.jpg)
-    no-repeat center center fixed;
-  background-size: cover;
-  font: 14px/20px Lato, Arial, sans-serif;
-  color: #9e9e9e;
-  margin-top: 30px;
-}
+
 .slide-container {
   margin: auto;
   width: 600px;

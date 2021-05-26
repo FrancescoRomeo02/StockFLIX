@@ -124,6 +124,8 @@ i {
   color: inherit;
 }
 
+/* BANNER CSS */
+
 .banners-container {
   position: fixed;
   top: 0;
@@ -143,28 +145,6 @@ i {
 .banner .banner-message {
   flex: 1;
   padding: 0 2rem;
-}
-
-.banner .banner-close {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.banner .banner-close:hover {
-  background: rgba(0, 0, 0, 0.12);
-}
-
-.banner.success {
-  background: #10c15c;
-}
-
-.banner.success::after {
-  background: #10c15c;
 }
 
 .banner.error {
@@ -207,6 +187,17 @@ i {
   animation-iteration-count: 1;
 }
 
+.show-banner {
+  appearance: none;
+  background: #ededed;
+  border: 0;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin: 0.25rem;
+}
+
 @keyframes banner-in {
   0% {
     transform: translateY(-100%);
@@ -219,15 +210,4 @@ i {
   100% {
     transform: translateY(0);
   }
-}
-
-.show-banner {
-  appearance: none;
-  background: #ededed;
-  border: 0;
-  padding: 1rem 2rem;
-  border-radius: 4px;
-  cursor: pointer;
-  text-transform: uppercase;
-  margin: 0.25rem;
 }

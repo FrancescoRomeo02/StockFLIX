@@ -21,7 +21,6 @@ $_SESSION['url_file'] = 'query';
     <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
     <!-- js query  -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="https://unpkg.com/eva-icons" onload="eva.replace()"></script>
     <title> StockN - Azioni</title>
 </head>
 
@@ -31,20 +30,22 @@ $_SESSION['url_file'] = 'query';
     <!--BARRA DI NAVIGAZIONE-->
     <br /><br />
     <!-- MAIN -->
-    <!-- RICERCA AZIONI -->
+    <!-- BANNER AZIONI -->
     <div class="banners-container">
         <div class="banners">
-            <div class="banner info">
+            <div class="banner <?php echo $_SESSION['type'] ?>">
                 <div class="banner-icon">
-                    <i data-eva="info-outline" data-eva-fill="#ffffff" data-eva-height="48" data-eva-width="48"></i>
+                    <i class="fas fa-plus-circle"></i>
                 </div>
-                <div class="banner-message">Azzione aggiunta al tuo wallet</div>
+                <div class="banner-message"><?php echo $_SESSION['banner_txt'] ?></div>
             </div>
         </div>
     </div>
+    <!-- BANNER AZIONI -->
+    <!-- RICERCA AZIONI -->
     <input type="checkbox" name="" id="check" />
     <div class="box">
-        <input type="text" placeholder="Cerca azioni" id="search" autocomplete="off" />
+        <input type="text" placeholder="Ricerca azioni, premi sulla meteora per aggiungerla al wallet" id="search" autocomplete="off" />
         <label for="check"><i class="fas fa-search"></i></label>
     </div>
     <div id="output">
@@ -123,26 +124,27 @@ $_SESSION['url_file'] = 'query';
                 }
             });
         });
-        //  Follow not Follow
 
+        //  Follow not Follow
         function follow(val) {
             console.log(val.getAttribute('value'));
-            showBanner('.banner.info');
-            setTimeout(hideBanners, 3000);
 
             $.ajax({
-                type: "POST",
+                method: "POST",
                 url: 'http://romeofrancesco.altervista.org/Web/html/obj/follow.php',
                 data: {
                     name: val.getAttribute('value'),
-                    user_id: $_SESSION['user_id']
-                }
+                    user_id: <?php echo $_SESSION['user_id'] ?> "",
+                },
             });
+
+            showBanner('.banner.<?php echo $_SESSION['type'] ?>');
+            setTimeout(hideBanners, 3000);
         }
 
+        // animazioni banner
         const showBanner = (selector) => {
             hideBanners();
-            // Ensure animation plays even if the same alert type is triggered.
             requestAnimationFrame(() => {
                 const banner = document.querySelector(selector);
                 banner.classList.add("visible");
