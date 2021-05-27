@@ -141,7 +141,9 @@ include('./obj/header.php');
   <!-- js animazioni e toggle -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+  <script src="../js/libreria.js" type="text/javascript"></script>
   <script src="../js/app.js" type="text/javascript"></script>
+
   <script>
     AOS.init();
     navSlide();
@@ -163,7 +165,6 @@ include('./obj/header.php');
         });
       }
     };
-    check();
   </script>
 </body>
 
