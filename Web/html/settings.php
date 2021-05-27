@@ -14,6 +14,7 @@ include("./obj/libreria.php");
 
     <link rel="stylesheet" href="../css/log_sing_in.css" />
     <link rel="stylesheet" href="../css/home_page.css" />
+    <link rel="stylesheet" href="../css/settings.css" />
     <title> StockN </title>
 </head>
 <script src="../js/libreria.js" type="text/javascript"></script>
@@ -30,11 +31,38 @@ $nome = $data['nome'];
 $cognome = $data['cognome'];
 $email = $data['email'];
 $password = $data['password'];
+
+//modifica dei dati
+if (isset($_POST['mod_dati'])) {
+    if (isset($_POST['email']) && (!isset($_POST['password']) || !isset($_POST['password2']))) {
+        $query_mod = " UPDATE `user` SET `email`= $_POST[email],`verificato`=0 WHERE `user_id` = '$_POST[user_id]'";
+        if (mysqli_query($con, $query_mod)) {
+            echo '<br><div class="alert"><span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> <strong>ATTENZIONE!</strong>Dati aggiornata, è necessario verificare nuovamente la mail</div>';
+        }
+    };
+    if (isset($_POST['password']) && isset($_POST['password2'])) {
+        $query_mod = " UPDATE `user` SET `password`= $_POST[password],`verificato`=0 WHERE `user_id` = '$_POST[user_id]'";
+        if (mysqli_query($con, $query_mod)) {
+            echo  '<br><div class="alert"><span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> <strong>ATTENZIONE!</strong> Dati aggiornata, è necessario verificare nuovamente la mail</div>';
+        }
+    }
+}
+
+//cancellazione wallet
+if (isset($_POST['dell_wallet'])) {
+    $query_wallet_id = "SELECT `wallet_id` FROM `wallet` WHERE `user_id` = '$_SESSION[user_id]'";
+    $temp = mysqli_query($con, $query_wallet_id);
+    $data = mysqli_fetch_array($temp);
+    $query_rem = "DELETE FROM `wallet_stock` WHERE `wallet_id` = '$data[wallet_id]'";
+    if (mysqli_query($con, $query_rem)) {
+        echo '<br><div class="alert"><span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> <strong>ATTENZIONE!</strong>Il tuo wallet ora è vuoto</div>';
+    }
+}
 ?>
 
 <body>
     <!--BARRA DI NAVIGAZIONE-->
-    <?php include('./html/obj/nav.php'); ?>
+    <?php include('./obj/nav.php'); ?>
     <!--BARRA DI NAVIGAZIONE-->
     <div class="container">
         <div class="forms-container">
@@ -64,8 +92,8 @@ $password = $data['password'];
                         <i class="fas fa-key" style="color: #4481eb"></i>
                         <input type="password" placeholder="Nuova password" name="password2" class="pass" />
                     </div>
-                    <input type="submit" class="btn" value="modifica campi" name="modifica_campi" />
-                    <input type="submit" class="btn" value="cancella wallet" name="cancella_wallet" />
+                    <input type="submit" class="btn" value="cancella wallet" name="dell_wallet" />
+                    <input type="submit" class="btn" value="modifica campi" name="mod_datit" />
                 </form>
             </div>
         </div>
@@ -84,12 +112,21 @@ $password = $data['password'];
                 <div class="content">
                     <h3>Sei gia uno di noi ?</h3>
                     <p>Accedi al tuo account e goditi tutte le nostre offerte.</p>
-                    <button class="btn transparent" id="sign-in-btn">Accedi</button>
+                    <button class="btn transparent" id="sign-in-btn" onclick="location.href='mailto:StockN_help@gmail.com?subject=Richiesta%20supporto%20dati%20account'">Accedi</button>
                 </div>
                 <img src="../img/log_sing_in/register.svg" class="image" alt="" />
             </div>
         </div>
     </div>
+    <script src="../js/app.js"></script>
+    <script>
+        const nav = document.querySelector("nav");
+        nav.classList.add("dark");
+        const nav_link = document.querySelectorAll(".nav_links li a");
+        nav_link.forEach((link) => {
+            link.classList.add("white_text");
+        });
+    </script>
 </body>
 
 </html>
