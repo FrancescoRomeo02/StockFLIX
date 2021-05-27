@@ -108,7 +108,7 @@ if (!isset($_SESSION['icon'])) $_SESSION['icon'] = 'fa-bug';
                 var query = $(this).val();
                 if (query != "") {
                     $.ajax({
-                        url: "http://romeofrancesco.altervista.org/Web/html/obj/ajax_db_search.php",
+                        url: "https://romeofrancesco.altervista.org/Web/html/obj/ajax_db_search.php",
                         method: "POST",
                         data: {
                             query: query
@@ -131,7 +131,7 @@ if (!isset($_SESSION['icon'])) $_SESSION['icon'] = 'fa-bug';
         function follow(val) {
             $.ajax({
                 method: "POST",
-                url: 'http://romeofrancesco.altervista.org/Web/html/obj/follow.php',
+                url: 'https://romeofrancesco.altervista.org/Web/html/obj/follow.php',
                 data: {
                     name: val.getAttribute('value'),
                     user_id: <?php echo $_SESSION['user_id'] ?>,
@@ -149,7 +149,7 @@ if (!isset($_SESSION['icon'])) $_SESSION['icon'] = 'fa-bug';
 
             $.ajax({
                 method: "POST",
-                url: 'http://romeofrancesco.altervista.org/Web/html/obj/unfollow.php',
+                url: 'https://romeofrancesco.altervista.org/Web/html/obj/unfollow.php',
                 data: {
                     name: val.getAttribute('value'),
                     user_id: <?php echo $_SESSION['user_id'] ?>,

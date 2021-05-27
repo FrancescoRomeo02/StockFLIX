@@ -1,6 +1,6 @@
 <?php
 include('../obj/header.php');
-$glob_url = 'http://romeofrancesco.altervista.org/Data/csv/';
+$glob_url = 'https://romeofrancesco.altervista.org/Data/csv/';
 $chart_div_array = array();
 /* STOCKS NAME FROM DB */
 $query_wallet_id = "SELECT `wallet_id` FROM `wallet` WHERE `user_id` = '$_SESSION[user_id]'";

@@ -5,7 +5,7 @@ import os
 
 
 def hconn_send(name):
-    url = 'http://romeofrancesco.altervista.org/Data/csv_upload.php'
+    url = 'https://romeofrancesco.altervista.org/Data/csv_upload.php'
     file = {'myfile': open(name, 'rb')}
     r = requests.post(url, files=file)
 

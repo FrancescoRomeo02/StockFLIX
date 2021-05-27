@@ -8,6 +8,7 @@ Progetto esame di maturita' 2020/2021
 -fix navbar
 -bottono logout
 
+-chiedere come risolvere questione banner
 -fix testo aggiungi/rimuovi azione
 -cambiare testo ricerca azioni
 -css per utenti pro
@@ -27,6 +28,10 @@ Progetto esame di maturita' 2020/2021
 -fix css banner azioni
 -css wallet vuoto
 
+-bloccare furto di sessione
+-bloccare attacchi forza bruta
+-bloccare sql injection
+
 ## -ottimizzare tempi py
 
 1. ANALISI GENERALE DEL PROBLEMA
@@ -36,6 +41,7 @@ Progetto esame di maturita' 2020/2021
    3B) PROGETTAZIONE LOGICA
 4. DESCRIZIONE DELL' APPLICAZIONE <progetto di una parte significativa in php>
    APPROFONDIMENTO DI SISTEMI E RETI
+
    iG9uvSgT4uaTS6F
 
     <!-- BANNER AZIONI -->
