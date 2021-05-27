@@ -24,6 +24,33 @@ foreach ($data2 as $key => $value) {
     $div .= include('../obj/chart_page.php');
     $div .= " </div></div>";
     array_push($chart_div_array, $div);
+
+    $count = 0;
+    if (($handle = fopen('../../../Data/csv/' . $data3['symbol'] . '_y.csv', "r")) !== FALSE) {
+        while (($row =   fgetcsv($handle)) !== FALSE && $count < 3) {
+            if ($count == 0) {
+                $count++;
+                continue;
+            }
+            if ($count == 1) {
+                $count++;
+                $new = $row[1];
+                continue;
+            }
+            if ($count == 2) {
+                $count++;
+                $old = $row[1];
+                continue;
+            }
+        }
+        fclose($handle);
+        $query_rem = "DELETE FROM `stock_info` WHERE `stock_id` = '$value[stock_id]'";
+        mysqli_query($con, $query_rem);
+
+        $var = round(((($new) / ($old)) * 100) - 100, 3);
+        $query = "INSERT INTO `stock_info`(`stock_id`, `prezzo`, `old_prezzo`, `variazione`) VALUES ('$value[stock_id]', '$new', '$old', '$var')";
+        mysqli_query($con, $query);
+    }
 }
 
 /* STOCKS NAME FROM DB  */
@@ -69,13 +96,39 @@ foreach ($data2 as $key => $value) {
         <div class="container_stock">
             <!--    CHART DINAMICO    -->
             <?php
+            $count_div = 0;
             foreach ($chart_div_array as $chart_div) {
                 echo $chart_div;
+                $count_div++;
+            }
+            if ($count_div == 0) {
+                echo "qui non c'è ancora nulla";
             }
             ?>
             <!--    CHART DINAMICO    -->
         </div>
         <!-- CHART STOCKS-->
+        <!-- DEMO SHOP -->
+        <?php
+        $query  = "SELECT * FROM stock, stock_info, wallet_stock, wallet WHERE stock_info.stock_id = wallet_stock.stock_id AND wallet_stock.wallet_id = wallet.wallet_id AND stock.stock_id = stock_info.stock_id AND wallet.user_id = '$_SESSION[user_id]' ";
+        $temp = mysqli_query($con, $query);
+        $info = array();
+        if (mysqli_num_rows($temp)) {
+            while ($row = mysqli_fetch_array($temp, MYSQLI_ASSOC)) {
+                $info[] = $row;
+            }
+        }
+
+        for ($i = 0; $i < sizeof($info); $i++) {
+            $card['symbol'] = $info[$i]['symbol'];
+            $card['stock_owned'] = 10;
+            $card['value'] = $info[$i]['prezzo'];
+            $card['variazione'] = $info[$i]['variazione'];
+            include('../obj/data_card.php');
+        }
+        ?>
+        <!-- DEMO SHOP -->
+        <!-- SEZIONE IMMAGINE E TESTO -->
     </div>
     <!-- MAIN -->
     <!-- FOOTER -->

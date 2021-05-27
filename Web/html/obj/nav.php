@@ -15,6 +15,7 @@ if (!$_SESSION['login']) {
         <?php echo  $title ?>
         <li><a href="https://romeofrancesco.altervista.org/Web/html/services/stocks_data.php">Azioni</a></li>
         <li><a href="https://romeofrancesco.altervista.org/Web/html/settings.php">Impostazioni</a></li>
+        <li><a href="https://romeofrancesco.altervista.org/Web/html/logout.php">Logout</a></li>
     </ul>
     <div id="burger">
         <div class="line1"></div>

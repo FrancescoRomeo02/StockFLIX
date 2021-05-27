@@ -2,11 +2,8 @@
 
 Progetto esame di maturita' 2020/2021
 -fare il pdf
--fix recupero password
--pagina mercato demo
--controllo se utente loggato/verificato
--fix navbar
 -bottono logout
+-aggiungere numero di azioni
 
 -chiedere come risolvere questione banner
 -fix testo aggiungi/rimuovi azione
@@ -27,6 +24,7 @@ Progetto esame di maturita' 2020/2021
 -fix css buy
 -fix css banner azioni
 -css wallet vuoto
+-demo card css fix
 
 -bloccare furto di sessione
 -bloccare attacchi forza bruta

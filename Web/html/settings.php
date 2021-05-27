@@ -57,6 +57,7 @@ if (isset($_POST['dell_wallet'])) {
     $query_rem = "DELETE FROM `wallet_stock` WHERE `wallet_id` = '$data[wallet_id]'";
     if (mysqli_query($con, $query_rem)) {
     }
+    header('Location: ./services/wallet.php')
 }
 ?>
 
@@ -107,9 +108,7 @@ if (isset($_POST['dell_wallet'])) {
                     <button class="btn transparent" id="sign-in-btn" onclick="location.href='mailto:StockN_help@gmail.com?subject=Richiesta%20supporto%20dati%20account'">
                         Accedi
                     </button>
-                </div> <button><a href="android.php" style="text-decoration: none; color:inherit;">
-                        Find More
-                </button></a>
+                </div>
                 <img src="../img/log_sing_in/settings.svg" class="image" alt="" />
             </div>
             <div class="panel right-panel">
@@ -117,7 +116,7 @@ if (isset($_POST['dell_wallet'])) {
                     <h3>Sei gia uno di noi ?</h3>
                     <p>Accedi al tuo account e goditi tutte le nostre offerte.</p>
                     <button class="btn transparent" id="sign-in-btn"><a href='mailto:StockN_help@gmail.com?subject=Richiesta%20supporto%20dati%20account' style="text-decoration: none; color:white;">
-                            Find More
+
                     </button></a>
                 </div>
                 <img src="../img/log_sing_in/register.svg" class="image" alt="" />
