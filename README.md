@@ -31,6 +31,7 @@ Progetto esame di maturita' 2020/2021
 -bloccare furto di sessione
 -bloccare attacchi forza bruta
 -bloccare sql injection
+-fix creazione wallet su verifica della mail
 
 ## -ottimizzare tempi py
 

@@ -19,5 +19,19 @@ if (mysqli_query($con, $query_rem)) {
     $_SESSION['txt'] = 'Non è stato possibile rimuovere la tua azione';
     $_SESSION['icon'] = 'fa-exclamation-triangle';
 }
+function updatefile($filepath)
+{
 
-echo 'ci siamo';
+    $con = mysqli_connect('localhost', 'romeofrancesco', '');
+    $con_db = (mysqli_select_db($con, 'my_romeofrancesco'));
+    $data_file = fopen($filepath, "w") or die('Errore =(');
+    $query = 'SELECT distinct symbol FROM wallet_stock, stock WHERE wallet_stock.stock_id = stock.stock_id';
+    $temp = mysqli_query($con, $query);
+    $data = mysqli_fetch_all($temp, MYSQLI_ASSOC);
+    foreach ($data as $array) {
+        fwrite($data_file, $array['symbol']  . "\n");
+    }
+    fclose($data_file);
+}
+
+updatefile('../../../Data/stockname.txt');

@@ -163,6 +163,7 @@ include('./obj/header.php');
         });
       }
     };
+    check();
   </script>
 </body>
 

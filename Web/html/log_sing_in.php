@@ -109,9 +109,9 @@ if (isset($_POST['registrati'])) {
           ?>
         </form>
         <!-------------------
-          form registarzione  
+          form registrazione  
         -------------------->
-        <form action="#" class="sign-up-form" method="POST" onsubmit="criptreg()" id="registarzione">
+        <form action="#" class="sign-up-form" method="POST" onsubmit="criptreg()" id="registrazione">
           <h2 class="title">Registrati a <span style="color: <?php echo $color ?>;">StockN</span></h2>
           <div class="input-field">
             <i class="fas fa-user" style="color: #4481eb"></i>

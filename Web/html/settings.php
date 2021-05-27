@@ -34,16 +34,17 @@ $password = $data['password'];
 
 //modifica dei dati
 if (isset($_POST['mod_dati'])) {
-    if (isset($_POST['email']) && (!isset($_POST['password']) || !isset($_POST['password2']))) {
-        $query_mod = " UPDATE `user` SET `email`= $_POST[email],`verificato`=0 WHERE `user_id` = '$_POST[user_id]'";
+    if (!empty($_POST['email'])) {
+        $query_mod = " UPDATE `user` SET `email`= '$_POST[email]',`verificato`=0 WHERE `user_id` = '$_SESSION[user_id]'";
         if (mysqli_query($con, $query_mod)) {
-            echo '<br><div class="alert"><span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> <strong>ATTENZIONE!</strong>Dati aggiornata, è necessario verificare nuovamente la mail</div>';
+            mail_send('stockN@info.com', $email, $link, 'Attiva il tuo account con la tua nuova mail');
         }
     };
-    if (isset($_POST['password']) && isset($_POST['password2'])) {
-        $query_mod = " UPDATE `user` SET `password`= $_POST[password],`verificato`=0 WHERE `user_id` = '$_POST[user_id]'";
-        if (mysqli_query($con, $query_mod)) {
-            echo  '<br><div class="alert"><span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> <strong>ATTENZIONE!</strong> Dati aggiornata, è necessario verificare nuovamente la mail</div>';
+    if (!empty($_POST['password']) && !empty($_POST['password2'])) {
+        $query_mod = " UPDATE `user` SET `password`= '$_POST[password2]',`verificato`=0 WHERE `user_id` = '$_SESSION[user_id]'";
+        if ($password == $_POST['password']) {
+            if (mysqli_query($con, $query_mod)) {
+            }
         }
     }
 }
@@ -55,7 +56,6 @@ if (isset($_POST['dell_wallet'])) {
     $data = mysqli_fetch_array($temp);
     $query_rem = "DELETE FROM `wallet_stock` WHERE `wallet_id` = '$data[wallet_id]'";
     if (mysqli_query($con, $query_rem)) {
-        echo '<br><div class="alert"><span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> <strong>ATTENZIONE!</strong>Il tuo wallet ora è vuoto</div>';
     }
 }
 ?>
@@ -68,9 +68,9 @@ if (isset($_POST['dell_wallet'])) {
         <div class="forms-container">
             <div class="signin-signup">
                 <!-------------------
-                form registarzione  
+                form registrazione  
                 -------------------->
-                <form action="#" class="sign-up-form" method="POST" id="registarzione" style="opacity: 1;" onsubmit="criptreg()">
+                <form action="#" class="sign-up-form" method="POST" id="registrazione" style="opacity: 1;" onsubmit="criptset()">
                     <h2 class="title">Ecco i tuoi <span style="color: <?php echo $color ?>;">Dati</span></h2>
                     <div class="input-field">
                         <i class="fas fa-user" style="color: #606c81"></i>
@@ -93,7 +93,7 @@ if (isset($_POST['dell_wallet'])) {
                         <input type="password" placeholder="Nuova password" name="password2" class="pass" />
                     </div>
                     <input type="submit" class="btn" value="cancella wallet" name="dell_wallet" />
-                    <input type="submit" class="btn" value="modifica campi" name="mod_datit" />
+                    <input type="submit" class="btn" value="modifica campi" name="mod_dati" />
                 </form>
             </div>
         </div>
@@ -118,7 +118,6 @@ if (isset($_POST['dell_wallet'])) {
             </div>
         </div>
     </div>
-    <script src="../js/app.js"></script>
     <script>
         const nav = document.querySelector("nav");
         nav.classList.add("dark");
