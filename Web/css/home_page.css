@@ -4,12 +4,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 
 html {
   background: linear-gradient(60deg, #ecdfff, #dae9f5);
   overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
