@@ -18,7 +18,7 @@ include('./html/obj/header.php');
   <!-- js icone  -->
   <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
 
-  <title> StockN </title>
+  <title> StockFLIX </title>
 </head>
 
 <body>

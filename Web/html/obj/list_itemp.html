@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="../../css/list_buy_sell.css" />
+<main>
+  <ol class="gradient-list">
+    <li>
+      <div class="symbol">AAPL</div>
+      <div class="name">Apple Inc. - Common Stock</div>
+      <div class="price">3425$</div>
+      <form action="" method="post">
+        <div class="qnt">
+          <input
+            type="number"
+            name="azioni"
+            id=""
+            min="1"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+          />
+        </div>
+        <button name="add">ADD</button>
+        <button name="dell">DELL</button>
+      </form>
+    </li>
+  </ol>
+</main>

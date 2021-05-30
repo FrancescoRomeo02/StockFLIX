@@ -357,7 +357,7 @@ button {
   color: #141414;
 }
 
-#services .service_item:not(.free):not(.pay)::after {
+#services .service_item:not(.free):not(.pay):not(.rank)::after {
   content: "";
   position: absolute;
   left: 0;

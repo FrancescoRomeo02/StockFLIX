@@ -10,7 +10,7 @@ include("./obj/libreria.php")
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/log_sing_in.css">
-    <title>StockN - Recupera dati</title>
+    <title>StockFLIX - Recupera dati</title>
 </head>
 <?php
 if (isset($_POST['invia']) && $_POST['email'] != '') {
@@ -22,7 +22,7 @@ if (isset($_POST['invia']) && $_POST['email'] != '') {
     if ($data != null && $_POST['email'] == $data['email']) {
         $body = $data['hash'];
         //invoco la funzione per l'invio della mail per il reset della password
-        mail_send('stockN@assistenza.com', $email, 'Modifica della password', $body);
+        mail_send('StockFLIX@assistenza.com', $email, 'Modifica della password', $body);
     } else {
         echo '<br> <h3>La mail non e\' presente nel database</h3>';
     }
@@ -39,7 +39,7 @@ if (isset($_POST['invia']) && $_POST['email'] != '') {
                     form accesso  
                 -------------------->
                 <form action="#" class="sign-in-form" method="POST">
-                    <h2 class="title">Recupera le credenziali di <span style="color: <?php echo $color ?>;">StockN</span> </h2>
+                    <h2 class="title">Recupera le credenziali di <span style="color: <?php echo $color ?>;">StockFLIX</span> </h2>
                     <div class="input-field">
                         <i class="fas fa-at" style="color: #4481eb"></i>
                         <input required type="email" placeholder="Email" name="email" />

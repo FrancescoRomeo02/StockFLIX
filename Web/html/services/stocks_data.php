@@ -23,7 +23,7 @@ if (!isset($_SESSION['icon'])) $_SESSION['icon'] = 'fa-bug';
     <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
     <!-- js query  -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <title> StockN - Azioni</title>
+    <title> StockFLIX - Azioni</title>
 </head>
 
 <body>

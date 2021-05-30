@@ -13,7 +13,7 @@ include("./obj/libreria.php");
   <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="../css/log_sing_in.css" />
-  <title> StockN </title>
+  <title> StockFLIX </title>
 </head>
 <script src="../js/libreria.js" type="text/javascript"></script>
 <?php
@@ -66,7 +66,7 @@ if (isset($_POST['registrati'])) {
       $query_add = "INSERT INTO user (`nome`, `cognome`, `email`, `password`, `hash`) VALUES ('$nome', '$cognome', '$email', '$password', '$hash')";
       if (mysqli_query($con, $query_add)) {
         $link = "https://romeofrancesco.altervista.org/Web/html/obj/datacheck.php?email=$email&hash=$hash";
-        mail_send('stockN@info.com', $email, $link, 'Attiva il tuo account');
+        mail_send('StockFLIX@info.com', $email, $link, 'Attiva il tuo account');
         $_SESSION['link'] = $link;
         $msr2 = 'Controlla la mail ed attiva il tuo account ';
       } else {
@@ -92,7 +92,7 @@ if (isset($_POST['registrati'])) {
           form accesso  
         -------------------->
         <form action="#" class="sign-in-form" method="POST" onsubmit="criptacc()">
-          <h2 class="title">Accedi a <span style="color: <?php echo $color ?>;">StockN</span> </h2>
+          <h2 class="title">Accedi a <span style="color: <?php echo $color ?>;">StockFLIX</span> </h2>
           <div class="input-field">
             <i class="fas fa-at" style="color: #4481eb"></i>
             <input required type="email" placeholder="Email" name="email" />
@@ -112,7 +112,7 @@ if (isset($_POST['registrati'])) {
           form registrazione  
         -------------------->
         <form action="#" class="sign-up-form" method="POST" onsubmit="criptreg()" id="registrazione">
-          <h2 class="title">Registrati a <span style="color: <?php echo $color ?>;">StockN</span></h2>
+          <h2 class="title">Registrati a <span style="color: <?php echo $color ?>;">StockFLIX</span></h2>
           <div class="input-field">
             <i class="fas fa-user" style="color: #4481eb"></i>
             <input required type="text" placeholder="Nome" name="nome" />
@@ -147,7 +147,7 @@ if (isset($_POST['registrati'])) {
         <div class="content">
           <h3>Sei nuovo qui ?</h3>
           <p>
-            Entra anche tu in StockN per poter usufruire dei nostri fantastici
+            Entra anche tu in StockFLIX per poter usufruire dei nostri fantastici
             servizi, non lasciarti sfuggire l'occasione.
           </p>
           <button class="btn transparent" id="sign-up-btn">Registrati</button>

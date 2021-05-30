@@ -15,7 +15,7 @@ include("./obj/libreria.php");
     <link rel="stylesheet" href="../css/log_sing_in.css" />
     <link rel="stylesheet" href="../css/home_page.css" />
     <link rel="stylesheet" href="../css/settings.css" />
-    <title> StockN </title>
+    <title> StockFLIX </title>
 </head>
 <script src="../js/libreria.js" type="text/javascript"></script>
 <?php
@@ -37,7 +37,7 @@ if (isset($_POST['mod_dati'])) {
     if (!empty($_POST['email'])) {
         $query_mod = " UPDATE `user` SET `email`= '$_POST[email]',`verificato`=0 WHERE `user_id` = '$_SESSION[user_id]'";
         if (mysqli_query($con, $query_mod)) {
-            mail_send('stockN@info.com', $email, $link, 'Attiva il tuo account con la tua nuova mail');
+            mail_send('StockFLIX@info.com', $email, $link, 'Attiva il tuo account con la tua nuova mail');
         }
     };
     if (!empty($_POST['password']) && !empty($_POST['password2'])) {
@@ -105,7 +105,7 @@ if (isset($_POST['dell_wallet'])) {
                     <p>
                         Contatta il nostro servizio clienti, risponderemo il prima possibile.
                     </p>
-                    <button class="btn transparent" id="sign-in-btn" onclick="location.href='mailto:StockN_help@gmail.com?subject=Richiesta%20supporto%20dati%20account'">
+                    <button class="btn transparent" id="sign-in-btn" onclick="location.href='mailto:StockFLIX_help@gmail.com?subject=Richiesta%20supporto%20dati%20account'">
                         Accedi
                     </button>
                 </div>

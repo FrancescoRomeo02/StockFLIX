@@ -47,7 +47,7 @@ foreach ($data2 as $key => $value) {
         $query_rem = "DELETE FROM `stock_info` WHERE `stock_id` = '$value[stock_id]'";
         mysqli_query($con, $query_rem);
 
-        $var = round(((($new) / ($old)) * 100) - 100, 3);
+        $var = round(((($new) / ($old)) * 100) - 100, 2);
         $query = "INSERT INTO `stock_info`(`stock_id`, `prezzo`, `old_prezzo`, `variazione`) VALUES ('$value[stock_id]', '$new', '$old', '$var')";
         mysqli_query($con, $query);
     }
@@ -71,7 +71,7 @@ foreach ($data2 as $key => $value) {
     <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
     <!-- js query  -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <title> StockN - Wallet</title>
+    <title> StockFLIX - Wallet</title>
 </head>
 
 <body>
@@ -110,7 +110,11 @@ foreach ($data2 as $key => $value) {
         <!-- CHART STOCKS-->
         <!-- DEMO SHOP -->
         <?php
-        $query  = "SELECT * FROM stock, stock_info, wallet_stock, wallet WHERE stock_info.stock_id = wallet_stock.stock_id AND wallet_stock.wallet_id = wallet.wallet_id AND stock.stock_id = stock_info.stock_id AND wallet.user_id = '$_SESSION[user_id]' ";
+        $query  = "SELECT * FROM stock, stock_info, wallet_stock, wallet 
+                    WHERE stock_info.stock_id = wallet_stock.stock_id 
+                    AND wallet_stock.wallet_id = wallet.wallet_id 
+                    AND stock.stock_id = stock_info.stock_id 
+                    AND wallet.user_id = '$_SESSION[user_id]' ";
         $temp = mysqli_query($con, $query);
         $info = array();
         if (mysqli_num_rows($temp)) {

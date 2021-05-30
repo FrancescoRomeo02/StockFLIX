@@ -168,13 +168,6 @@ function linkpage(page) {
         location.replace(linkpage); 
 }
 
-function criptreg() {
-    var password = document.getElementsByClassName('pass')[1].value;
-    var password2 = document.getElementsByClassName('pass')[2].value;
-    var password = document.getElementsByClassName('pass')[1].value = md5(password);
-    var password2 = document.getElementsByClassName('pass')[2].value = md5(password2);
-};
-
 function criptset() {
     var password = document.getElementsByClassName('pass')[0].value;
     var password2 = document.getElementsByClassName('pass')[1].value;

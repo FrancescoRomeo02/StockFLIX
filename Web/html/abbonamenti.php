@@ -14,7 +14,7 @@ include('./obj/header.php');
 
   <!-- css animazioni -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <title>StockN - Abbonamenti</title>
+  <title>StockFLIX - Abbonamenti</title>
 </head>
 
 <body>
@@ -114,7 +114,7 @@ include('./obj/header.php');
             <li><s>A.I. dedicata</s></li>
             <li><s>Supporto 24/7</s></li>
           </ul>
-          <a href="#" class="button button1">Iscriviti</a>
+          <a href="https://romeofrancesco.altervista.org/Web/html/log_sing_in.php" class="button button1">Iscriviti</a>
         </div>
       </div>
       <div data-aos="fade-left">
@@ -128,7 +128,7 @@ include('./obj/header.php');
             <li>A.I. dedicata</li>
             <li>Supporto 24/7</li>
           </ul>
-          <a href="#" class="button button2">Abbonati</a>
+          <a href="https://romeofrancesco.altervista.org/Web/html/pay.php" class="button button2">Abbonati</a>
         </div>
       </div>
     </div>

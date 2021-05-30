@@ -11,8 +11,15 @@ include('./html/obj/header.php');
 
   <link rel="stylesheet" href="../css/home_page.css">
   <link rel="stylesheet" href="../css/pay.css" />
-  <title> StockN - Pagameneto </title>
+  <title> StockFLIX - Pagameneto </title>
 </head>
+<?php
+if (isset($_POST['paga'])) {
+  $query = "UPDATE `user` SET `pro_user`=1,`patrimonio`=10000 WHERE `user_id` = $_SESSION[user_id]";
+  mysqli_query($con, $query);
+  header('Location: ../home_page.php');
+}
+?>
 
 <body>
   <!--BARRA DI NAVIGAZIONE-->
@@ -22,7 +29,7 @@ include('./html/obj/header.php');
   <!-- MAIN -->
   <div class="container">
     <div class="payment">
-      <form class="form">
+      <form class="form" method="POST">
         <h2>Dettagli di pagamento</h2>
 
         <div class="form__name form__detail">
@@ -75,7 +82,7 @@ include('./html/obj/header.php');
           </div>
         </div>
 
-        <button type="submit" class="form__btn">Conferma</button>
+        <button type="submit" class="form__btn" name="paga">Conferma</button>
       </form>
     </div>
     <a href="https://dribbble.com/myacode" class="dribbble" target="_blank">

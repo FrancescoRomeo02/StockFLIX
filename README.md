@@ -1,30 +1,30 @@
-# StockN
+# StockFLIX
 
 Progetto esame di maturita' 2020/2021
 -fare il pdf
--bottono logout
--aggiungere numero di azioni
 
--chiedere come risolvere questione banner
--fix testo aggiungi/rimuovi azione
--cambiare testo ricerca azioni
--css per utenti pro
--controllo sul file per evitare azioni doppie
--modifiche file per utenti pro
--fix grafico home azioni
--css fix browser diversi
--sistemare css pagina azioni
--controllo grammatica
--testo pagina home
--css pagina abbonamento
--css php pagina pay (invio mail conferma abbonamento e cambio css)
--cambiare numero di azioni possibili
--modifica testo pagina buy
--css azioni possedute
--fix css buy
--fix css banner azioni
--css wallet vuoto
--demo card css fix
+- ABBONAMNETO NON FUNZIONA A CAUSA DELLE SESSIONI ( PAGINE PAY E ABBONAMNETI)
+
+- risolvere questione banner
+  -fix testo aggiungi/rimuovi azione
+  -cambiare testo ricerca azioni
+  -css per utenti pro
+  -fix grafico home azioni
+  -css fix browser diversi
+  -sistemare css pagina azioni
+  -controllo grammatica
+  -testo pagina home
+  -css pagina abbonamento
+  -css php pagina pay (invio mail conferma abbonamento e cambio css)
+  -cambiare numero di azioni possibili
+  -modifica testo pagina buy
+  -css azioni possedute
+  -fix css buy
+  -fix css banner azioni
+  -css wallet vuoto
+  -demo card css fix
+  -fix logout
+  -css style copia da: https://www.google.com/finance/
 
 -bloccare furto di sessione
 -bloccare attacchi forza bruta
