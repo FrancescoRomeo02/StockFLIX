@@ -13,11 +13,13 @@ def hconn_send(name):
 def main():
     os.chdir("C:/Users/Francesco Romeo/Documents/Scuola/StockN/Data")
     for file in glob.glob("*.csv"):
+        print(f'Upload di {file}')
         name = "C:/Users/Francesco Romeo/Documents/Scuola/StockN/Data/" + file
         hconn_send(name)
         os.remove(name)
-    print('upload completato.')
-    print('Script concluso')
+        print('|___Upload completato.')
+    print('Tutti i file sono stati caricati con successo.')
+    print('Script completato')
 
 
 main()
