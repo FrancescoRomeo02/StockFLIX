@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -47,6 +47,7 @@ nav {
   text-transform: uppercase;
   color: #59b4ff;
   font-size: 22px;
+  font-family: "Bebas Neue", cursive;
 }
 
 .logo span {
