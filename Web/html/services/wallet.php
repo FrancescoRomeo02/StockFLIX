@@ -102,7 +102,7 @@ foreach ($data2 as $key => $value) {
                 $count_div++;
             }
             if ($count_div == 0) {
-                echo "qui non c'è ancora nulla";
+                echo "<h4>qui non c'è ancora nulla, se non l'hai ancora fatto accedi al tuo profilo oppure aggiungi alcune azioni al tuo wallet</h4>";
             }
             ?>
             <!--    CHART DINAMICO    -->

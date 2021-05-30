@@ -1,6 +1,7 @@
 <?php
 include('./obj/header.php');
 include("./obj/libreria.php");
+if (!isset($_SESSION['user_id'])) header('Location: ./obj/accesso_negato.html');
 ?>
 <!DOCTYPE html>
 <html lang="it">

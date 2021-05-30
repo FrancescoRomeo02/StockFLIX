@@ -53,7 +53,7 @@ include('./html/obj/header.php');
       <div class="services container">
         <div class="service_top">
           <h1 class="section_title">
-            <span>noi</span> siamo Stock<span>N</span>
+            <span>noi</span> siamo Stock<span>FLIX</span>
           </h1>
           <p>
             Ecco cosa ti offriamo, leggi, informati e <span>capisci</span> se
@@ -69,7 +69,7 @@ include('./html/obj/header.php');
             <h2>Grafici</h2>
             <p>
               Visione l'andamento delle <span>tue</span> azioni attraverso comodi grafici. <br>
-              Tieni sotto controlle le tue azioni su qualsiasi dispositivo grazie alla versione <span>mobile</span> del nostro servizio.
+              Tieni sotto controlle le tue azioni su tutti i tui <span>dispositivi</span>.
             </p>
           </div>
           <!-- CARD -->
@@ -101,7 +101,7 @@ include('./html/obj/header.php');
             <div class="icon"><i class="fas fa-envelope fa-3x" style="color: rgb(221, 128, 230);"></i></div>
             <h2>Mai solo</h2>
             <p>
-              Non ti lasceremo <span>mai solo</span>. il mercato si muove rapido, noi lo siamo di più <br> riceverai <span>costanti mail</span> sull'andamento delle tue azioni.
+              Non ti lasceremo <span>mai solo</span>. il mercato si muove rapido, noi lo siamo di più riceverai <span>costanti mail</span> sull'andamento delle tue azioni.
             </p>
           </div>
           <!-- CARD -->

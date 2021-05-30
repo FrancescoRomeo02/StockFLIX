@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 .fill:hover,
 .fill:focus {
   box-shadow: inset 0 0 0 2em var(--hover);
@@ -86,6 +88,7 @@
 }
 
 button {
+  font-family: "Bebas Neue", cursive !important;
   color: var(--color);
   transition: 0.25s;
 }

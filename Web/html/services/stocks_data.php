@@ -47,7 +47,7 @@ if (!isset($_SESSION['icon'])) $_SESSION['icon'] = 'fa-bug';
     <!-- RICERCA AZIONI -->
     <input type="checkbox" name="" id="check" />
     <div class="box">
-        <input type="text" placeholder="Ricerca azioni, premi sulla meteora per aggiungerla al wallet" id="search" autocomplete="off" />
+        <input type="text" placeholder="Ricerca azioni" id="search" autocomplete="off" />
         <label for="check"><i class="fas fa-search"></i></label>
     </div>
     <div id="output">

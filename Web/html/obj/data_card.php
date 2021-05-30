@@ -1,7 +1,7 @@
 <div class="slide-container">
   <div class="wrapper">
     <div class="stock-card barbarian">
-      <div class="stock-card__level stock-card__level--barbarian">Stock<span>N</span></div>
+      <div class="stock-card__level stock-card__level--barbarian">Stock<span>FLIX</span></div>
       <div class="stock-card__unit-name"><?php echo $card['symbol'] ?></div>
       <div class="stock-card__unit-stats stock-card__unit-stats--barbarian clearfix">
         <div class="one-third">
