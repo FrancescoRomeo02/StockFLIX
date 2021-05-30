@@ -1,6 +1,5 @@
 # StockFLIX Romeo Francesco
-
-- Progetto esame di maturita' 2020/2021
+Progetto esame di maturita' 2020/2021
 
 # Cose da finire:
 
