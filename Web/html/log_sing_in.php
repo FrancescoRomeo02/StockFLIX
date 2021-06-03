@@ -133,7 +133,7 @@ if (isset($_POST['registrati'])) {
             <i class="fas fa-key" style="color: #4481eb"></i>
             <input required type="password" placeholder="Password" name="password2" class="pass" />
           </div>
-          <input type="submit" class="btn" value="Regisatrti" name="registrati" />
+          <input type="submit" class="btn" value="Registrati" name="registrati" />
           <?php
           if ($errore_account) {
             echo $msr2;
