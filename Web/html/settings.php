@@ -72,7 +72,7 @@ if (isset($_POST['dell_wallet'])) {
                 <!-------------------
                 form registrazione  
                 -------------------->
-                <form action="#" class="sign-up-form" method="POST" id="registrazione" style="opacity: 1;" onsubmit="criptset()">
+                <form action="#" class="sign-up-form" method="POST" id="registrazione" style="opacity: 1;" onsubmit="criptreg()">
                     <h2 class="title">Ecco i tuoi <span style="color: <?php echo $color ?>;">Dati</span></h2>
                     <div class="input-field">
                         <i class="fas fa-user" style="color: #606c81"></i>

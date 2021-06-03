@@ -168,7 +168,7 @@ function linkpage(page) {
         location.replace(linkpage); 
 }
 
-function criptset() {
+function criptreg() {
     var password = document.getElementsByClassName('pass')[0].value;
     var password2 = document.getElementsByClassName('pass')[1].value;
     document.getElementsByClassName('pass')[0].value = md5(password);
