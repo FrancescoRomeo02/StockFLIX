@@ -1,8 +1,5 @@
 <?php
 include('../obj/header.php');
-if (!isset($_SESSION['type'])) $_SESSION['type'] = 'error';
-if (!isset($_SESSION['txt'])) $_SESSION['txt'] = 'Qualcosa è andato storto';
-if (!isset($_SESSION['icon'])) $_SESSION['icon'] = 'fa-bug';
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -32,18 +29,42 @@ if (!isset($_SESSION['icon'])) $_SESSION['icon'] = 'fa-bug';
     <!--BARRA DI NAVIGAZIONE-->
     <br /><br />
     <!-- MAIN -->
-    <!-- BANNER AZIONI -->
+    <!-- BANNER Errore -->
     <div class="banners-container">
         <div class="banners">
-            <div class="banner <?php echo $_SESSION['type'] ?>">
+            <div class="banner error">
                 <div class="banner-icon">
-                    <i class="fas <?php echo $_SESSION['icon'] ?>"></i>
+                    <i class="fas fa-bomb"></i>
                 </div>
-                <div class="banner-message"><?php echo $_SESSION['txt'] ?></div>
+                <div class="banner-message">Errorre nell'aggiunta dell'azione!</div>
             </div>
         </div>
     </div>
-    <!-- BANNER AZIONI -->
+    <!-- BANNER Errore -->
+    <!-- BANNER Aggiunta -->
+    <div class="banners-container">
+        <div class="banners">
+            <div class="banner info">
+                <div class="banner-icon">
+                    <i class="fas fa-check-double"></i>
+                </div>
+                <div class="banner-message">Azione aggiunta con successo!</div>
+            </div>
+        </div>
+    </div>
+    <!-- BANNER Aggiunta -->
+    <!-- BANNER Rimozione -->
+    <div class="banners-container">
+        <div class="banners">
+            <div class="banner info">
+                <div class="banner-icon">
+                    <i class="fas fa-trash-alt"></i>
+                </div>
+                <div class="banner-message">Azione rimossa con successo!</div>
+            </div>
+        </div>
+    </div>
+    <!-- BANNER Rimozione -->
     <!-- RICERCA AZIONI -->
     <input type="checkbox" name="" id="check" />
     <div class="box">
@@ -134,10 +155,12 @@ if (!isset($_SESSION['icon'])) $_SESSION['icon'] = 'fa-bug';
                 url: 'https://romeofrancesco.altervista.org/Web/html/obj/follow.php',
                 data: {
                     name: val.getAttribute('value'),
-                    user_id: <?php echo $_SESSION['user_id'] ?>,
+                    user_id: <?php if (isset($_SESSION['user_id'])) {
+                                    echo $_SESSION['user_id'];
+                                } else echo 'NULL'; ?>,
                 },
                 success: function(params) {
-                    showBanner('.banner.<?php echo $_SESSION['type'] ?>');
+                    showBanner('.banner.info');
                     setTimeout(hideBanners, 3000);
                 }
 
@@ -152,10 +175,12 @@ if (!isset($_SESSION['icon'])) $_SESSION['icon'] = 'fa-bug';
                 url: 'https://romeofrancesco.altervista.org/Web/html/obj/unfollow.php',
                 data: {
                     name: val.getAttribute('value'),
-                    user_id: <?php echo $_SESSION['user_id'] ?>,
+                    user_id: <?php if (isset($_SESSION['user_id'])) {
+                                    echo $_SESSION['user_id'];
+                                } else echo 'NULL'; ?>,
                 },
                 success: function(params) {
-                    showBanner('.banner.<?php echo $_SESSION['type'] ?>');
+                    showBanner('.banner.error');
                     setTimeout(hideBanners, 3000)
                 }
             });

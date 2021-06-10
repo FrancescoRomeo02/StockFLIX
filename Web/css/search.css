@@ -135,7 +135,7 @@ i:hover {
 }
 
 .banner {
-  color: white;
+  color: #333;
   font-weight: 700;
   padding: 2rem;
   display: flex;
@@ -150,19 +150,19 @@ i:hover {
 }
 
 .banner.error {
-  background: #ed1c24;
+  background: #610606;
 }
 
 .banner.error::after {
-  background: #ed1c24;
+  background: #610606;
 }
 
 .banner.info {
-  background: #0b22e2;
+  background: #2ba812;
 }
 
 .banner.info::after {
-  background: #0b22e2;
+  background: #2ba812;
 }
 
 .banner::after {
