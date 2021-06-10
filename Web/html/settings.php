@@ -72,7 +72,7 @@ if (isset($_POST['dell_wallet'])) {
                 <!-------------------
                 form registrazione  
                 -------------------->
-                <form action="#" class="sign-up-form" method="POST" id="registrazione" style="opacity: 1;" onsubmit="criptreg()">
+                <form action="#" class="sign-up-form" method="POST" id="registrazione" style="opacity: 1;" onsubmit="criptset()">
                     <h2 class="title">Ecco i tuoi <span style="color: <?php echo $color ?>;">Dati</span></h2>
                     <div class="input-field">
                         <i class="fas fa-user" style="color: #606c81"></i>
@@ -107,7 +107,7 @@ if (isset($_POST['dell_wallet'])) {
                         Contatta il nostro servizio clienti, risponderemo il prima possibile.
                     </p>
                     <button class="btn transparent" id="sign-in-btn" onclick="location.href='mailto:StockFLIX_help@gmail.com?subject=Richiesta%20supporto%20dati%20account'">
-                        Accedi
+                        contattaci
                     </button>
                 </div>
                 <img src="../img/log_sing_in/settings.svg" class="image" alt="" />

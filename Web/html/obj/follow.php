@@ -9,15 +9,7 @@ $temp = mysqli_query($con, $query_stock_id);
 $data2 = mysqli_fetch_array($temp);
 
 $query_add = "INSERT INTO `wallet_stock`(`wallet_id`, `stock_id`) VALUES ( '$data[wallet_id]', '$data2[stock_id]') ";
-if (mysqli_query($con, $query_add)) {
-    $_SESSION['type'] = 'info';
-    $_SESSION['txt'] = 'Azione aggiunta con successo';
-    $_SESSION['icon'] = 'fa-plus-circle';
-} else {
-    $_SESSION['type'] = 'error';
-    $_SESSION['txt'] = 'Non è stato possibile aggiungere la tua azione';
-    $_SESSION['icon'] = 'fa-exclamation-triangle';
-}
+
 function updatefile($filepath)
 {
 
