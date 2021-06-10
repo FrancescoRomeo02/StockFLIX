@@ -27,7 +27,7 @@ if (isset($_POST['query'])) {
                 <li class=item>
                     <p class=symbol p" . $count . ">" . $stock['symbol'] . "</p>
                     <p class=sec_name>" . $stock['security_name'] . "</p>
-                    <i class='fas fa-wallet' id='unfollow' style='z-index:11' value='" . $stock['symbol'] . "' onClick='unfollow(this)'></i>
+                    <i class='fas fa-trash-alt' id='unfollow' style='z-index:11' value='" . $stock['symbol'] . "' onClick='unfollow(this)'></i>
                 </li>
                 ";
             } else {
