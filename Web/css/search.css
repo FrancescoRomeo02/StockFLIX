@@ -120,10 +120,10 @@ i:hover {
   color: #333;
 }
 #unfollow {
-  color: #0b22e2;
+  color: #333;
 }
 #unfollow:hover {
-  color: #333;
+  color: #ff0000;
 }
 /* BANNER CSS */
 
