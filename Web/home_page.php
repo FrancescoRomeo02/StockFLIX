@@ -38,7 +38,11 @@ include('./html/obj/header.php');
         <h3>Non lasciare che il tempo sgretoli i tuoi risparmi</h3>
         <p>Iniziare non è mai facile</p>
         <h4>Lascia che qualcuno ti aiuti</h4>
-        <a href="#services"><button type="button" class="offset">iniziamo</button></a>
+        <a href="<?php if (isset($logout)) {
+                    echo 'https://romeofrancesco.altervista.org/Web/html/services/stocks_data.php';
+                  } else {
+                    echo 'https://romeofrancesco.altervista.org/Web/html/log_sing_in.php';
+                  }  ?>"><button type="button" class="offset">iniziamo</button></a>
       </div>
 
       <div class="col_2">

@@ -168,7 +168,7 @@ function linkpage(page) {
         location.replace(linkpage); 
 }
 
-function criptreg() {
+function criptset() {
     var password = document.getElementsByClassName('pass')[0].value;
     var password2 = document.getElementsByClassName('pass')[1].value;
     document.getElementsByClassName('pass')[0].value = md5(password);
@@ -178,6 +178,13 @@ function criptreg() {
 function criptacc() {
     var password = document.getElementsByClassName('pass')[0].value;;
     var password2 = document.getElementsByClassName('pass')[0].value = md5(password);
+};
+
+function criptreg() {
+    var password = document.getElementsByClassName('pass')[1].value;
+    var password2 = document.getElementsByClassName('pass')[2].value;
+    var password  = document.getElementsByClassName('pass')[1].value = (md5(password));
+    var password2 = document.getElementsByClassName('pass')[2].value = (md5(password2));
 };
 
 function check() {

@@ -1,4 +1,5 @@
 # StockFLIX Romeo Francesco
+
 Progetto esame di maturita' 2020/2021
 
 # Cose da finire:
@@ -16,7 +17,7 @@ Progetto esame di maturita' 2020/2021
 - fix css buy
 - css wallet vuoto
 - fix creazione wallet su verifica della mail
-
+- AOS animation nella pagina referenze
 - bloccare furto di sessione
 - bloccare attacchi forza bruta
 - bloccare sql injection

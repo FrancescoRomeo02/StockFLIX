@@ -133,8 +133,8 @@ button {
   border: 0;
   padding: 12px 10px;
   outline: none;
-  color: #333;
   text-transform: uppercase;
+  font-size: medium;
 }
 
 .col_1::after {
