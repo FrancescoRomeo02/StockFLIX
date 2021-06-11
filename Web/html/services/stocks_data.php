@@ -29,18 +29,6 @@ include('../obj/header.php');
     <!--BARRA DI NAVIGAZIONE-->
     <br /><br />
     <!-- MAIN -->
-    <!-- BANNER Errore -->
-    <div class="banners-container">
-        <div class="banners">
-            <div class="banner error">
-                <div class="banner-icon">
-                    <i class="fas fa-bomb"></i>
-                </div>
-                <div class="banner-message">Errorre nell'aggiunta dell'azione!</div>
-            </div>
-        </div>
-    </div>
-    <!-- BANNER Errore -->
     <!-- BANNER Aggiunta -->
     <div class="banners-container">
         <div class="banners">
@@ -56,7 +44,7 @@ include('../obj/header.php');
     <!-- BANNER Rimozione -->
     <div class="banners-container">
         <div class="banners">
-            <div class="banner info">
+            <div class="banner info rem">
                 <div class="banner-icon">
                     <i class="fas fa-trash-alt"></i>
                 </div>
@@ -140,6 +128,9 @@ include('../obj/header.php');
                             $("#search").focusin(function() {
                                 $("#output").css("display", "block");
                             });
+                            $("#search").focusout(function() {
+                                $("#output").css("display", "none");
+                            });
                         },
                     });
                 } else {
@@ -165,11 +156,9 @@ include('../obj/header.php');
                 }
 
             });
-
         }
 
         function unfollow(val) {
-
             $.ajax({
                 method: "POST",
                 url: 'https://romeofrancesco.altervista.org/Web/html/obj/unfollow.php',
@@ -180,7 +169,7 @@ include('../obj/header.php');
                                 } else echo 'NULL'; ?>,
                 },
                 success: function(params) {
-                    showBanner('.banner.error');
+                    showBanner('.banner.error.rem');
                     setTimeout(hideBanners, 3000)
                 }
             });

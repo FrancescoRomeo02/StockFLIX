@@ -61,7 +61,7 @@ input[type="checkbox"] {
 }
 /* STILE RISULTATI */
 ul.output {
-  position: fixed;
+  position: absolute;
   margin-top: 24%;
   left: 65%;
   width: auto;
