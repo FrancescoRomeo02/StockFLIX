@@ -31,19 +31,23 @@ $nome = $data['nome'];
 $cognome = $data['cognome'];
 $email = $data['email'];
 $password = $data['password'];
+$hash = md5(rand(0, 1000));
+$link = "https://romeofrancesco.altervista.org/Web/html/obj/datacheck.php?email=$email&hash=$hash";
 
 //modifica dei dati
 if (isset($_POST['mod_dati'])) {
     if (!empty($_POST['email'])) {
-        $query_mod = " UPDATE `user` SET `email`= '$_POST[email]',`verificato`=0 WHERE `user_id` = '$_SESSION[user_id]'";
+        $query_mod = " UPDATE `user` SET `email`= '$_POST[email]',`verificato`=0, 'hash' = $hash WHERE `user_id` = '$_SESSION[user_id]'";
         if (mysqli_query($con, $query_mod)) {
             mail_send('StockFLIX@info.com', $email, $link, 'Attiva il tuo account con la tua nuova mail');
         }
     };
     if (!empty($_POST['password']) && !empty($_POST['password2'])) {
-        $query_mod = " UPDATE `user` SET `password`= '$_POST[password2]',`verificato`=0 WHERE `user_id` = '$_SESSION[user_id]'";
+        $query_mod = " UPDATE `user` SET `password`= '$_POST[password2]' WHERE `user_id` = '$_SESSION[user_id]'";
         if ($password == $_POST['password']) {
             if (mysqli_query($con, $query_mod)) {
+            } else {
+                $msr = 'La vecchia password non è corretta, vuoi <a href="./pswreset.php">ripristinarla</a>?';
             }
         }
     }
@@ -93,7 +97,7 @@ if (isset($_POST['mod_abb'])) {
                         <input type="email" placeholder="<?php echo $email ?>" name="email" />
                     </div>
                     <div class="input-field">
-                        <i class="fas fa-key" style="color: #4481eb"></i>
+                        <i class="fas fa-key" style="color: #4481eb; transform: scale(-1, 1);"></i>
                         <input type="password" placeholder="Vecchia password" name="password" class="pass" />
                     </div>
                     <div class="input-field">
@@ -103,8 +107,9 @@ if (isset($_POST['mod_abb'])) {
                     <div class="btn_action">
                         <input type="submit" class="btn" value="cancella wallet" name="dell_wallet" />
                         <input type="submit" class="btn" value="modifica campi" name="mod_dati" />
-                        <?php if ($data['pro_user'] == 1) echo '<input type="submit" class="btn" value="disdici abbonamento" name="mod_abb" />' ?>
+                        <?php if ($data['pro_user'] == 1) echo '<input type="submit" class="btn" value="disdici pro" name="mod_abb" />' ?>
                     </div>
+                    <?php if (isset($msr2) && !isset($errore)) echo "<br><p>$msr</p>"; ?>
                 </form>
             </div>
         </div>
