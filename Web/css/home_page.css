@@ -21,6 +21,12 @@ html {
   overflow: hidden;
 }
 
+.btn_action {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 /* BARRA DI NAVIGAZIONE CSS */
 nav {
   position: fixed;

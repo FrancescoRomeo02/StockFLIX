@@ -213,3 +213,25 @@ i:hover {
     transform: translateY(0);
   }
 }
+
+/* RESPONSIVE CSS */
+@media screen and (max-width: 1024px) {
+}
+
+/* RESPONSIVE CSS */
+@media screen and (max-width: 768px) {
+  .box {
+    top: 130%;
+  }
+  #check:checked + .box {
+    width: 400px;
+  }
+  #output {
+    position: absolute;
+  }
+  ul.output {
+    margin-top: 205%;
+    margin-left: -51%;
+    background-color: #d1d1d130;
+  }
+}

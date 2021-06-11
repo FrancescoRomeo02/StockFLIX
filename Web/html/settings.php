@@ -15,7 +15,6 @@ if (!isset($_SESSION['user_id'])) header('Location: ./obj/accesso_negato.html');
 
     <link rel="stylesheet" href="../css/log_sing_in.css" />
     <link rel="stylesheet" href="../css/home_page.css" />
-    <link rel="stylesheet" href="../css/settings.css" />
     <title> StockFLIX </title>
 </head>
 <script src="../js/libreria.js" type="text/javascript"></script>
@@ -60,6 +59,13 @@ if (isset($_POST['dell_wallet'])) {
     }
     header('Location: ./services/wallet.php');
 }
+
+//recesso pro user
+if (isset($_POST['mod_abb'])) {
+    $query_mod_abb = " UPDATE `user` SET `pro_user` = 0 WHERE `user_id` = '$_SESSION[user_id]'";
+    mysqli_query($con, $query_mod_abb);
+    header('Location: ' . $_SERVER['PHP_SELF']);
+}
 ?>
 
 <body>
@@ -94,8 +100,11 @@ if (isset($_POST['dell_wallet'])) {
                         <i class="fas fa-key" style="color: #4481eb"></i>
                         <input type="password" placeholder="Nuova password" name="password2" class="pass" />
                     </div>
-                    <input type="submit" class="btn" value="cancella wallet" name="dell_wallet" />
-                    <input type="submit" class="btn" value="modifica campi" name="mod_dati" />
+                    <div class="btn_action">
+                        <input type="submit" class="btn" value="cancella wallet" name="dell_wallet" />
+                        <input type="submit" class="btn" value="modifica campi" name="mod_dati" />
+                        <?php if ($data['pro_user'] == 1) echo '<input type="submit" class="btn" value="disdici abbonamento" name="mod_abb" />' ?>
+                    </div>
                 </form>
             </div>
         </div>
