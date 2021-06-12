@@ -203,6 +203,14 @@ i:hover {
   margin: 0.25rem;
 }
 
+h3 span {
+  color: var(--color_primary);
+}
+
+p {
+  color: var(--color_secondary);
+}
+
 @keyframes banner-in {
   0% {
     transform: translateY(-100%);
