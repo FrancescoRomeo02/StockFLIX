@@ -59,7 +59,7 @@
 
 .pulse {
   --color: #8c4fff;
-  --hover: #ef8f6e;
+  --hover: var(--color_secondary);
 }
 
 .close {
@@ -83,8 +83,8 @@
 }
 
 .offset {
-  --color: #a175f3;
-  --hover: #59b4ff;
+  --color: var(--color_primary);
+  --hover: var(--color_action);
 }
 
 button {
@@ -95,5 +95,5 @@ button {
 button:hover,
 button:focus {
   border-color: var(--hover);
-  color: #333;
+  color: var(--color_text);
 }

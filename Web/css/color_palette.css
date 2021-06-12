@@ -1,0 +1,12 @@
+/* Colori */
+:root {
+  --color_black: #000000;
+  --color_action: #ffd700;
+  --color_text: #333333;
+  --color_primary: #a175f3;
+  --color_secondary: #ef8f6e;
+  --color_white: #f4f4f4;
+  --color_bg1: #f8eeb8;
+  --color_bg2: #dac6ff;
+  --color_bg3: #0f0327;
+}

@@ -7,7 +7,7 @@
 }
 
 html {
-  background: linear-gradient(60deg, #ecdfff, #dae9f5);
+  background: linear-gradient(60deg, var(--color_bg1), var(--color_bg2));
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
 }
@@ -37,7 +37,7 @@ nav {
   width: 100%;
   z-index: 99;
   margin-top: 0px;
-  background-color: #59b4ff34;
+  background-color: var(--color_action);
 }
 
 .dark {
@@ -45,19 +45,19 @@ nav {
 }
 
 .white_text {
-  color: #dae9f5 !important;
+  color: var(--color_bg2) !important;
 }
 
 .logo {
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  color: #59b4ff;
+  color: var(--color_action);
   font-size: 22px;
   font-family: "Bebas Neue", cursive;
 }
 
 .logo span {
-  color: #a175f3;
+  color: var(--color_primary);
 }
 
 .nav_links {
@@ -81,7 +81,7 @@ nav {
 
 .nav_links a:hover {
   transition: all 0.2s ease;
-  color: #9055ff !important;
+  color: var(--color_action) !important;
 }
 
 #burger {
@@ -92,7 +92,7 @@ nav {
 #burger div {
   width: 35px;
   height: 3px;
-  background-color: #ecdfff;
+  background-color: var(--color_bg1);
   margin: 5px;
   transition: all 0.3s ease-in;
 }
@@ -147,7 +147,7 @@ button {
   content: "";
   width: 10px;
   height: 57%;
-  background: linear-gradient(#a175f3, #59b4ff);
+  background: linear-gradient(var(--color_primary), var(--color_action));
   position: absolute;
   left: -40px;
   top: 8px;
@@ -169,7 +169,7 @@ button {
   position: absolute;
   right: 0;
   top: 0;
-  background: linear-gradient(#a175f3, #59b4ff);
+  background: linear-gradient(var(--color_primary), var(--color_action));
   border-radius: 20px 0 0 20px;
   height: 100%;
   width: 80%;
@@ -182,7 +182,7 @@ button {
   position: absolute;
   left: 35%;
   top: 45%;
-  color: #fff;
+  color: var(--color_white);
 }
 
 /* CARDS CSS */
@@ -193,7 +193,7 @@ button {
   max-width: 1500px;
   margin: 0 auto;
   padding: 100px 0;
-  color: #fff;
+  color: var(--color_white);
 }
 
 #services .section_title {
@@ -206,7 +206,7 @@ button {
 }
 
 #services .section_title span {
-  color: #59b4ff;
+  color: var(--color_action);
 }
 
 #services .service_top p {
@@ -220,7 +220,7 @@ button {
 }
 
 #services .service_top p span {
-  color: #59b4ff;
+  color: var(--color_action);
 }
 
 #services .service_bottom {
@@ -332,7 +332,7 @@ button {
       #aff1f1 0,
       #8dd1f1 50%
     );
-  color: #141414;
+  color: var(--color_bg3);
 }
 
 #services .service_bottom .service_item.free {
@@ -361,7 +361,7 @@ button {
       #f7f2d8 0,
       #c5ace5 50%
     );
-  color: #141414;
+  color: var(--color_bg3);
 }
 
 #services .service_item:not(.free):not(.pay):not(.rank)::after {
@@ -371,7 +371,7 @@ button {
   top: 0;
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(60deg, #333a42 0%, #403244 100%);
+  background-image: linear-gradient(60deg, var(--color_text) 0%, #403244 100%);
   opacity: 0.8;
   z-index: -1;
 }
@@ -380,7 +380,7 @@ button {
   font-size: 2rem;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  color: #59b4ff;
+  color: var(--color_action);
 }
 
 #services .service_item p {
@@ -390,19 +390,19 @@ button {
 }
 
 p span {
-  color: #59b4ff;
+  color: var(--color_action);
 }
 
 /* FOOTER */
 
 footer {
-  background: #141414;
+  background: var(--color_bg3);
   width: 100%;
   padding: 10px;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   letter-spacing: 1px;
-  color: rgb(105, 105, 105);
+  color: var(--color_text);
 }
 
 footer span {
@@ -414,12 +414,12 @@ footer span {
 
 footer span a {
   text-decoration: none;
-  color: #59b4ff;
+  color: var(--color_action);
   transition: all 0.2s ease-in;
 }
 
 footer span a:hover {
-  color: #a175f3;
+  color: var(--color_primary);
 }
 
 /* RESPONSIVE CSS */
@@ -431,7 +431,7 @@ footer span a:hover {
 
 @media screen and (max-width: 768px) {
   nav {
-    background-color: #031829c9;
+    background-color: var(--color_bg3);
   }
 
   .nav_links {
@@ -442,7 +442,7 @@ footer span a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #031829c9;
+    background-color: var(--color_bg3);
     width: 40%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
@@ -453,7 +453,7 @@ footer span a:hover {
   }
 
   .nav_links li a {
-    color: #ecdfff;
+    color: var(--color_bg1);
     font-size: 22px;
   }
 

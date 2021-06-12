@@ -40,12 +40,14 @@ input[type="checkbox"] {
   font-size: 19px;
   padding-left: 20px;
   color: gray;
-  box-shadow: -10px -10px 15px #a175f338, 10px 10px 15px #59b4ff38;
+  box-shadow: -10px -10px 15px var(--color_primary) 38,
+    10px 10px 15px var(--color_action) 38;
   transform: 0.5s;
   opacity: 0;
 }
 .box input:focus {
-  box-shadow: -10px -10px 40px #a175f338, 10px 10px 40px #59b4ff38;
+  box-shadow: -10px -10px 40px var(--color_primary) 38,
+    10px 10px 40px var(--color_action) 38;
 }
 #check:checked + .box {
   width: 500px;
@@ -69,7 +71,8 @@ ul.output {
   transition: 0.5s;
   list-style: none;
   background-color: #00000007;
-  box-shadow: -5px -5px 8px #a175f338, 5px 5px 10px #59b4ff38;
+  box-shadow: -5px -5px 8px var(--color_primary) 38,
+    5px 5px 10px var(--color_action) 38;
   border-radius: 10px;
   z-index: 10;
 }
@@ -94,7 +97,7 @@ li > p.symbol {
 li > p.sec_name {
   padding-bottom: 5%;
   margin: auto;
-  color: #333;
+  color: var(--color_text);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -108,16 +111,16 @@ li > p.sec_name {
 }
 
 i {
-  color: #333;
+  color: var(--color_text);
 }
 
 i:hover {
-  color: #a175f3;
+  color: var(--color_primary);
   size: 1.5rem;
 }
 
 .fa-search {
-  color: #333;
+  color: var(--color_text);
 }
 #unfollow {
   color: #200000;
@@ -135,7 +138,7 @@ i:hover {
 }
 
 .banner {
-  color: #333;
+  color: var(--color_text);
   font-weight: 700;
   padding: 2rem;
   display: flex;
