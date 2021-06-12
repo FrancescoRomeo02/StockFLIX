@@ -128,9 +128,6 @@ include('../obj/header.php');
                             $("#search").focusin(function() {
                                 $("#output").css("display", "block");
                             });
-                            $("#search").focusout(function() {
-                                $("#output").css("display", "none");
-                            });
                         },
                     });
                 } else {
@@ -169,7 +166,7 @@ include('../obj/header.php');
                                 } else echo 'NULL'; ?>,
                 },
                 success: function(params) {
-                    showBanner('.banner.error.rem');
+                    showBanner('.banner.info.rem');
                     setTimeout(hideBanners, 3000)
                 }
             });

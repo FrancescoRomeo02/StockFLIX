@@ -120,10 +120,10 @@ i:hover {
   color: #333;
 }
 #unfollow {
-  color: #333;
+  color: #200000;
 }
 #unfollow:hover {
-  color: #ff0000;
+  color: #6b0000;
 }
 /* BANNER CSS */
 
@@ -147,14 +147,6 @@ i:hover {
 .banner .banner-message {
   flex: 1;
   padding: 0 2rem;
-}
-
-.banner.error {
-  background: #610606;
-}
-
-.banner.error::after {
-  background: #610606;
 }
 
 .banner.info {
@@ -216,6 +208,13 @@ i:hover {
 
 /* RESPONSIVE CSS */
 @media screen and (max-width: 1024px) {
+  .box {
+    margin-top: 45%;
+  }
+  ul.output {
+    margin-top: 90%;
+    margin-left: 44%;
+  }
 }
 
 /* RESPONSIVE CSS */
