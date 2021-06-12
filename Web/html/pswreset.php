@@ -42,11 +42,11 @@ if (isset($_POST['invia']) && $_POST['email'] != '') {
                 <form action="#" class="sign-in-form" method="POST">
                     <h2 class="title">Recupera le credenziali di <span style="color: <?php echo $color ?>;">StockFLIX</span> </h2>
                     <div class="input-field">
-                        <i class="fas fa-at" style="color: #4481eb"></i>
+                        <i class="fas fa-at"></i>
                         <input required type="email" placeholder="Email" name="email" />
                     </div>
                     <div class="input-field">
-                        <i class="fas fa-key" style="color: #4481eb"></i>
+                        <i class="fas fa-key"></i>
                         <input required type="password" placeholder="Ultima password utilizzata" name="password" class="pass" />
                     </div>
                     <input required type="submit" value="invia" name="accedi" class="btn solid" />
