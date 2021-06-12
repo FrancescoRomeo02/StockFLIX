@@ -107,14 +107,17 @@ foreach ($data2 as $key => $value) {
             ?>
             <!--    CHART DINAMICO    -->
         </div>
+
         <!-- CHART STOCKS-->
         <!-- DEMO SHOP -->
         <?php
-        $query  = "SELECT * FROM stock, stock_info, wallet_stock, wallet 
+        $query  = "SELECT * FROM stock, stock_info, wallet_stock, wallet, user 
                     WHERE stock_info.stock_id = wallet_stock.stock_id 
                     AND wallet_stock.wallet_id = wallet.wallet_id 
                     AND stock.stock_id = stock_info.stock_id 
-                    AND wallet.user_id = '$_SESSION[user_id]' ";
+                    AND wallet.user_id = '$_SESSION[user_id]' 
+                    AND user.user_id = '$_SESSION[user_id]' 
+                    AND user.pro_user = 1 ";
         $temp = mysqli_query($con, $query);
         $info = array();
         if (mysqli_num_rows($temp)) {
@@ -123,13 +126,16 @@ foreach ($data2 as $key => $value) {
             }
         }
 
+        echo '<div class="cards_info">';
         for ($i = 0; $i < sizeof($info); $i++) {
             $card['symbol'] = $info[$i]['symbol'];
             $card['stock_owned'] = 10;
             $card['value'] = $info[$i]['prezzo'];
+            $card['value'] > 0 ? $card['style_value'] = 'up' : $card['style_value'] = 'down';
             $card['variazione'] = $info[$i]['variazione'];
             include('../obj/data_card.php');
         }
+        echo '</div>'
         ?>
         <!-- DEMO SHOP -->
         <!-- SEZIONE IMMAGINE E TESTO -->

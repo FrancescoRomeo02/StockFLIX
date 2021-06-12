@@ -24,7 +24,7 @@ def get_ts(symbol, data_type):
         },
             inplace=False)
 
-    fname = f"C:/Users/Francesco Romeo/Documents/Scuola/StockN/Data/{symbol}_{data_type}.csv"
+    fname = f"C:/Users/Francesco Romeo/Documents/Scuola/StockFLIX/Data/{symbol}_{data_type}.csv"
     nice_data.to_csv(fname)
     print(f'|___Dati di {symbol} raccolti con successo.')
 
@@ -34,16 +34,16 @@ def main():
 
     lines_seen = set()
     outfile = open(
-        'C:/Users/Francesco Romeo/Documents/Scuola/StockN/Data/new_stockname.txt', "w")
+        'C:/Users/Francesco Romeo/Documents/Scuola/StockFLIX/Data/new_stockname.txt', "w")
     infile = open(
-        'C:/Users/Francesco Romeo/Documents/Scuola/StockN/Data/stockname.txt', "r")
+        'C:/Users/Francesco Romeo/Documents/Scuola/StockFLIX/Data/stockname.txt', "r")
     for line in infile:
         if line not in lines_seen:
             outfile.write(line)
             lines_seen.add(line)
     outfile.close()
 
-    with open("C:/Users/Francesco Romeo/Documents/Scuola/StockN/Data/new_stockname.txt") as file:
+    with open("C:/Users/Francesco Romeo/Documents/Scuola/StockFLIX/Data/new_stockname.txt") as file:
         for line in file:
             line = line.strip()
             symbols.append(line)
@@ -52,7 +52,8 @@ def main():
 
         if(count == 4):
             print('... attesa ... attesa ... attesa ...')
-            time.sleep(90)
+            time.sleep(65)
+            count = 0
         get_ts(symbol, data_input)
         count += 1
 

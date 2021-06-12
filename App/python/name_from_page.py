@@ -1,7 +1,7 @@
 import ftplib
 import os
 
-file = ('C:/Users/Francesco Romeo/Documents/Scuola/StockN/Data/stockname.txt')
+file = ('C:/Users/Francesco Romeo/Documents/Scuola/StockFLIX/Data/stockname.txt')
 FTP_host = "ftp.romeofrancesco.altervista.org"
 FTP = ftplib.FTP()
 FTP.encoding = "latin-1"
