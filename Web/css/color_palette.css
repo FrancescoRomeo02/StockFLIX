@@ -1,12 +1,17 @@
-/* Colori */
 :root {
+  --color_one: #c34271;
+  --color_two: #f070a1;
+  --color_three: #16ffbd;
+  --color_four: #12c998;
+  --color_five: #439f76;
+
   --color_black: #000000;
-  --color_action: #ffd700;
+  --color_action: #16ffbd;
   --color_text: #333333;
-  --color_primary: #a175f3;
-  --color_secondary: #ef8f6e;
-  --color_white: #f4f4f4;
-  --color_bg1: #f8eeb8;
-  --color_bg2: #dac6ff;
-  --color_bg3: #0f0327;
+  --color_primary: #c34271;
+  --color_secondary: #f070a1;
+  --color_white: #f7f7f7;
+  --color_bg1: #f7f7f7;
+  --color_bg2: #f7f7f7;
+  --color_bg3: #f7f7f7;
 }

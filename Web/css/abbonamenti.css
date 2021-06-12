@@ -46,7 +46,7 @@
 }
 
 .title-white {
-  color: white;
+  color: var(--color_white);
 }
 
 .title-black {
@@ -197,7 +197,7 @@ label {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: var(--color_white);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }

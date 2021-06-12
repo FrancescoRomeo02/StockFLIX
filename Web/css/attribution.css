@@ -64,7 +64,7 @@ a {
 }
 
 span {
-  color: var(--color_action);
+  color: var(--color_secondary);
 }
 
 a,

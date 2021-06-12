@@ -45,19 +45,19 @@ nav {
 }
 
 .white_text {
-  color: var(--color_bg2) !important;
+  color: var(--color_white) !important;
 }
 
 .logo {
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  color: var(--color_action);
+  color: var(--color_primary);
   font-size: 22px;
   font-family: "Bebas Neue", cursive;
 }
 
 .logo span {
-  color: var(--color_primary);
+  color: var(--color_five);
 }
 
 .nav_links {
@@ -81,7 +81,7 @@ nav {
 
 .nav_links a:hover {
   transition: all 0.2s ease;
-  color: var(--color_action) !important;
+  color: var(--color_primary) !important;
 }
 
 #burger {
@@ -147,7 +147,7 @@ button {
   content: "";
   width: 10px;
   height: 57%;
-  background: linear-gradient(var(--color_primary), var(--color_action));
+  background: linear-gradient(var(--color_primary), var(--color_secondary));
   position: absolute;
   left: -40px;
   top: 8px;
@@ -169,7 +169,7 @@ button {
   position: absolute;
   right: 0;
   top: 0;
-  background: linear-gradient(var(--color_primary), var(--color_action));
+  background: linear-gradient(var(--color_primary), var(--color_secondary));
   border-radius: 20px 0 0 20px;
   height: 100%;
   width: 80%;
@@ -206,7 +206,7 @@ button {
 }
 
 #services .section_title span {
-  color: var(--color_action);
+  color: var(--color_secondary);
 }
 
 #services .service_top p {
@@ -220,7 +220,7 @@ button {
 }
 
 #services .service_top p span {
-  color: var(--color_action);
+  color: var(--color_primary);
 }
 
 #services .service_bottom {
@@ -322,17 +322,17 @@ button {
       45deg,
       transparent 0,
       transparent 25%,
-      #fbb4c9 0,
-      #fee0cc 50%
+      var(--color_primary) 0,
+      var(--color_secondary) 50%
     ),
     repeating-linear-gradient(
       -45deg,
-      #fff4e8 0,
-      #fff4e8 25%,
-      #aff1f1 0,
-      #8dd1f1 50%
+      var(--color_white) 0,
+      var(--color_white) 25%,
+      var(--color_four) 0,
+      var(--color_five) 50%
     );
-  color: var(--color_bg3);
+  color: var(--color_white);
 }
 
 #services .service_bottom .service_item.free {
@@ -351,17 +351,17 @@ button {
       -45deg,
       transparent 0,
       transparent 25%,
-      #e4ed85 0,
-      #a9cbd7 50%
+      var(--color_five) 0,
+      var(--color_four) 50%
     ),
     repeating-linear-gradient(
       45deg,
-      #fcc3c3 0,
-      #fcc3c3 25%,
-      #f7f2d8 0,
-      #c5ace5 50%
+      var(--color_one) 0,
+      var(--color_two) 25%,
+      var(--color_white) 0,
+      var(--color_one) 50%
     );
-  color: var(--color_bg3);
+  color: var(--color_white);
 }
 
 #services .service_item:not(.free):not(.pay):not(.rank)::after {
@@ -371,7 +371,11 @@ button {
   top: 0;
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(60deg, var(--color_text) 0%, #403244 100%);
+  background-image: linear-gradient(
+    60deg,
+    var(--color_primary) 0%,
+    var(--color_secondary) 100%
+  );
   opacity: 0.8;
   z-index: -1;
 }
@@ -380,7 +384,7 @@ button {
   font-size: 2rem;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  color: var(--color_action);
+  color: var(--color_primary);
 }
 
 #services .service_item p {
@@ -396,7 +400,7 @@ p span {
 /* FOOTER */
 
 footer {
-  background: var(--color_bg3);
+  background: var(--color_black);
   width: 100%;
   padding: 10px;
   font-family: "Poppins", sans-serif;
@@ -431,7 +435,7 @@ footer span a:hover {
 
 @media screen and (max-width: 768px) {
   nav {
-    background-color: var(--color_bg3);
+    background-color: var(--color_black);
   }
 
   .nav_links {
@@ -442,7 +446,7 @@ footer span a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--color_bg3);
+    background-color: var(--color_black);
     width: 40%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
@@ -453,7 +457,7 @@ footer span a:hover {
   }
 
   .nav_links li a {
-    color: var(--color_bg1);
+    color: var(--color_text);
     font-size: 22px;
   }
 

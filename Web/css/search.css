@@ -41,13 +41,13 @@ input[type="checkbox"] {
   padding-left: 20px;
   color: gray;
   box-shadow: -10px -10px 15px var(--color_primary) 38,
-    10px 10px 15px var(--color_action) 38;
+    10px 10px 15px var(--color_secondary) 38;
   transform: 0.5s;
   opacity: 0;
 }
 .box input:focus {
   box-shadow: -10px -10px 40px var(--color_primary) 38,
-    10px 10px 40px var(--color_action) 38;
+    10px 10px 40px var(--color_secondary) 38;
 }
 #check:checked + .box {
   width: 500px;
@@ -72,7 +72,7 @@ ul.output {
   list-style: none;
   background-color: #00000007;
   box-shadow: -5px -5px 8px var(--color_primary) 38,
-    5px 5px 10px var(--color_action) 38;
+    5px 5px 10px var(--color_secondary) 38;
   border-radius: 10px;
   z-index: 10;
 }
@@ -91,7 +91,7 @@ li > p.symbol {
   padding-bottom: 5%;
   padding-right: 5%;
   padding-left: 5%;
-  color: #247ad3;
+  color: var(--color_primary);
 }
 
 li > p.sec_name {
@@ -107,7 +107,7 @@ li > p.sec_name {
   font-size: 2rem;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  color: #72070c;
+  color: var(--color_action);
 }
 
 i {
@@ -144,7 +144,7 @@ i:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-radius: 5%;
+  border-radius: 0px 0px 50px 50px;
 }
 
 .banner .banner-message {
@@ -153,11 +153,19 @@ i:hover {
 }
 
 .banner.info {
-  background: #2ba812;
+  background: var(--color_four);
 }
 
 .banner.info::after {
-  background: #2ba812;
+  background: var(--color_four);
+}
+
+.banner.info.rem {
+  background: var(--color_one);
+}
+
+.banner.info.rem::after {
+  background: var(--color_one);
 }
 
 .banner::after {
@@ -186,7 +194,7 @@ i:hover {
 
 .show-banner {
   appearance: none;
-  background: #ededed;
+  background: var(--color_white);
   border: 0;
   padding: 1rem 2rem;
   border-radius: 4px;
