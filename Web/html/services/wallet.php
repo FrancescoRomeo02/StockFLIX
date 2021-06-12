@@ -62,7 +62,6 @@ foreach ($data2 as $key => $value) {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../css/color_palette.css" />
     <link rel="stylesheet" href="../../css/home_page.css" />
     <link rel="stylesheet" href="../../css/button.css" />
     <link rel="stylesheet" href="../../css/wallet.css" />
@@ -86,10 +85,10 @@ foreach ($data2 as $key => $value) {
         <div data-aos="fade-left" class="row">
             <div class="col_1">
                 <h2>
-                    Ecco il tuo wallet<span>!</span>
+                    Ecco il tuo wallet<span style="color: #59b4ff;">!</span>
                 </h2>
-                <h3>Aggiornamenti <span>istantamei</span> ogni giorno</h3>
-                <p>Aggiornamenti live solo per versione pro</p>
+                <h3>Aggiornamenti <span style="color: #59b4ff;">istantamei</span> ogni giorno</h3>
+                <p style="color: blueviolet;">Aggiornamenti live solo per versione pro</p>
             </div>
         </div>
         <!-- SEZIONE IMMAGINE E TESTO -->
@@ -132,8 +131,8 @@ foreach ($data2 as $key => $value) {
             $card['symbol'] = $info[$i]['symbol'];
             $card['stock_owned'] = 10;
             $card['value'] = $info[$i]['prezzo'];
+            substr(strval($card['value']), 0, 1) == "-" ? $card['style_value'] = 'down' : $card['style_value'] = 'up';
             $card['variazione'] = $info[$i]['variazione'];
-            substr(strval($card['variazione']), 0, 1) == "-" ? $card['style_value'] = 'down_value' : $card['style_value'] = 'up_value';
             include('../obj/data_card.php');
         }
         echo '</div>'

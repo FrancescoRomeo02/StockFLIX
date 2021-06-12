@@ -7,7 +7,7 @@
 }
 
 html {
-  background: linear-gradient(60deg, var(--color_bg1), var(--color_bg2));
+  background: linear-gradient(60deg, #ecdfff, #dae9f5);
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
 }
@@ -34,7 +34,7 @@ dl + dl {
 
 dt {
   counter-increment: count;
-  color: var(--color_primary);
+  color: #a175f3;
   font-family: "Bebas Neue", cursive;
   font-size: 4vw;
   text-transform: uppercase;
@@ -43,7 +43,7 @@ dt {
 dt::before {
   content: counter(count, decimal-leading-zero) ".";
   font-family: "Poppins", sans-serif;
-  color: var(--color_action);
+  color: #59b4ff;
   margin-left: -1vw;
   padding-right: 12px;
 }
@@ -60,11 +60,11 @@ a {
 }
 
 a {
-  color: var(--color_primary);
+  color: #a175f3;
 }
 
 span {
-  color: var(--color_secondary);
+  color: #59b4ff;
 }
 
 a,

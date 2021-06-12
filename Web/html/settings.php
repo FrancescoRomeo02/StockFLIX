@@ -12,14 +12,14 @@ if (!isset($_SESSION['user_id'])) header('Location: ./obj/accesso_negato.html');
 
     <!-- js per le icone -->
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/color_palette.css">
+
     <link rel="stylesheet" href="../css/log_sing_in.css" />
     <link rel="stylesheet" href="../css/home_page.css" />
     <title> StockFLIX </title>
 </head>
 <script src="../js/libreria.js" type="text/javascript"></script>
 <?php
-$color =  '#c3427';
+$color =  '#4481eb';
 
 use function PHPSTORM_META\type;
 
@@ -93,15 +93,15 @@ if (isset($_POST['mod_abb'])) {
                         <input disabled type="text" placeholder="<?php echo $cognome ?>" name="cognome" />
                     </div>
                     <div class="input-field">
-                        <i class="fas fa-at"></i>
+                        <i class="fas fa-at" style="color: #4481eb"></i>
                         <input type="email" placeholder="<?php echo $email ?>" name="email" />
                     </div>
                     <div class="input-field">
-                        <i class="fas fa-key" style="transform: scale(-1, 1);"></i>
+                        <i class="fas fa-key" style="color: #4481eb; transform: scale(-1, 1);"></i>
                         <input type="password" placeholder="Vecchia password" name="password" class="pass" />
                     </div>
                     <div class="input-field">
-                        <i class="fas fa-key"></i>
+                        <i class="fas fa-key" style="color: #4481eb"></i>
                         <input type="password" placeholder="Nuova password" name="password2" class="pass" />
                     </div>
                     <div class="btn_action">

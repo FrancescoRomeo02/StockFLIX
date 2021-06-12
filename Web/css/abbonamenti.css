@@ -46,11 +46,11 @@
 }
 
 .title-white {
-  color: var(--color_white);
+  color: white;
 }
 
 .title-black {
-  color: var(--color_text);
+  color: #333;
 }
 
 @media all and (max-width: 500px) {
@@ -84,7 +84,7 @@
   width: 300px;
   padding-bottom: 1.5em;
   height: 100%;
-  background-color: var(--color_text);
+  background-color: #333;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,7 +92,7 @@
   border-radius: 20px;
   box-shadow: 0 19px 38px rgba(30, 35, 33, 1), 0 15px 12px rgba(30, 35, 33, 0.2);
   flex-wrap: wrap;
-  color: var(--color_white);
+  color: #f4f4f4;
 }
 
 h1,
@@ -103,7 +103,7 @@ h2 {
 .list li {
   font-size: 20px;
   list-style: none;
-  border-bottom: 1px solid var(--color_white);
+  border-bottom: 1px solid #f4f4f4;
   padding-inline-start: 0;
   border-width: 1px;
   padding: 10px;
@@ -111,7 +111,7 @@ h2 {
 
 .first {
   margin-top: 40px;
-  border-top: 1px solid var(--color_white);
+  border-top: 1px solid #f4f4f4;
 }
 
 .list {
@@ -142,7 +142,7 @@ label {
   font-size: 1.4em;
   margin: 15px 15px;
   border-radius: 50px;
-  color: var(--color_white);
+  color: #f4f4f4;
   transition: all 0.3s ease 0s;
 }
 
@@ -151,15 +151,13 @@ label {
 }
 
 .button1 {
-  background-color: var(--color_primary);
-  box-shadow: 0 0 10px 0 var(--color_primary) inset,
-    0 0 20px 2px var(--color_primary);
+  background-color: #a175f3;
+  box-shadow: 0 0 10px 0 #a175f3 inset, 0 0 20px 2px #a175f3;
 }
 
 .button2 {
-  background-color: var(--color_secondary);
-  box-shadow: 0 0 10px 0 var(--color_secondary) inset,
-    0 0 20px 2px var(--color_secondary);
+  background-color: #ef8f6e;
+  box-shadow: 0 0 10px 0 #ef8f6e inset, 0 0 20px 2px #ef8f6e;
 }
 
 .switch {
@@ -182,10 +180,10 @@ label {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--color_text);
+  background-color: #333;
   -webkit-transition: 0.4s;
 
-  box-shadow: 2px 6px 25px var(--color_text);
+  box-shadow: 2px 6px 25px #333;
   transform: translate(0px, 0px);
   transition: 0.6s ease transform, 0.6s box-shadow;
 }
@@ -197,17 +195,17 @@ label {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: var(--color_white);
+  background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: var(--color_action);
+  background-color: #59b4ff;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px var(--color_action);
+  box-shadow: 0 0 1px #59b4ff;
 }
 
 input:checked + .slider:before {

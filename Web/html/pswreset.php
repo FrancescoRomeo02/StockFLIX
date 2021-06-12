@@ -9,7 +9,6 @@ include("./obj/libreria.php")
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/color_palette.css">
     <link rel="stylesheet" href="../css/log_sing_in.css">
     <title>StockFLIX - Recupera dati</title>
 </head>
@@ -42,11 +41,11 @@ if (isset($_POST['invia']) && $_POST['email'] != '') {
                 <form action="#" class="sign-in-form" method="POST">
                     <h2 class="title">Recupera le credenziali di <span style="color: <?php echo $color ?>;">StockFLIX</span> </h2>
                     <div class="input-field">
-                        <i class="fas fa-at"></i>
+                        <i class="fas fa-at" style="color: #4481eb"></i>
                         <input required type="email" placeholder="Email" name="email" />
                     </div>
                     <div class="input-field">
-                        <i class="fas fa-key"></i>
+                        <i class="fas fa-key" style="color: #4481eb"></i>
                         <input required type="password" placeholder="Ultima password utilizzata" name="password" class="pass" />
                     </div>
                     <input required type="submit" value="invia" name="accedi" class="btn solid" />

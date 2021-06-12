@@ -24,14 +24,15 @@
   flex-wrap: wrap;
 }
 .stock-card {
-  background: var(--color_white);
-  width: auto;
+  background: #fff;
+  width: 300px;
   display: inline-block;
   margin: auto;
   border-radius: 19px;
   position: relative;
   text-align: center;
-  box-shadow: -1px 15px 30px -12px var(--color_black);
+  box-shadow: -1px 15px 30px -12px #000;
+  z-index: 9999;
 }
 .stock-card__level {
   text-transform: uppercase;
@@ -40,17 +41,8 @@
   margin-bottom: 3px;
 }
 .stock-card__level--barbarian {
-  color: var(--color_primary);
-  font-family: "Bebas Neue", cursive;
-  font-size: 14px;
-  font-stretch: expanded;
-  letter-spacing: 0.08rem;
+  color: #59b4ff;
 }
-
-.stock-card__level--barbarian span {
-  color: var(--color_secondary);
-}
-
 .stock-card__unit-name {
   font-size: 26px;
   color: #000;
@@ -58,13 +50,13 @@
   margin-bottom: 5px;
 }
 .stock-card__unit-stats--barbarian {
-  background: var(--color_action);
+  background: #59b4ff;
 }
 .stock-card__unit-stats--barbarian .one-third {
-  border-right: 1px solid var(--color_primary);
+  border-right: 1px solid #a175f3;
 }
 .stock-card__unit-stats {
-  color: var(--color_white);
+  color: #fff;
   font-weight: 700;
   border-bottom-left-radius: 14px;
   border-bottom-right-radius: 14px;
@@ -101,21 +93,11 @@
   clear: both;
   height: 0;
 }
-h2 soan {
-  color: var(--color_primary);
-}
-h3 span {
-  color: var(--color_secondary);
-}
 
-p {
-  color: var(--color_tertiary);
-}
-
-.up_value {
+.up {
   color: rgb(73, 147, 0);
 }
 
-.down_value {
-  color: rgb(160, 3, 3);
+.down {
+  color: rgb(78, 0, 0);
 }

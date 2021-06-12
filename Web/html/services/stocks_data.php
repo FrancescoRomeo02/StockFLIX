@@ -11,7 +11,6 @@ include('../obj/header.php');
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../css/color_palette.css">
     <link rel="stylesheet" href="../../css/home_page.css" />
     <link rel="stylesheet" href="../../css/button.css" />
     <link rel="stylesheet" href="../../css/search.css" />
@@ -72,8 +71,8 @@ include('../obj/header.php');
                     Le azioni Americane, <br />
                     Il mercato più importante <br /> mondo
                 </h2>
-                <h3>Scopri ogni giorno <span>nuove</span> possibilità</h3>
-                <p>Presto disponibili nuove azioni</p>
+                <h3>Scopri ogni giorno <span style="color: #59b4ff;">nuove</span> possibilità</h3>
+                <p style="color: blueviolet;">Presto disponibili nuove azioni</p>
                 <h4>Dai un occhio alle tue azioni</h4>
                 <a href="./wallet.php"> <button type="button" class="slide">WALLET</button></a>
             </div>

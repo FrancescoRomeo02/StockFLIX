@@ -2,23 +2,23 @@
 
 body {
   background: #1b1b1b;
-  color: var(--color_white);
+  color: white;
   font-family: "Bungee", cursive;
   margin-top: 50px;
   text-align: center;
 }
 a {
-  color: var(--color_action);
+  color: #2aa7cc;
   text-decoration: none;
 }
 a:hover {
-  color: var(--color_white);
+  color: white;
 }
 svg {
   width: 50vw;
 }
 .lightblue {
-  fill: var(--color_text);
+  fill: #444;
 }
 
 #eye-wrap {
@@ -33,6 +33,6 @@ svg {
 
 @keyframes alarmOn {
   to {
-    fill: var(--color_secondary);
+    fill: darkred;
   }
 }

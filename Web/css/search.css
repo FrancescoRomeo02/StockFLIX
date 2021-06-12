@@ -24,10 +24,10 @@ input[type="checkbox"] {
   text-align: center;
   font-size: 24px;
   cursor: pointer;
-  box-shadow: -5px -5px 8px var(--color_bg1), 5px 5px 10px var(--color_bg2);
+  box-shadow: -5px -5px 8px #edeff1, 5px 5px 10px #cacfd8;
 }
 .box label:hover {
-  box-shadow: -10px -10px 15px var(--color_bg1), 10px 10px 15px var(--color_bg2);
+  box-shadow: -10px -10px 15px #edeff1, 10px 10px 15px #cacfd8;
   transform: scale(1.1);
 }
 .box input {
@@ -40,14 +40,12 @@ input[type="checkbox"] {
   font-size: 19px;
   padding-left: 20px;
   color: gray;
-  box-shadow: -10px -10px 15px var(--color_primary),
-    10px 10px 15px var(--color_secondary);
+  box-shadow: -10px -10px 15px #a175f338, 10px 10px 15px #59b4ff38;
   transform: 0.5s;
   opacity: 0;
 }
 .box input:focus {
-  box-shadow: -10px -10px 40px var(--color_primary),
-    10px 10px 40px var(--color_secondary);
+  box-shadow: -10px -10px 40px #a175f338, 10px 10px 40px #59b4ff38;
 }
 #check:checked + .box {
   width: 500px;
@@ -71,8 +69,7 @@ ul.output {
   transition: 0.5s;
   list-style: none;
   background-color: #00000007;
-  box-shadow: -5px -5px 8px var(--color_primary),
-    5px 5px 10px var(--color_secondary);
+  box-shadow: -5px -5px 8px #a175f338, 5px 5px 10px #59b4ff38;
   border-radius: 10px;
   z-index: 10;
 }
@@ -91,13 +88,13 @@ li > p.symbol {
   padding-bottom: 5%;
   padding-right: 5%;
   padding-left: 5%;
-  color: var(--color_text);
+  color: #247ad3;
 }
 
 li > p.sec_name {
   padding-bottom: 5%;
   margin: auto;
-  color: var(--color_text);
+  color: #333;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -107,20 +104,20 @@ li > p.sec_name {
   font-size: 2rem;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  color: var(--color_action);
+  color: #72070c;
 }
 
 i {
-  color: var(--color_text);
+  color: #333;
 }
 
 i:hover {
-  color: var(--color_primary);
+  color: #a175f3;
   size: 1.5rem;
 }
 
 .fa-search {
-  color: var(--color_text);
+  color: #333;
 }
 #unfollow {
   color: #200000;
@@ -138,13 +135,13 @@ i:hover {
 }
 
 .banner {
-  color: var(--color_text);
+  color: #333;
   font-weight: 700;
   padding: 2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-radius: 0px 0px 50px 50px;
+  border-radius: 5%;
 }
 
 .banner .banner-message {
@@ -153,19 +150,11 @@ i:hover {
 }
 
 .banner.info {
-  background: var(--color_tertiary);
+  background: #2ba812;
 }
 
 .banner.info::after {
-  background: var(--color_tertiary);
-}
-
-.banner.info.rem {
-  background: var(--color_primar);
-}
-
-.banner.info.rem::after {
-  background: var(--color_primar);
+  background: #2ba812;
 }
 
 .banner::after {
@@ -194,21 +183,13 @@ i:hover {
 
 .show-banner {
   appearance: none;
-  background: var(--color_white);
+  background: #ededed;
   border: 0;
   padding: 1rem 2rem;
   border-radius: 4px;
   cursor: pointer;
   text-transform: uppercase;
   margin: 0.25rem;
-}
-
-h3 span {
-  color: var(--color_primary);
-}
-
-p {
-  color: var(--color_secondary);
 }
 
 @keyframes banner-in {
