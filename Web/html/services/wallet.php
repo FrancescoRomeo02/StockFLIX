@@ -86,10 +86,10 @@ foreach ($data2 as $key => $value) {
         <div data-aos="fade-left" class="row">
             <div class="col_1">
                 <h2>
-                    Ecco il tuo wallet<span style="color: #59b4ff;">!</span>
+                    Ecco il tuo wallet<span>!</span>
                 </h2>
-                <h3>Aggiornamenti <span style="color: #59b4ff;">istantamei</span> ogni giorno</h3>
-                <p style="color: blueviolet;">Aggiornamenti live solo per versione pro</p>
+                <h3>Aggiornamenti <span>istantamei</span> ogni giorno</h3>
+                <p>Aggiornamenti live solo per versione pro</p>
             </div>
         </div>
         <!-- SEZIONE IMMAGINE E TESTO -->

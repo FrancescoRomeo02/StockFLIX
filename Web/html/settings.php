@@ -97,7 +97,7 @@ if (isset($_POST['mod_abb'])) {
                         <input type="email" placeholder="<?php echo $email ?>" name="email" />
                     </div>
                     <div class="input-field">
-                        <i class="fas fa-key" style="color: #4481eb; transform: scale(-1, 1);"></i>
+                        <i class="fas fa-key" style="transform: scale(-1, 1);"></i>
                         <input type="password" placeholder="Vecchia password" name="password" class="pass" />
                     </div>
                     <div class="input-field">

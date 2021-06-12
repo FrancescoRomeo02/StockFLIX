@@ -101,6 +101,16 @@
   clear: both;
   height: 0;
 }
+h2 soan {
+  color: var(--color_primary);
+}
+h3 span {
+  color: var(--color_secondary);
+}
+
+p {
+  color: var(--color_tertiary);
+}
 
 .up_value {
   color: rgb(73, 147, 0);

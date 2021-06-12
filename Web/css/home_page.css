@@ -24,7 +24,7 @@ html {
 .btn_action {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 /* BARRA DI NAVIGAZIONE CSS */
@@ -118,7 +118,7 @@ nav {
 
 .col_1 h3 {
   font-size: 30px;
-  color: rgb(29, 29, 29);
+  color: var(--color_text);
   font-weight: 400;
   margin: 20px 0 10px;
 }
@@ -130,7 +130,7 @@ nav {
 
 .col_1 p {
   font-size: 16px;
-  color: rgb(20, 20, 20);
+  color: var(--color_secondary);
   font-weight: 200;
 }
 

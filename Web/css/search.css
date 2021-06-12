@@ -24,10 +24,10 @@ input[type="checkbox"] {
   text-align: center;
   font-size: 24px;
   cursor: pointer;
-  box-shadow: -5px -5px 8px #edeff1, 5px 5px 10px #cacfd8;
+  box-shadow: -5px -5px 8px var(--color_bg1), 5px 5px 10px var(--color_bg2);
 }
 .box label:hover {
-  box-shadow: -10px -10px 15px #edeff1, 10px 10px 15px #cacfd8;
+  box-shadow: -10px -10px 15px var(--color_bg1), 10px 10px 15px var(--color_bg2);
   transform: scale(1.1);
 }
 .box input {
@@ -40,14 +40,14 @@ input[type="checkbox"] {
   font-size: 19px;
   padding-left: 20px;
   color: gray;
-  box-shadow: -10px -10px 15px var(--color_primary) 38,
-    10px 10px 15px var(--color_secondary) 38;
+  box-shadow: -10px -10px 15px var(--color_primary),
+    10px 10px 15px var(--color_secondary);
   transform: 0.5s;
   opacity: 0;
 }
 .box input:focus {
-  box-shadow: -10px -10px 40px var(--color_primary) 38,
-    10px 10px 40px var(--color_secondary) 38;
+  box-shadow: -10px -10px 40px var(--color_primary),
+    10px 10px 40px var(--color_secondary);
 }
 #check:checked + .box {
   width: 500px;
@@ -71,8 +71,8 @@ ul.output {
   transition: 0.5s;
   list-style: none;
   background-color: #00000007;
-  box-shadow: -5px -5px 8px var(--color_primary) 38,
-    5px 5px 10px var(--color_secondary) 38;
+  box-shadow: -5px -5px 8px var(--color_primary),
+    5px 5px 10px var(--color_secondary);
   border-radius: 10px;
   z-index: 10;
 }
@@ -91,7 +91,7 @@ li > p.symbol {
   padding-bottom: 5%;
   padding-right: 5%;
   padding-left: 5%;
-  color: var(--color_primary);
+  color: var(--color_text);
 }
 
 li > p.sec_name {
