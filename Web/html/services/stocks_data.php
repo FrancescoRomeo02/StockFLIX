@@ -128,6 +128,9 @@ include('../obj/header.php');
                             $("#search").focusin(function() {
                                 $("#output").css("display", "block");
                             });
+                            $("#search").focusout(function() {
+                                $("#output").css("display", "none");
+                            });
                         },
                     });
                 } else {
