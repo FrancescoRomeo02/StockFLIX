@@ -53,33 +53,33 @@
 }
 
 .fill {
-  --color: #a972cb;
-  --hover: #cb72aa;
+  --color: var(--color_primary);
+  --hover: var(--color_secondary);
 }
 
 .pulse {
-  --color: #8c4fff;
+  --color: var(--color_primary);
   --hover: var(--color_secondary);
 }
 
 .close {
-  --color: #ff7f82;
-  --hover: #ffdc7f;
+  --color: var(--color_primary);
+  --hover: var(--colo_five);
 }
 
 .raise {
-  --color: #74d4fa;
-  --hover: #e5ff60;
+  --color: var(--color_primary);
+  --hover: var(--color_tertiary);
 }
 
 .up {
-  --color: #e4cb58;
-  --hover: #94e458;
+  --color: var(--color_primary);
+  --hover: var(--color_action: );
 }
 
 .slide {
-  --color: #9966c8;
-  --hover: #7066c8;
+  --color: var(--color_primary);
+  --hover: var(--color_secondary);
 }
 
 .offset {

@@ -191,7 +191,7 @@ html {
   border: none;
   background: transparent;
   border-radius: 0.6rem;
-  border: 1px solid var(--color_five);
+  border: 1px solid var(--color_quartary);
   color: var(--color_text);
   font-family: inherit;
   font-size: 1.4rem;

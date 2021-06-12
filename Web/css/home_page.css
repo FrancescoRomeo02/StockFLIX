@@ -57,7 +57,7 @@ nav {
 }
 
 .logo span {
-  color: var(--color_five);
+  color: var(--color_quartary);
 }
 
 .nav_links {
@@ -327,10 +327,10 @@ button {
     ),
     repeating-linear-gradient(
       -45deg,
-      var(--color_white) 0,
-      var(--color_white) 25%,
-      var(--color_four) 0,
-      var(--color_five) 50%
+      var(--color_tertiary) 0,
+      var(--color_tertiary) 25%,
+      var(--color_quartary) 0,
+      var(--color_quartary) 50%
     );
   color: var(--color_white);
 }
@@ -348,18 +348,18 @@ button {
   z-index: 1;
   overflow: hidden;
   background: repeating-linear-gradient(
-      -45deg,
+      45deg,
       transparent 0,
       transparent 25%,
-      var(--color_five) 0,
-      var(--color_four) 50%
+      var(--color_tertiary) 0,
+      var(--color_quartary) 50%
     ),
     repeating-linear-gradient(
-      45deg,
-      var(--color_one) 0,
-      var(--color_two) 25%,
-      var(--color_white) 0,
-      var(--color_one) 50%
+      -45deg,
+      var(--color_primary) 0,
+      var(--color_primary) 25%,
+      var(--color_secondary) 0,
+      var(--color_secondary) 50%
     );
   color: var(--color_white);
 }
@@ -374,9 +374,9 @@ button {
   background-image: linear-gradient(
     60deg,
     var(--color_primary) 0%,
-    var(--color_secondary) 100%
+    var(--color_tertiary) 100%
   );
-  opacity: 0.8;
+  opacity: 0.5;
   z-index: -1;
 }
 
@@ -384,7 +384,7 @@ button {
   font-size: 2rem;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  color: var(--color_primary);
+  color: var(--color_white);
 }
 
 #services .service_item p {
@@ -395,6 +395,7 @@ button {
 
 p span {
   color: var(--color_action);
+  font-weight: bold;
 }
 
 /* FOOTER */

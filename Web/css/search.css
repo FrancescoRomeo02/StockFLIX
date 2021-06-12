@@ -153,19 +153,19 @@ i:hover {
 }
 
 .banner.info {
-  background: var(--color_four);
+  background: var(--color_tertiary);
 }
 
 .banner.info::after {
-  background: var(--color_four);
+  background: var(--color_tertiary);
 }
 
 .banner.info.rem {
-  background: var(--color_one);
+  background: var(--color_primar);
 }
 
 .banner.info.rem::after {
-  background: var(--color_one);
+  background: var(--color_primar);
 }
 
 .banner::after {

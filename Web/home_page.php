@@ -146,7 +146,7 @@ include('./html/obj/header.php');
       </div>
       <div class="service_bottom">
         <!-- CARD -->
-        <div class="service_item pay" data-aos="fade-up-left">
+        <div class="service_item free" data-aos="fade-up-left">
           <div class="icon"><i class="fas fa-wind fa-3x" style="color: rgb(255, 255, 255);"></i></div>
           <h2>Standard</h2>
           <p>
@@ -157,7 +157,7 @@ include('./html/obj/header.php');
         <!-- CARD -->
 
         <!-- CARD -->
-        <div class="service_item free" data-aos="fade-up-right">
+        <div class="service_item pay" data-aos="fade-up-right">
           <div class="icon"><i class=" fas fa-money-bill-wave fa-3x" style="color: rgb(255, 255, 255);"></i></div>
           <h2>Plus</h2>
           <p>
