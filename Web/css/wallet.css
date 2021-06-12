@@ -15,35 +15,25 @@
 .wrapper:focus {
   outline: 0;
 }
-
-.cards_info {
-  display: flex;
-  flex-direction: row;
-}
-
 .stock-card {
   background: #fff;
-  width: auto;
+  width: 300px;
   display: inline-block;
   margin: auto;
   border-radius: 19px;
   position: relative;
   text-align: center;
   box-shadow: -1px 15px 30px -12px #000;
-  z-index: 1;
+  z-index: 9999;
 }
 .stock-card__level {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 700;
   margin-bottom: 3px;
-  font-family: "Bebas Neue", cursive;
 }
-.stock-card__level {
+.stock-card__level--barbarian {
   color: #59b4ff;
-}
-.stock-card__level span {
-  color: #a175f3;
 }
 .stock-card__unit-name {
   font-size: 26px;
@@ -51,10 +41,10 @@
   font-weight: 900;
   margin-bottom: 5px;
 }
-.stock-card__unit-stats {
+.stock-card__unit-stats--barbarian {
   background: #59b4ff;
 }
-.stock-card__unit-stats .one-third {
+.stock-card__unit-stats--barbarian .one-third {
   border-right: 1px solid #a175f3;
 }
 .stock-card__unit-stats {
