@@ -13,20 +13,6 @@ include("./obj/libreria.php")
     <title>StockFLIX - Recupera dati</title>
 </head>
 <?php
-function getpsw($n)
-{
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $randomString = '';
-
-    for ($i = 0; $i < $n; $i++) {
-        $index = rand(0, strlen($characters) - 1);
-        $randomString .= $characters[$index];
-    }
-
-    return $randomString;
-}
-
-
 if (isset($_POST['invia']) && $_POST['email'] != '') {
     //controllo i dati inviati tramite form
     $email = $_POST['email'];
@@ -53,17 +39,17 @@ if (isset($_POST['invia']) && $_POST['email'] != '') {
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
-                <!--------------------------
+                <!-------------------------
                     form recupero password  
-                --------------------------->
+                -------------------------->
                 <form action="#" class="sign-in-form" method="POST">
                     <h2 class="title">Recupera le credenziali di <span style="color: <?php echo $color ?>;">StockFLIX</span> </h2>
                     <div class="input-field">
-                        <i class="fas fa-at" style="color: #4481eb"></i>
+                        <i class="fas fa-at"></i>
                         <input required type="email" placeholder="Email" name="email" />
                     </div>
                     <div class="input-field">
-                        <i class="fas fa-key" style="color: #4481eb"></i>
+                        <i class="fas fa-key"></i>
                         <input required type="password" placeholder="Ultima password utilizzata" name="password" class="pass" />
                     </div>
                     <input required type="submit" value="invia" name="accedi" class="btn solid" />
