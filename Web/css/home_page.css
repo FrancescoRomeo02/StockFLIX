@@ -1,5 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+:root {
+  --color_primary: #9d72ee;
+  --color_secondary: #8e1ad9;
+  --color_tertiary: #d000f0;
+  --color_quaternary: #db4fbb;
+  --color_quintary: #fa5a8a;
+
+  --color_primary_light: #e9c5eb;
+  --color_secondary_light: #e5d3ee;
+  --color_tertiary_light: #d478e2;
+  --color_quaternary_light: #dc87c8;
+  --color_quintary_light: #fbabc3;
+  --color_text_light: #696969;
+
+  --color_text: #333333;
+  --color_white: #ffffff;
+  --color_black: #000000;
+
+  --color_quaternary_transp: #fa5a8ad2;
+  --color_dark_transp: #1e0c1149;
+  --color_dark_transp2: #1e0c1134;
+
+  --color_error: #810303;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +32,11 @@
 }
 
 html {
-  background: linear-gradient(60deg, #ecdfff, #dae9f5);
+  background: linear-gradient(
+    60deg,
+    var(--color_primary_light),
+    var(--color_secondary_light)
+  );
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
 }
@@ -21,13 +50,6 @@ html {
   overflow: hidden;
 }
 
-.btn_action {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
 /* BARRA DI NAVIGAZIONE CSS */
 nav {
   position: fixed;
@@ -38,27 +60,28 @@ nav {
   width: 100%;
   z-index: 99;
   margin-top: 0px;
-  background-color: #59b4ff34;
+  background-color: var(--color_quintary);
 }
 
 .dark {
-  background-color: #001220b9;
+  background-color: var(--color_quaternary_transp);
 }
 
 .white_text {
-  color: #dae9f5 !important;
+  color: var(--color_secondary_light) !important;
 }
 
 .logo {
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  color: #59b4ff;
+  color: var(--color_secondary_light);
   font-size: 22px;
   font-family: "Bebas Neue", cursive;
+  font-size: 24px;
 }
 
 .logo span {
-  color: #a175f3;
+  color: var(--color_secondary);
 }
 
 .nav_links {
@@ -75,14 +98,14 @@ nav {
 .nav_links a {
   text-decoration: none;
   letter-spacing: 0.03rem;
-  color: #1f1f1f;
+  color: var(--color_text);
   font-weight: bold;
-  font-size: 14px;
+  font-size: 17px;
 }
 
 .nav_links a:hover {
   transition: all 0.2s ease;
-  color: #9055ff !important;
+  color: var(--color_primary) !important;
 }
 
 #burger {
@@ -93,7 +116,7 @@ nav {
 #burger div {
   width: 35px;
   height: 3px;
-  background-color: #ecdfff;
+  background-color: var(--color_primary_light);
   margin: 5px;
   transition: all 0.3s ease-in;
 }
@@ -131,7 +154,7 @@ nav {
 
 .col_1 p {
   font-size: 16px;
-  color: rgb(20, 20, 20);
+  color: var(--color_text);
   font-weight: 200;
 }
 
@@ -148,7 +171,7 @@ button {
   content: "";
   width: 10px;
   height: 57%;
-  background: linear-gradient(#a175f3, #59b4ff);
+  background: linear-gradient(var(--color_primary), var(--color_quintary));
   position: absolute;
   left: -40px;
   top: 8px;
@@ -170,7 +193,7 @@ button {
   position: absolute;
   right: 0;
   top: 0;
-  background: linear-gradient(#a175f3, #59b4ff);
+  background: linear-gradient(var(--color_quintary), var(--color_primary));
   border-radius: 20px 0 0 20px;
   height: 100%;
   width: 80%;
@@ -183,7 +206,7 @@ button {
   position: absolute;
   left: 35%;
   top: 45%;
-  color: #fff;
+  color: var(--color_white);
 }
 
 /* CARDS CSS */
@@ -194,20 +217,20 @@ button {
   max-width: 1500px;
   margin: 0 auto;
   padding: 100px 0;
-  color: #fff;
+  color: var(--color_white);
 }
 
 #services .section_title {
   font-size: 4rem;
   font-weight: 300;
-  color: rgb(19, 19, 19);
+  color: var(--color_text);
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
 }
 
 #services .section_title span {
-  color: #59b4ff;
+  color: var(--color_secondary);
 }
 
 #services .service_top p {
@@ -221,7 +244,7 @@ button {
 }
 
 #services .service_top p span {
-  color: #59b4ff;
+  color: var(--color_secondary);
 }
 
 #services .service_bottom {
@@ -323,15 +346,15 @@ button {
       45deg,
       transparent 0,
       transparent 25%,
-      #fbb4c9 0,
-      #fee0cc 50%
+      var(--color_primary) 0,
+      var(--color_secondary) 50%
     ),
     repeating-linear-gradient(
       -45deg,
-      #fff4e8 0,
-      #fff4e8 25%,
-      #aff1f1 0,
-      #8dd1f1 50%
+      var(--color_tertiary) 0,
+      var(--color_tertiary) 25%,
+      var(--color_quintary) 0,
+      var(--color_quintary) 50%
     );
   color: #141414;
 }
@@ -352,15 +375,15 @@ button {
       -45deg,
       transparent 0,
       transparent 25%,
-      #e4ed85 0,
-      #a9cbd7 50%
+      var(--color_tertiary) 0,
+      var(--color_quintary) 50%
     ),
     repeating-linear-gradient(
       45deg,
-      #fcc3c3 0,
-      #fcc3c3 25%,
-      #f7f2d8 0,
-      #c5ace5 50%
+      var(--color_secondary) 0,
+      var(--color_secondary) 25%,
+      var(--color_quaternary) 0,
+      var(--color_quaternary) 50%
     );
   color: #141414;
 }
@@ -377,11 +400,28 @@ button {
   z-index: -1;
 }
 
+#services .service_item.pay::after,
+#services .service_item.free::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    60deg,
+    var(--color_primary_light) 0%,
+    var(--color_secondary_light) 100%
+  );
+  opacity: 0.8;
+  z-index: -1;
+}
+
 #services .service_item h2 {
   font-size: 2rem;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  color: #59b4ff;
+  color: var(--color_secondary);
 }
 
 #services .service_item p {
@@ -391,7 +431,7 @@ button {
 }
 
 p span {
-  color: #59b4ff;
+  color: var(--color_secondary);
 }
 
 /* FOOTER */
@@ -403,7 +443,7 @@ footer {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   letter-spacing: 1px;
-  color: rgb(105, 105, 105);
+  color: var(--color_text_light);
 }
 
 footer span {
@@ -415,12 +455,12 @@ footer span {
 
 footer span a {
   text-decoration: none;
-  color: #59b4ff;
+  color: var(--color_secondary);
   transition: all 0.2s ease-in;
 }
 
 footer span a:hover {
-  color: #a175f3;
+  color: var(--color_primary);
 }
 
 /* RESPONSIVE CSS */
@@ -443,7 +483,7 @@ footer span a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #031829c9;
+    background-color: var(--color_quaternary_transp);
     width: 40%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
@@ -454,7 +494,7 @@ footer span a:hover {
   }
 
   .nav_links li a {
-    color: #ecdfff;
+    color: var(--color_primary_light);
     font-size: 22px;
   }
 

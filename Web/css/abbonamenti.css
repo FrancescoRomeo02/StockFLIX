@@ -1,3 +1,22 @@
+:root {
+  --color_primary: #9d72ee;
+  --color_secondary: #8e1ad9;
+  --color_tertiary: #d000f0;
+  --color_quaternary: #db4fbb;
+  --color_quintary: #fa5a8a;
+
+  --color_primary_light: #e9c5eb;
+  --color_secondary_light: #e5d3ee;
+  --color_text_light: #696969;
+
+  --color_text: #333333;
+  --color_white: #ffffff;
+
+  --color_quaternary_transp: #fa5a8ad2;
+  --color_dark_transp: #1e0c1149;
+  --color_dark_transp2: #1e0c1134;
+}
+
 .cards-list {
   z-index: 0;
   width: 100%;
@@ -11,8 +30,8 @@
   width: 300px;
   height: 300px;
   border-radius: 40px;
-  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
-    -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  box-shadow: 5px 5px 30px 7px var(--color_dark_transp),
+    -5px -5px 30px 7px var(--color_dark2_transp);
   transition: 0.4s;
 }
 
@@ -41,16 +60,16 @@
 
 .card:hover {
   transform: scale(0.9, 0.9);
-  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
-    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+  box-shadow: 5px 5px 30px 15px var(--color_dark_transp),
+    -5px -5px 30px 15px var(--color_dark2_transp);
 }
 
 .title-white {
-  color: white;
+  color: var(--color_white);
 }
 
 .title-black {
-  color: #333;
+  color: var(--color_text);
 }
 
 @media all and (max-width: 500px) {
@@ -69,8 +88,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
-    -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  box-shadow: 5px 5px 30px 7px var(--color_dark_transp),
+    -5px -5px 30px 7px var(--color_dark2_transp);
   transition: 0.4s;
 }
 
@@ -84,7 +103,7 @@
   width: 300px;
   padding-bottom: 1.5em;
   height: 100%;
-  background-color: #333;
+  background-color: var(--color_text);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,7 +111,15 @@
   border-radius: 20px;
   box-shadow: 0 19px 38px rgba(30, 35, 33, 1), 0 15px 12px rgba(30, 35, 33, 0.2);
   flex-wrap: wrap;
-  color: #f4f4f4;
+  color: var(--color_secondary_light);
+}
+
+.packages h1 {
+  color: var(--color_secondary);
+}
+
+.packages h1.pro {
+  color: var(--color_tertiary);
 }
 
 h1,
@@ -100,10 +127,15 @@ h2 {
   font-size: 2.2em;
 }
 
+.title-white p,
+.card_title p {
+  color: var(--color_white);
+}
+
 .list li {
   font-size: 20px;
   list-style: none;
-  border-bottom: 1px solid #f4f4f4;
+  border-bottom: 1px solid var(--color_secondary_light);
   padding-inline-start: 0;
   border-width: 1px;
   padding: 10px;
@@ -111,7 +143,7 @@ h2 {
 
 .first {
   margin-top: 40px;
-  border-top: 1px solid #f4f4f4;
+  border-top: 1px solid var(--color_secondary_light);
 }
 
 .list {
@@ -142,7 +174,7 @@ label {
   font-size: 1.4em;
   margin: 15px 15px;
   border-radius: 50px;
-  color: #f4f4f4;
+  color: var(--color_secondary_light);
   transition: all 0.3s ease 0s;
 }
 
@@ -151,13 +183,15 @@ label {
 }
 
 .button1 {
-  background-color: #a175f3;
-  box-shadow: 0 0 10px 0 #a175f3 inset, 0 0 20px 2px #a175f3;
+  background-color: var(--color_secondary);
+  box-shadow: 0 0 10px 0 var(--color_secondary) inset,
+    0 0 20px 2px var(--color_secondary);
 }
 
 .button2 {
-  background-color: #ef8f6e;
-  box-shadow: 0 0 10px 0 #ef8f6e inset, 0 0 20px 2px #ef8f6e;
+  background-color: var(--color_tertiary);
+  box-shadow: 0 0 10px 0 var(--color_tertiary) inset,
+    0 0 20px 2px var(--color_tertiary);
 }
 
 .switch {
@@ -180,10 +214,10 @@ label {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #333;
+  background-color: var(--color_text);
   -webkit-transition: 0.4s;
 
-  box-shadow: 2px 6px 25px #333;
+  box-shadow: 2px 6px 25px var(--color_text);
   transform: translate(0px, 0px);
   transition: 0.6s ease transform, 0.6s box-shadow;
 }
@@ -195,17 +229,17 @@ label {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: var(--color_white);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: #59b4ff;
+  background-color: var(--color_primary);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #59b4ff;
+  box-shadow: 0 0 1px var(--color_primary);
 }
 
 input:checked + .slider:before {

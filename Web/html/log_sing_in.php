@@ -22,7 +22,7 @@ use function PHPSTORM_META\type;
 
 $nome = $cognome = $password = $mail = '';
 $pro = 0;
-$color = '#4481eb';
+$color = 'color1';
 $errore_account = false;
 //php accesso
 if (isset($_POST['accedi']) && $_POST['email'] != '' && $_POST['password'] != '') {
@@ -42,7 +42,7 @@ if (isset($_POST['accedi']) && $_POST['email'] != '' && $_POST['password'] != ''
     header("Location: ../home_page.php");
   } else {
     $errore =  'Dati errati, riprovare';
-    $color = 'rgb(129, 3, 3)';
+    $color = 'color2 ';
   }
   unset($_POST);
 }
@@ -66,7 +66,8 @@ if (isset($_POST['registrati'])) {
       $query_add = "INSERT INTO user (`nome`, `cognome`, `email`, `password`, `hash`) VALUES ('$nome', '$cognome', '$email', '$password', '$hash')";
       if (mysqli_query($con, $query_add)) {
         $link = "https://romeofrancesco.altervista.org/Web/html/obj/datacheck.php?email=$email&hash=$hash";
-        mail_send('StockFLIX@info.com', $email, $link, 'Attiva il tuo account');
+        $testo = 'La registrazione a StockFLIX è avvenuta con successo, <br> per confermare il tuo account fai click sul link che segue: ';
+        mail_send('StockFLIX@info.com', $email, $link, 'Attiva il tuo account', $testo);
         $_SESSION['link'] = $link;
         $msr2 = 'Controlla la mail ed attiva il tuo account ';
       } else {
@@ -77,7 +78,7 @@ if (isset($_POST['registrati'])) {
       }
     } else {
       $errore =  'Email già in uso';
-      $color = 'rgb(159, 3, 3)';
+      $color = 'color2';
     }
   }
   unset($_POST);
@@ -92,13 +93,13 @@ if (isset($_POST['registrati'])) {
           form accesso  
         -------------------->
         <form action="#" class="sign-in-form" method="POST" onsubmit="criptacc()">
-          <h2 class="title">Accedi a <span style="color: <?php echo $color ?>;">StockFLIX</span> </h2>
+          <h2 class="title">Accedi a <span class="<?php echo $color ?>;">StockFLIX</span> </h2>
           <div class="input-field">
-            <i class="fas fa-at" style="color: #4481eb"></i>
+            <i class="fas fa-at"></i>
             <input required type="email" placeholder="Email" name="email" />
           </div>
           <div class="input-field">
-            <i class="fas fa-key" style="color: #4481eb"></i>
+            <i class="fas fa-key"></i>
             <input required type="password" placeholder="Password" name="password" class="pass" />
           </div>
           <input required type="submit" value="accedi" name="accedi" class="btn solid" />
@@ -112,25 +113,25 @@ if (isset($_POST['registrati'])) {
           form registrazione  
         -------------------->
         <form action="#" class="sign-up-form" method="POST" onsubmit="criptreg()" id="registrazione">
-          <h2 class="title">Registrati a <span style="color: <?php echo $color ?>;">StockFLIX</span></h2>
+          <h2 class="title">Registrati a <span class="<?php echo $color ?>;">StockFLIX</span></h2>
           <div class="input-field">
-            <i class="fas fa-user" style="color: #4481eb"></i>
+            <i class="fas fa-user"></i>
             <input required type="text" placeholder="Nome" name="nome" />
           </div>
           <div class="input-field">
-            <i class="fas fa-signature" style="color: #4481eb"></i>
+            <i class="fas fa-signature"></i>
             <input required type="text" placeholder="Cognome" name="cognome" />
           </div>
           <div class="input-field">
-            <i class="fas fa-at" style="color: #4481eb"></i>
+            <i class="fas fa-at"></i>
             <input required type="email" placeholder="Email" name="email" />
           </div>
           <div class="input-field">
-            <i class="fas fa-key" style="color: #4481eb"></i>
+            <i class="fas fa-key"></i>
             <input required type="password" placeholder="Password" name="password" class="pass" />
           </div>
           <div class="input-field">
-            <i class="fas fa-key" style="color: #4481eb"></i>
+            <i class="fas fa-key"></i>
             <input required type="password" placeholder="Password" name="password2" class="pass" />
           </div>
           <input type="submit" class="btn" value="Registrati" name="registrati" />

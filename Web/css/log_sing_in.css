@@ -1,4 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+:root {
+  --color_primary: #9d72ee;
+  --color_secondary: #8e1ad9;
+  --color_tertiary: #d000f0;
+  --color_quaternary: #db4fbb;
+  --color_quintary: #fa5a8a;
+
+  --color_primary_light: #e9c5eb;
+  --color_secondary_light: #e5d3ee;
+  --color_text_light: #696969;
+
+  --color_text: #333333;
+  --color_white: #ffffff;
+  --color_black: #000000;
+
+  --color_quaternary_transp: #fa5a8ad2;
+  --color_dark_transp: #1e0c1149;
+  --color_dark_transp2: #1e0c1134;
+
+  --color_error: #810303;
+}
 
 * {
   margin: 0;
@@ -14,7 +35,7 @@ input {
 .container {
   position: relative;
   width: 100%;
-  background-color: #fff;
+  background-color: var(--color_white);
   min-height: 100vh;
   overflow: hidden;
 }
@@ -62,14 +83,14 @@ form.sign-in-form {
 
 .title {
   font-size: 2.2rem;
-  color: #444;
+  color: var(--color_text);
   margin-bottom: 10px;
 }
 
 .input-field {
   max-width: 380px;
   width: 100%;
-  background-color: #f0f0f0;
+  background-color: var(--color_primary_light);
   margin: 10px 0;
   height: 55px;
   border-radius: 55px;
@@ -82,7 +103,6 @@ form.sign-in-form {
 .input-field i {
   text-align: center;
   line-height: 55px;
-  color: #acacac;
   transition: 0.5s;
   font-size: 1.1rem;
 }
@@ -94,11 +114,11 @@ form.sign-in-form {
   line-height: 1;
   font-weight: 600;
   font-size: 1.1rem;
-  color: #333;
+  color: var(--color_text);
 }
 
 .input-field input::placeholder {
-  color: #aaa;
+  color: var(--color_white);
   font-weight: 500;
 }
 
@@ -119,36 +139,37 @@ form.sign-in-form {
   justify-content: center;
   align-items: center;
   margin: 0 0.45rem;
-  color: #333;
+  color: var(--color_text);
   border-radius: 50%;
-  border: 1px solid #333;
+  border: 1px solid var(--color_text);
   text-decoration: none;
   font-size: 1.1rem;
   transition: 0.3s;
 }
 
 .social-icon:hover {
-  color: #4481eb;
-  border-color: #4481eb;
+  color: var(--color_primary);
+  border-color: var(--color_primary);
 }
 
 .btn {
   width: 150px;
-  background-color: #5995fd;
+  background-color: var(--color_secondary);
   border: none;
   outline: none;
   height: 49px;
   border-radius: 49px;
-  color: #fff;
+  color: var(--color_white);
   text-transform: uppercase;
   font-weight: 600;
-  margin: 10px 0;
+  margin-left: 30px;
   cursor: pointer;
   transition: 0.5s;
+  margin: 5px;
 }
 
 .btn:hover {
-  background-color: #4d84e2;
+  background-color: var(--color_primary);
 }
 .panels-container {
   position: absolute;
@@ -168,7 +189,11 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
+  background-image: linear-gradient(
+    -45deg,
+    var(--color_tertiary) 0%,
+    var(--color_quintary) 100%
+  );
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
@@ -200,7 +225,7 @@ form.sign-in-form {
 }
 
 .panel .content {
-  color: #fff;
+  color: var(--color_white);
   transition: transform 0.9s ease-in-out;
   transition-delay: 0.6s;
 }
@@ -219,7 +244,7 @@ form.sign-in-form {
 .btn.transparent {
   margin: 0;
   background: none;
-  border: 2px solid #fff;
+  border: 2px solid var(--color_white);
   width: 130px;
   height: 41px;
   font-weight: 600;
@@ -233,26 +258,26 @@ form.sign-in-form {
 
 a {
   text-decoration: none;
-  color: #acacac;
+  color: var(--color_text_light);
 }
 
 .alert {
   padding: 20px;
   background-color: rgb(129, 3, 3);
-  color: white;
+  color: var(--color_white);
   border-radius: 5px;
 }
 
 .mail {
   padding: 20px;
   background-color: rgb(3, 129, 55);
-  color: white;
+  color: var(--color_white);
   border-radius: 5px;
 }
 
 .closebtn {
   margin-left: 15px;
-  color: white;
+  color: var(--color_white);
   font-weight: bold;
   float: right;
   font-size: 22px;
@@ -262,7 +287,7 @@ a {
 }
 
 .closebtn:hover {
-  color: black;
+  color: var(--color_black);
 }
 
 input:-webkit-autofill,
@@ -418,6 +443,18 @@ select:-webkit-autofill:focus {
     top: 5%;
     transform: translate(-50%, 0);
   }
+}
+
+.color1 {
+  color: var(--color_primary);
+}
+
+.color2 {
+  color: var(--color_error);
+}
+
+.fas {
+  color: var(--color_secondary);
 }
 
 @media (max-width: 570px) {

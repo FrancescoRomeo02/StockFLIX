@@ -1,5 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
+:root {
+  --color_primary: #9d72ee;
+  --color_secondary: #8e1ad9;
+  --color_tertiary: #d000f0;
+  --color_quaternary: #db4fbb;
+  --color_quintary: #fa5a8a;
+
+  --color_primary_light: #e9c5eb;
+  --color_secondary_light: #e5d3ee;
+  --color_tertiary_light: #d478e2;
+  --color_quaternary_light: #dc87c8;
+  --color_quintary_light: #fbabc3;
+  --color_text_light: #696969;
+
+  --color_text: #333333;
+  --color_white: #ffffff;
+  --color_black: #000000;
+
+  --color_quaternary_transp: #fa5a8ad2;
+  --color_dark_transp: #1e0c1149;
+  --color_dark_transp2: #1e0c1134;
+
+  --color_error: #810303;
+}
+
 .fill:hover,
 .fill:focus {
   box-shadow: inset 0 0 0 2em var(--hover);
@@ -53,38 +78,38 @@
 }
 
 .fill {
-  --color: #a972cb;
-  --hover: #cb72aa;
+  --color: var(--color_primary);
+  --hover: var(--color_quintary);
 }
 
 .pulse {
-  --color: #8c4fff;
-  --hover: #ef8f6e;
+  --color: var(--color_primary);
+  --hover: var(--color_primary);
 }
 
 .close {
-  --color: #ff7f82;
-  --hover: #ffdc7f;
+  --color: var(--color_quaternary);
+  --hover: var(--color_quintary);
 }
 
 .raise {
-  --color: #74d4fa;
-  --hover: #e5ff60;
+  --color: var(--color_tertiary);
+  --hover: var(--color_quintary_light);
 }
 
 .up {
-  --color: #e4cb58;
-  --hover: #94e458;
+  --color: var(--color_secondary);
+  --hover: var(--color_primary);
 }
 
 .slide {
-  --color: #9966c8;
-  --hover: #7066c8;
+  --color: var(--color_secondary);
+  --hover: var(--color_secondary_light);
 }
 
 .offset {
-  --color: #a175f3;
-  --hover: #59b4ff;
+  --color: var(--color_quintary);
+  --hover: var(--color_quintary_light);
 }
 
 button {
@@ -95,5 +120,5 @@ button {
 button:hover,
 button:focus {
   border-color: var(--hover);
-  color: #333;
+  color: var(--color_text);
 }

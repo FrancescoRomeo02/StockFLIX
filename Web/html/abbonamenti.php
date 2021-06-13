@@ -43,7 +43,7 @@ include('./obj/header.php');
               <img src="https://media.giphy.com/media/12Eo7WogCAoj84/giphy.gif" />
             </div>
             <div class="card_title title-white">
-              <p style="color: white">Portafoglio Demo</p>
+              <p>Portafoglio Demo</p>
             </div>
             <p>Non rischiare i tuoi soldi.</p>
           </div>
@@ -65,7 +65,7 @@ include('./obj/header.php');
               <img src="https://media.giphy.com/media/26BkMgeeCjES3B4FW/giphy.gif" />
             </div>
             <div class="card_title">
-              <p style="color: white">Mai Solo</p>
+              <p>Mai Solo</p>
             </div>
             <p>Sarai sempre aggiornato.</p>
           </div>
@@ -76,7 +76,7 @@ include('./obj/header.php');
               <img src="https://media.giphy.com/media/8t8Yamlz9ctfc4Dhuu/giphy.gif" />
             </div>
             <div class="card_title title-black">
-              <p style="color: white">AI</p>
+              <p>AI</p>
             </div>
             <p>Non fare tutto tu.</p>
           </div>
@@ -105,7 +105,7 @@ include('./obj/header.php');
     <div class="package-container">
       <div data-aos="fade-right">
         <div class="packages">
-          <h1 style="color: #a175f3">Basic</h1>
+          <h1>Basic</h1>
           <h2 class="text1">Gratis</h2>
           <h2 class="text2">Gratis</h2>
           <ul class="list">
@@ -119,7 +119,7 @@ include('./obj/header.php');
       </div>
       <div data-aos="fade-left">
         <div class="packages">
-          <h1 style="color: #ef8f6e">PRO</h1>
+          <h1 class="pro">PRO</h1>
           <h2 class="text1">119.99 &euro;</h2>
           <h2 class="text2">239.99 &euro;</h2>
           <ul class="list">

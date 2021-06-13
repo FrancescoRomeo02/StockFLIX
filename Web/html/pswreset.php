@@ -13,31 +13,49 @@ include("./obj/libreria.php")
     <title>StockFLIX - Recupera dati</title>
 </head>
 <?php
+function getpsw($n)
+{
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $randomString = '';
+
+    for ($i = 0; $i < $n; $i++) {
+        $index = rand(0, strlen($characters) - 1);
+        $randomString .= $characters[$index];
+    }
+
+    return $randomString;
+}
+
+
 if (isset($_POST['invia']) && $_POST['email'] != '') {
-    //controllo i dati inviati tramite form 
+    //controllo i dati inviati tramite form
     $email = $_POST['email'];
     $query_data = "SELECT email, hash FROM user WHERE email = '$email' ";
     $temp = mysqli_query($con, $query_data);
     $data = mysqli_fetch_array($temp);
     if ($data != null && $_POST['email'] == $data['email']) {
-        $body = $data['hash'];
+        $temp = getpsw(7);
+        $code = md5($temp);
         //invoco la funzione per l'invio della mail per il reset della password
-        mail_send('StockFLIX@assistenza.com', $email, 'Modifica della password', $body);
+        $testo = 'Ecco la tua nuova passowrd, usala per accedere al tuo account';
+        mail_send('StockFLIX@assistenza.com', $email, 'Modifica della password', $code, $testo);
+        $regen_psw = "UPDATE `user` SET password = $code WHERE `user_id` = $_SESSION[user_id]";
+        mysqli_query($con, $regen_psw);
     } else {
         echo '<br> <h3>La mail non e\' presente nel database</h3>';
     }
 }
-// Una volta che l'utente premerà sul link della mail riceverà una nuova mail 
-// con una passowrd generata dal sito chje potrà essere cambiata dalle impostazioni 
+// Una volta che l'utente premerà sul link della mail riceverà una nuova password
+// con una passowrd generata dal sito che potrà essere cambiata dalle impostazioni
 ?>
 
 <body>
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
-                <!-------------------
-                    form accesso  
-                -------------------->
+                <!--------------------------
+                    form recupero password  
+                --------------------------->
                 <form action="#" class="sign-in-form" method="POST">
                     <h2 class="title">Recupera le credenziali di <span style="color: <?php echo $color ?>;">StockFLIX</span> </h2>
                     <div class="input-field">

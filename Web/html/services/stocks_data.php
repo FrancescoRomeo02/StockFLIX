@@ -3,9 +3,6 @@ include('../obj/header.php');
 ?>
 <!DOCTYPE html>
 <html lang="it">
-<style>
-
-</style>
 
 <head>
     <meta charset="UTF-8" />
@@ -128,9 +125,6 @@ include('../obj/header.php');
                             $("#search").focusin(function() {
                                 $("#output").css("display", "block");
                             });
-                            $("#search").focusout(function() {
-                                $("#output").css("display", "none");
-                            });
                         },
                     });
                 } else {
@@ -154,7 +148,6 @@ include('../obj/header.php');
                     showBanner('.banner.info');
                     setTimeout(hideBanners, 3000);
                 }
-
             });
         }
 
