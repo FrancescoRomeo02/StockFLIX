@@ -42,14 +42,14 @@ input[type="checkbox"] {
   font-size: 19px;
   padding-left: 20px;
   color: var(--color_text_light);
-  box-shadow: -10px -10px 15px var(--color_tertiary_light),
-    10px 10px 15px var(--color_quaternary_light);
+  box-shadow: -10px -10px 15px var(--color_bg1),
+    10px 10px 15px var(--color_bg2);
   transform: 0.5s;
   opacity: 0;
 }
 .box input:focus {
-  box-shadow: -10px -10px 40px var(--color_tertiary_light),
-    10px 10px 40px var(--color_quaternary_light);
+  box-shadow: -10px -10px 40px var(--color_bg1),
+    10px 10px 40px var(--color_bg2);
 }
 #check:checked + .box {
   width: 500px;
@@ -72,7 +72,7 @@ ul.output {
   min-width: 350px;
   transition: 0.5s;
   list-style: none;
-  background-color: var(--color_dark_transp);
+  background-color: var(--color_bg2);
   box-shadow: -5px -5px 8px var(--color_secondary_light),
     5px 5px 10px var(--color_quaternary_light);
   border-radius: 10px;

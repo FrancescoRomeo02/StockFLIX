@@ -10,8 +10,8 @@
 html {
   background: linear-gradient(
     60deg,
-    var(--color_primary_light),
-    var(--color_secondary_light)
+    var(--color_bg1),
+    var(--color_bg2)
   );
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
@@ -427,6 +427,7 @@ footer span {
   min-width: 230px;
   margin: 10px 0 10px 0;
   text-align: center;
+  display: flex;
 }
 
 footer span a {
