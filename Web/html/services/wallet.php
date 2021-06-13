@@ -131,7 +131,7 @@ foreach ($data2 as $key => $value) {
             $card['symbol'] = $info[$i]['symbol'];
             $card['stock_owned'] = 10;
             $card['value'] = $info[$i]['prezzo'];
-            substr(strval($card['value']), 0, 1) == "-" ? $card['style_value'] = 'down' : $card['style_value'] = 'up';
+            substr(strval($card['value']), 0, 1) == "-" ? $card['style_value'] = 'down_stock' : $card['style_value'] = 'up_stock';
             $card['variazione'] = $info[$i]['variazione'];
             include('../obj/data_card.php');
         }

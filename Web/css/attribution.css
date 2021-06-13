@@ -7,7 +7,11 @@
 }
 
 html {
-  background: linear-gradient(60deg, #ecdfff, #dae9f5);
+  background: linear-gradient(
+    60deg,
+    var(--color_primary_light),
+    var(--color_secondary_light)
+  );
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
 }
@@ -20,8 +24,8 @@ dl {
   counter-reset: count;
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 0.04) 20%,
-    rgba(255, 255, 255, 0) 0%
+    var(--color_dark_transp) 20%,
+    var(--color_dark_transp2) 0%
   );
   padding-left: 4vw;
   padding-right: 4vw;
@@ -34,7 +38,7 @@ dl + dl {
 
 dt {
   counter-increment: count;
-  color: #a175f3;
+  color: var(--color_tertiary);
   font-family: "Bebas Neue", cursive;
   font-size: 4vw;
   text-transform: uppercase;
@@ -43,7 +47,7 @@ dt {
 dt::before {
   content: counter(count, decimal-leading-zero) ".";
   font-family: "Poppins", sans-serif;
-  color: #59b4ff;
+  color: var(--color_primary);
   margin-left: -1vw;
   padding-right: 12px;
 }
@@ -60,11 +64,11 @@ a {
 }
 
 a {
-  color: #a175f3;
+  color: var(--color_primary);
 }
 
 span {
-  color: #59b4ff;
+  color: var(--color_secondary);
 }
 
 a,

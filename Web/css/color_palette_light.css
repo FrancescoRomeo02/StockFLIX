@@ -1,11 +1,3 @@
-/* 
-<?php
-header(“Content-type: text/css”);
-?> 
-<style type=”text/css”>
-@import css.php?<?php echo md5(mt_rand()); ?>
-</style
-*/
 :root {
   --color_primary: #9d72ee;
   --color_secondary: #8e1ad9;

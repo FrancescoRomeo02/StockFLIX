@@ -24,10 +24,12 @@ input[type="checkbox"] {
   text-align: center;
   font-size: 24px;
   cursor: pointer;
-  box-shadow: -5px -5px 8px #edeff1, 5px 5px 10px #cacfd8;
+  box-shadow: -5px -5px 8px var(--color_primary_light),
+    5px 5px 10px var(--color_secondary_light);
 }
 .box label:hover {
-  box-shadow: -10px -10px 15px #edeff1, 10px 10px 15px #cacfd8;
+  box-shadow: -10px -10px 15px var(--color_primary_light),
+    10px 10px 15px var(--color_secondary_light);
   transform: scale(1.1);
 }
 .box input {
@@ -39,13 +41,15 @@ input[type="checkbox"] {
   outline: none;
   font-size: 19px;
   padding-left: 20px;
-  color: gray;
-  box-shadow: -10px -10px 15px #a175f338, 10px 10px 15px #59b4ff38;
+  color: var(--color_text_light);
+  box-shadow: -10px -10px 15px var(--color_tertiary_light),
+    10px 10px 15px var(--color_quaternary_light);
   transform: 0.5s;
   opacity: 0;
 }
 .box input:focus {
-  box-shadow: -10px -10px 40px #a175f338, 10px 10px 40px #59b4ff38;
+  box-shadow: -10px -10px 40px var(--color_tertiary_light),
+    10px 10px 40px var(--color_quaternary_light);
 }
 #check:checked + .box {
   width: 500px;
@@ -68,8 +72,9 @@ ul.output {
   min-width: 350px;
   transition: 0.5s;
   list-style: none;
-  background-color: #00000007;
-  box-shadow: -5px -5px 8px #a175f338, 5px 5px 10px #59b4ff38;
+  background-color: var(--color_dark_transp);
+  box-shadow: -5px -5px 8px var(--color_secondary_light),
+    5px 5px 10px var(--color_quaternary_light);
   border-radius: 10px;
   z-index: 10;
 }
@@ -88,13 +93,13 @@ li > p.symbol {
   padding-bottom: 5%;
   padding-right: 5%;
   padding-left: 5%;
-  color: #247ad3;
+  color: var(--color_secondary);
 }
 
 li > p.sec_name {
   padding-bottom: 5%;
   margin: auto;
-  color: #333;
+  color: var(--color_text);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -104,23 +109,23 @@ li > p.sec_name {
   font-size: 2rem;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  color: #72070c;
+  color: #6b0000;
 }
 
 i {
-  color: #333;
+  color: var(--color_text);
 }
 
 i:hover {
-  color: #a175f3;
+  color: var(--color_primary);
   size: 1.5rem;
 }
 
 .fa-search {
-  color: #333;
+  color: var(--color_text);
 }
 #unfollow {
-  color: #200000;
+  color: #440e0e;
 }
 #unfollow:hover {
   color: #6b0000;
@@ -136,7 +141,7 @@ i:hover {
 }
 
 .banner {
-  color: #333;
+  color: var(--color_text);
   font-weight: 700;
   padding: 2rem;
   display: flex;
@@ -146,12 +151,12 @@ i:hover {
 }
 
 .banner.info .banner-icon i {
-  color: #134709;
+  color: #b0fba1;
   font-size: large;
 }
 
 .banner.info.rem .banner-icon i {
-  color: #3b0000;
+  color: #ff9090;
   font-size: large;
 }
 
@@ -191,7 +196,7 @@ i:hover {
 }
 
 .banner.visible {
-  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px 2px var(--color_dark_transp2);
   animation-name: banner-in;
   animation-direction: forwards;
   animation-duration: 0.6s;
@@ -202,7 +207,7 @@ i:hover {
 
 .show-banner {
   appearance: none;
-  background: #ededed;
+  background: var(--color_secondary_light);
   border: 0;
   padding: 1rem 2rem;
   border-radius: 4px;
@@ -250,6 +255,6 @@ i:hover {
   ul.output {
     margin-top: 205%;
     margin-left: -51%;
-    background-color: #d1d1d130;
+    background-color: var(--color_dark_transp2);
   }
 }

@@ -24,14 +24,14 @@
   flex-wrap: wrap;
 }
 .stock-card {
-  background: #fff;
+  background: var(--color_white);
   width: 300px;
   display: inline-block;
   margin: auto;
   border-radius: 19px;
   position: relative;
   text-align: center;
-  box-shadow: -1px 15px 30px -12px #000;
+  box-shadow: -1px 15px 30px -12px var(--color_black);
   z-index: 9999;
 }
 .stock-card__level {
@@ -41,22 +41,22 @@
   margin-bottom: 3px;
 }
 .stock-card__level--barbarian {
-  color: #59b4ff;
+  color: var(--color_primary_light);
 }
 .stock-card__unit-name {
   font-size: 26px;
-  color: #000;
+  color: var(--color_black);
   font-weight: 900;
   margin-bottom: 5px;
 }
 .stock-card__unit-stats--barbarian {
-  background: #59b4ff;
+  background: var(--color_primary_light);
 }
 .stock-card__unit-stats--barbarian .one-third {
-  border-right: 1px solid #a175f3;
+  border-right: 1px solid var(--color_tertiary_light);
 }
 .stock-card__unit-stats {
-  color: #fff;
+  color: var(--color_white);
   font-weight: 700;
   border-bottom-left-radius: 14px;
   border-bottom-right-radius: 14px;
@@ -94,10 +94,10 @@
   height: 0;
 }
 
-.up {
+.up_stock {
   color: rgb(73, 147, 0);
 }
 
-.down {
+.down_stock {
   color: rgb(78, 0, 0);
 }

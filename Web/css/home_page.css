@@ -1,29 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-:root {
-  --color_primary: #9d72ee;
-  --color_secondary: #8e1ad9;
-  --color_tertiary: #d000f0;
-  --color_quaternary: #db4fbb;
-  --color_quintary: #fa5a8a;
-
-  --color_primary_light: #e9c5eb;
-  --color_secondary_light: #e5d3ee;
-  --color_tertiary_light: #d478e2;
-  --color_quaternary_light: #dc87c8;
-  --color_quintary_light: #fbabc3;
-  --color_text_light: #696969;
-
-  --color_text: #333333;
-  --color_white: #ffffff;
-  --color_black: #000000;
-
-  --color_quaternary_transp: #fa5a8ad2;
-  --color_dark_transp: #1e0c1149;
-  --color_dark_transp2: #1e0c1134;
-
-  --color_error: #810303;
-}
 
 * {
   margin: 0;
@@ -154,7 +130,7 @@ nav {
 
 .col_1 p {
   font-size: 16px;
-  color: var(--color_text);
+  color: var(--color_tertiary);
   font-weight: 200;
 }
 

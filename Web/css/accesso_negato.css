@@ -1,24 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Bungee");
 
 body {
-  background: #1b1b1b;
-  color: white;
+  background: var(--color_text_light);
+  color: var(--color_white);
   font-family: "Bungee", cursive;
   margin-top: 50px;
   text-align: center;
 }
 a {
-  color: #2aa7cc;
+  color: var(--color_primary);
   text-decoration: none;
 }
 a:hover {
-  color: white;
+  color: var(--color_white);
 }
 svg {
   width: 50vw;
 }
 .lightblue {
-  fill: #444;
+  fill: var(--color_text_light);
 }
 
 #eye-wrap {
@@ -33,6 +33,6 @@ svg {
 
 @keyframes alarmOn {
   to {
-    fill: darkred;
+    fill: var(--color_primary);
   }
 }

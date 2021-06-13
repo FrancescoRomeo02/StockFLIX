@@ -20,6 +20,8 @@ def main():
         print('|___Upload completato.')
     print('Tutti i file sono stati caricati con successo.')
     print('Script completato')
+    os.remove('new_stockname.txt')
+    os.remove('stockname.txt')
 
 
 main()

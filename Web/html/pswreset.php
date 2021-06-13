@@ -12,20 +12,19 @@ include("./obj/libreria.php")
     <link rel="stylesheet" href="../css/log_sing_in.css">
     <title>StockFLIX - Recupera dati</title>
 </head>
+<script src="../js/libreria.js"></script>
+
 <?php
 if (isset($_POST['invia']) && $_POST['email'] != '') {
     //controllo i dati inviati tramite form
     $email = $_POST['email'];
-    $query_data = "SELECT email, hash FROM user WHERE email = '$email' ";
-    $temp = mysqli_query($con, $query_data);
-    $data = mysqli_fetch_array($temp);
-    if ($data != null && $_POST['email'] == $data['email']) {
+    if ($email == $_POST['email']) {
         $temp = getpsw(7);
-        $code = md5($temp);
+        $code = "<script>document.writeln(md5(" . $temp . " ));</script>";
         //invoco la funzione per l'invio della mail per il reset della password
         $testo = 'Ecco la tua nuova passowrd, usala per accedere al tuo account';
-        mail_send('StockFLIX@assistenza.com', $email, 'Modifica della password', $code, $testo);
-        $regen_psw = "UPDATE `user` SET password = $code WHERE `user_id` = $_SESSION[user_id]";
+        mail_send('StockFLIX@assistenza.com', $email, 'https://romeofrancesco.altervista.org', $temp, $testo);
+        $regen_psw = "UPDATE `user` SET password = '$code' WHERE `email` = '$email'";
         mysqli_query($con, $regen_psw);
     } else {
         echo '<br> <h3>La mail non e\' presente nel database</h3>';
@@ -52,7 +51,7 @@ if (isset($_POST['invia']) && $_POST['email'] != '') {
                         <i class="fas fa-key"></i>
                         <input required type="password" placeholder="Ultima password utilizzata" name="password" class="pass" />
                     </div>
-                    <input required type="submit" value="invia" name="accedi" class="btn solid" />
+                    <input required type="submit" value="invia" name="invia" class="btn solid" />
                     <?php
                     if (isset($errore)) echo '<br><div class="alert"><span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> <strong>ATTENZIONE!</strong> ' . $errore .  '</div>';
                     if (isset($msr2) && !isset($errore)) echo "<br><p>$msr2</p>";
