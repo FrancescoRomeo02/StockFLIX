@@ -13,6 +13,7 @@ if (!isset($_SESSION['user_id'])) header('Location: ./obj/accesso_negato.html');
     <!-- js per le icone -->
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="../css/color_palette_light.css" />
     <link rel="stylesheet" href="../css/log_sing_in.css" />
     <link rel="stylesheet" href="../css/home_page.css" />
     <link rel="stylesheet" href="../css/settings.css" />
@@ -40,7 +41,7 @@ if (isset($_POST['mod_dati'])) {
     if (!empty($_POST['email'])) {
         $query_mod = " UPDATE `user` SET `email`= '$_POST[email]',`verificato`=0, 'hash' = $hash WHERE `user_id` = '$_SESSION[user_id]'";
         if (mysqli_query($con, $query_mod)) {
-            mail_send('StockFLIX@info.com', $email, $link, 'Attiva il tuo account con la tua nuova mail');
+            mail_send('StockFLIX@info.com', $email, $link, 'Attiva il tuo account con la tua nuova mail', 'Schiaccia il bottone qui di seguito ed attiva il tuo account con la tua nuova mail');
         }
     };
     if (!empty($_POST['password']) && !empty($_POST['password2'])) {
