@@ -79,7 +79,7 @@
 
 .slide {
   --color: var(--color_secondary);
-  --hover: var(--color_secondary_light);
+  --hover: var(--color_primary);
 }
 
 .offset {
@@ -95,5 +95,5 @@ button {
 button:hover,
 button:focus {
   border-color: var(--hover);
-  color: var(--color_text);
+  color: var(--color_primary);
 }

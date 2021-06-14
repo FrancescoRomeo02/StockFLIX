@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --color_primary: #9d72ee;
   --color_secondary: #8e1ad9;
   --color_tertiary: #d000f0;
@@ -24,7 +24,7 @@
 
   --color_bg1: #fff;
   --color_bg2: #efefef;
-}
+} */
 
 :root {
   --color_primary: #9d72ee;
@@ -53,5 +53,5 @@
   --color_dark_transp: #1e0c1149;
   --color_dark_transp2: #1e0c1134;
 
-  --color_bg2_transp: #3636364a;
+  --color_bg_transp: #36363665;
 }
