@@ -36,7 +36,7 @@ nav {
 }
 
 .dark {
-  background-color: var(--color_secondary_transp);
+  background-color: var(--color_bg2_transp);
 }
 
 .white_text {
@@ -111,6 +111,10 @@ nav {
 .col_1 h2 {
   font-size: 54px;
   color: var(--color_text);
+}
+
+.col_1 h2 span {
+  color: var(--color_primary);
 }
 
 .col_1 h3 {

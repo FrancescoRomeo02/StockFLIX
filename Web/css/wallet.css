@@ -1,6 +1,9 @@
 .one_stock {
   padding-bottom: 5%;
 }
+.one_stock h1 {
+  color: var(--color_primary);
+}
 /* CARD */
 
 .slide-container {

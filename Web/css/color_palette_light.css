@@ -44,12 +44,14 @@
   --color_white: #ffffff;
   --color_black: #000000;
 
-  --color_quaternary_transp: #fa5a8ad2;
-  --color_dark_transp: #1e0c1149;
-  --color_dark_transp2: #1e0c1134;
-
   --color_error: #810303;
 
   --color_bg1: #252525;
   --color_bg2: #363636;
+
+  --color_quaternary_transp: #fa5a8ad2;
+  --color_dark_transp: #1e0c1149;
+  --color_dark_transp2: #1e0c1134;
+
+  --color_bg2_transp: #3636364a;
 }
