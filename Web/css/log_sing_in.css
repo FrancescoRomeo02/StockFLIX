@@ -14,7 +14,7 @@ input {
 .container {
   position: relative;
   width: 100%;
-  background-color: var(--color_bg1);
+  background: linear-gradient(60deg, var(--color_bg1), var(--color_bg2));
   min-height: 100vh;
   overflow: hidden;
 }

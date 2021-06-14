@@ -14,7 +14,7 @@
 
   --color_text: #333333;
   --color_white: #ffffff;
-  --color_black: #000000;
+  --color_black: #9f4ef5;
 
   --color_quaternary_transp: #fa5a8ad2;
   --color_dark_transp: #1e0c1149;
@@ -23,6 +23,6 @@
   --color_error: #810303;
 
   --color_bg1: #fff;
-  --color_bg2: #efefef;
+  --color_bg2: #cdbee9;
   --color_bg2_transp: #363636d9;
 }
