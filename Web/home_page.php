@@ -111,7 +111,6 @@ include('./html/obj/header.php');
           </div>
           <!-- CARD -->
         </div>
-      </div>
     </section>
     <!-- CARDS DIV SERVIZI-->
 

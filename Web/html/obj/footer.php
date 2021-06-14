@@ -1,12 +1,4 @@
-<?php
-if (isset($_POST['theme'])) {
-  $text = 'More Color ?';
-  $_SESSION['theme'] = 'dark';
-} else {
-  $text = 'More Boring ?';
-  $_SESSION['theme'] = 'light';
-}
-?>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <footer>
   <span>StockFLIX</span>
   <span>Based in Milan</span>
@@ -17,8 +9,32 @@ if (isset($_POST['theme'])) {
     <a href="https://www.iubenda.com/privacy-policy/13904014" rel="noreferrer nofollow" target="_blank">Privacy Policy</a>
   </span>
   <span>
-    <form action="#" method="post">
-      <button type="submit" name="theme"><?php echo $text; ?></button>
-    </form>
+    <button type="submit" name="theme_l" class="button" value="light">More Color ?</button>
+  </span>
+  <span>
+    <button type="submit" name="theme_d" class="button" value="dark">More Boring ?</button>
   </span>
 </footer>
+<!-- js query  -->
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+  $(".button").click(function(e) {
+    e.preventDefault();
+    $.ajax({
+      crossDomain: true,
+      url: "https://romeofrancesco.altervista.org/Web/html/obj/theme.php",
+      method: "POST",
+      data: {
+        id: $(this).val()
+      },
+      success: function(data) {
+        alert('Il tema verrà aggiornato');
+        location.reload();
+      },
+      error: function(data) {
+        alert('Errore');
+        location.reload();
+      }
+    });
+  });
+</script>

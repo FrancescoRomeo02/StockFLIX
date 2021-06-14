@@ -451,6 +451,15 @@ footer span a:hover {
   color: var(--color_primary);
 }
 
+footer span button {
+  width: 120px;
+  border: 0;
+  padding: 12px 10px;
+  outline: none;
+  text-transform: uppercase;
+  font-size: medium;
+}
+
 /* RESPONSIVE CSS */
 @media screen and (max-width: 1024px) {
   .nav_links {
