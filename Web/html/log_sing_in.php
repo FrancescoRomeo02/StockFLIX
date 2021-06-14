@@ -94,7 +94,7 @@ if (isset($_POST['registrati'])) {
           form accesso  
         -------------------->
         <form action="#" class="sign-in-form" method="POST" onsubmit="criptacc()">
-          <h2 class="title">Accedi a <span class="<?php echo $color ?>;">StockFLIX</span> </h2>
+          <h2 class="title">Accedi a <span class="<?php echo $color ?>">StockFLIX</span> </h2>
           <div class="input-field">
             <i class="fas fa-at"></i>
             <input required type="email" placeholder="Email" name="email" />
@@ -114,7 +114,7 @@ if (isset($_POST['registrati'])) {
           form registrazione  
         -------------------->
         <form action="#" class="sign-up-form" method="POST" onsubmit="criptreg()" id="registrazione">
-          <h2 class="title">Registrati a <span class="<?php echo $color ?>;">StockFLIX</span></h2>
+          <h2 class="title">Registrati a <span class="<?php echo $color ?>">StockFLIX</span></h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
             <input required type="text" placeholder="Nome" name="nome" />

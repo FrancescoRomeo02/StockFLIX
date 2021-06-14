@@ -27,29 +27,29 @@
 }
 
 :root {
-  --color_primary: #5c546b;
-  --color_secondary: #522d6b;
-  --color_tertiary: #61206b;
-  --color_quaternary: #6b4763;
-  --color_quintary: #6b4752;
+  --color_primary: #9d72ee;
+  --color_secondary: #8e1ad9;
+  --color_tertiary: #d000f0;
+  --color_quaternary: #db4fbb;
+  --color_quintary: #fa5a8a;
 
-  --color_primary_light: #693a6b;
-  --color_secondary_light: #5c3f6b;
-  --color_tertiary_light: #69596b;
-  --color_quaternary_light: #6b215a;
-  --color_quintary_light: #6b293d;
-  --color_text_light: #696969;
+  --color_primary_light: #ffffff;
+  --color_secondary_light: #e0e0e0;
+  --color_tertiary_light: #a4a4a4;
+  --color_quaternary_light: #8e8e8e;
+  --color_quintary_light: #515151;
+  --color_text_light: #a0a0a0;
 
-  --color_text: #333333;
+  --color_text: #ffffff;
   --color_white: #ffffff;
   --color_black: #000000;
 
-  --color_quaternary_transp: #421825d2;
+  --color_quaternary_transp: #fa5a8ad2;
   --color_dark_transp: #1e0c1149;
   --color_dark_transp2: #1e0c1134;
 
   --color_error: #810303;
 
-  --color_bg1: #140008;
-  --color_bg2: #1a1a1a;
+  --color_bg1: #252525;
+  --color_bg2: #363636;
 }

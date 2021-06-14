@@ -8,11 +8,7 @@
 }
 
 html {
-  background: linear-gradient(
-    60deg,
-    var(--color_bg1),
-    var(--color_bg2)
-  );
+  background: linear-gradient(60deg, var(--color_bg1), var(--color_bg2));
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
 }
@@ -36,11 +32,11 @@ nav {
   width: 100%;
   z-index: 99;
   margin-top: 0px;
-  background-color: var(--color_quintary);
+  background-color: var(--color_black);
 }
 
 .dark {
-  background-color: var(--color_quaternary_transp);
+  background-color: var(--color_secondary_transp);
 }
 
 .white_text {
@@ -114,18 +110,24 @@ nav {
 
 .col_1 h2 {
   font-size: 54px;
+  color: var(--color_text);
 }
 
 .col_1 h3 {
   font-size: 30px;
-  color: rgb(29, 29, 29);
+  color: var(--color_text_light);
   font-weight: 400;
   margin: 20px 0 10px;
+}
+
+.col_1 h3 span {
+  color: var(--color_primary);
 }
 
 .col_1 h4 {
   font-size: 20px;
   margin: 30px 0;
+  color: var(--color_primary);
 }
 
 .col_1 p {
@@ -215,7 +217,7 @@ button {
   line-height: 2.5rem;
   font-weight: 200;
   letter-spacing: 0.05rem;
-  color: #1f1f1f;
+  color: var(--color_text_light);
   margin-bottom: 50px;
 }
 
@@ -408,6 +410,7 @@ button {
 
 p span {
   color: var(--color_secondary);
+  font-weight: bold;
 }
 
 /* FOOTER */

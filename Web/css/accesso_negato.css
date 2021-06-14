@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Bungee");
 
 body {
-  background: var(--color_text_light);
+  background: var(--color_bg1);
   color: var(--color_white);
   font-family: "Bungee", cursive;
   margin-top: 50px;
