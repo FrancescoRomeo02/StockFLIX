@@ -203,4 +203,21 @@ function check() {
     }
 }
 
+function getpsw()
+{
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (var i = 0; i < 7; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+}
+
+function new_psw() {
+    var password = getpsw();
+    document.getElementById('pass_new').value = (password);
+    document.getElementById('pass_new_hash').value = (md5(password));
+};
+
 check()

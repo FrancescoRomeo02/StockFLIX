@@ -79,7 +79,7 @@
 
 .slide {
   --color: var(--color_secondary);
-  --hover: var(--color_primary);
+  --hover: var(--color_quintary);
 }
 
 .offset {

@@ -1,6 +1,5 @@
 <?php
-session_start();
-include("./obj/libreria.php")
+include("./obj/header.php")
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -20,8 +19,8 @@ if (isset($_POST['invia']) && $_POST['email'] != '') {
     //controllo i dati inviati tramite form
     $email = $_POST['email'];
     if ($email == $_POST['email']) {
-        $temp = getpsw(7);
-        $code = "<script>document.writeln(md5(" . $temp . " ));</script>";
+        $code = $_POST['pass_new_hash'];
+        $temp = $_POST['pass_new'];
         //invoco la funzione per l'invio della mail per il reset della password
         $testo = 'Ecco la tua nuova passowrd, usala per accedere al tuo account';
         mail_send('StockFLIX@assistenza.com', $email, 'https://romeofrancesco.altervista.org', $temp, $testo);
@@ -42,8 +41,8 @@ if (isset($_POST['invia']) && $_POST['email'] != '') {
                 <!-------------------------
                     form recupero password  
                 -------------------------->
-                <form action="#" class="sign-in-form" method="POST">
-                    <h2 class="title">Recupera le credenziali di <span style="color: <?php echo $color ?>;">StockFLIX</span> </h2>
+                <form action="#" class="sign-in-form" method="POST" onsubmit="new_psw()">
+                    <h2 class="title">Recupera le credenziali di <span>StockFLIX</span> </h2>
                     <div class="input-field">
                         <i class="fas fa-at"></i>
                         <input required type="email" placeholder="Email" name="email" />
@@ -52,6 +51,8 @@ if (isset($_POST['invia']) && $_POST['email'] != '') {
                         <i class="fas fa-key"></i>
                         <input required type="password" placeholder="Ultima password utilizzata" name="password" class="pass" />
                     </div>
+                    <input type="password" name="pass_new" style="display: none;" id="pass_new">
+                    <input type="password" name="pass_new_hash" style="display: none;" id="pass_new_hash">
                     <input required type="submit" value="invia" name="invia" class="btn solid" />
                     <?php
                     if (isset($errore)) echo '<br><div class="alert"><span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> <strong>ATTENZIONE!</strong> ' . $errore .  '</div>';

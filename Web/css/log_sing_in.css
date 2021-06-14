@@ -66,6 +66,10 @@ form.sign-in-form {
   margin-bottom: 10px;
 }
 
+h2 span {
+  color: var(--color_primary);
+}
+
 .input-field {
   max-width: 380px;
   width: 100%;

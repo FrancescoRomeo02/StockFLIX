@@ -149,6 +149,10 @@ button {
   font-size: medium;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .col_1::after {
   content: "";
   width: 10px;
@@ -413,7 +417,7 @@ button {
 }
 
 p span {
-  color: var(--color_secondary);
+  color: var(--color_quaternary);
   font-weight: bold;
 }
 
