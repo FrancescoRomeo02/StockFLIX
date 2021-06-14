@@ -18,7 +18,7 @@
 <!-- js query  -->
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script>
-  $(".button").click(function(e) {
+  $(".button_theme").click(function(e) {
     e.preventDefault();
     $.ajax({
       crossDomain: true,

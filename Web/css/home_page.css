@@ -424,7 +424,7 @@ p span {
 /* FOOTER */
 
 footer {
-  background: #141414;
+  background: var(--color_black);
   width: 100%;
   padding: 10px;
   font-family: "Poppins", sans-serif;

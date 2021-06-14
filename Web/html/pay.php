@@ -1,5 +1,5 @@
 <?php
-include('./html/obj/header.php');
+include('../html/obj/header.php');
 ?>
 <!DOCTYPE html>
 <html lang="it">
