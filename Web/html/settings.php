@@ -13,7 +13,7 @@ if (!isset($_SESSION['user_id'])) header('Location: ./obj/accesso_negato.html');
     <!-- js per le icone -->
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="../css/color_palette_light.css" />
+    <link rel="stylesheet" href="../css/color_palette_<?php echo $_SESSION['theme'] ?>.css" />
     <link rel="stylesheet" href="../css/log_sing_in.css" />
     <link rel="stylesheet" href="../css/home_page.css" />
     <link rel="stylesheet" href="../css/settings.css" />

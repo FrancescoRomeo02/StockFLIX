@@ -12,7 +12,7 @@ include("./obj/libreria.php");
   <!-- js per le icone -->
   <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="../css/color_palette_light.css" />
+  <link rel="stylesheet" href="../css/color_palette_<?php echo $_SESSION['theme'] ?>.css" />
   <link rel="stylesheet" href="../css/log_sing_in.css" />
   <title> StockFLIX </title>
 </head>

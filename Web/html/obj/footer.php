@@ -1,7 +1,11 @@
 <?php
-$dataUrl = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-$text = 'More Boring ?';
-$teme = 'light';
+if (isset($_POST['theme'])) {
+  $text = 'More Color ?';
+  $_SESSION['theme'] = 'dark';
+} else {
+  $text = 'More Boring ?';
+  $_SESSION['theme'] = 'light';
+}
 ?>
 <footer>
   <span>StockFLIX</span>
@@ -13,6 +17,8 @@ $teme = 'light';
     <a href="https://www.iubenda.com/privacy-policy/13904014" rel="noreferrer nofollow" target="_blank">Privacy Policy</a>
   </span>
   <span>
-    <a href="<?php echo $dataUrl . '?' . $theme ?>"><?php echo $text ?></a>
+    <form action="#" method="post">
+      <button type="submit" name="theme"><?php echo $text; ?></button>
+    </form>
   </span>
 </footer>

@@ -9,7 +9,7 @@ include('./html/obj/header.php');
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="./css/color_palette_light.css" />
+  <link rel="stylesheet" href="./css/color_palette_<?php echo $_SESSION['theme'] ?>.css" />
   <link rel="stylesheet" href="./css/home_page.css" />
   <link rel="stylesheet" href="./css/button.css" />
 

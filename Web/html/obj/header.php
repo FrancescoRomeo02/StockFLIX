@@ -1,5 +1,7 @@
 <?php
 session_start();
+if (!isset($_SESSION['theme'])) $_SESSION['theme'] = 'light';
+
 $_SESSION['name_user'] = 'romeofrancesco';
 $_SESSION['db_name'] =   'my_romeofrancesco';
 
