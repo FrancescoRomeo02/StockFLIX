@@ -1,12 +1,12 @@
 <div class="slide-container">
   <div class="wrapper">
-    <div class="stock-card barbarian">
-      <div class="stock-card__level stock-card__level--barbarian">Stock<span>FLIX</span></div>
+    <div class="stock-card stock">
+      <div class="stock-card__level stock-card__level--stock">Stock<span>FLIX</span></div>
       <div class="stock-card__unit-name"><?php echo $card['symbol'] ?></div>
-      <div class="stock-card__unit-stats stock-card__unit-stats--barbarian clearfix">
+      <div class="stock-card__unit-stats stock-card__unit-stats--stock clearfix">
         <div class="one-third">
-          <div class="stat"><?php echo $card['stock_owned'] ?><sup>Azioni</sup></div>
-          <div class="stat-value">Quantità</div>
+          <div class="stat"><?php echo $card['stock_owned'] ?></div>
+          <div class="stat-value">possedute</div>
         </div>
         <div class="one-third">
           <div class="stat"><?php echo $card['value'] ?></div>

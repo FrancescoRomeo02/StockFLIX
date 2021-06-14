@@ -1,7 +1,5 @@
 .one_stock {
   padding-bottom: 5%;
-}
-.one_stock h1 {
   color: var(--color_primary);
 }
 /* CARD */
@@ -43,19 +41,22 @@
   font-weight: 700;
   margin-bottom: 3px;
 }
-.stock-card__level--barbarian {
-  color: var(--color_primary_light);
+.stock-card__level--stock {
+  color: var(--color_primary);
+}
+.stock-card__level--stock span {
+  color: var(--color_secondary);
 }
 .stock-card__unit-name {
   font-size: 26px;
-  color: var(--color_black);
+  color: var(--color_secondary);
   font-weight: 900;
   margin-bottom: 5px;
 }
-.stock-card__unit-stats--barbarian {
-  background: var(--color_primary_light);
+.stock-card__unit-stats--stock {
+  background: var(--color_quaternary_light);
 }
-.stock-card__unit-stats--barbarian .one-third {
+.stock-card__unit-stats--stock .one-third {
   border-right: 1px solid var(--color_tertiary_light);
 }
 .stock-card__unit-stats {

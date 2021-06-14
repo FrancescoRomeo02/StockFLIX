@@ -424,7 +424,7 @@ p span {
 /* FOOTER */
 
 footer {
-  background: var(--color_black);
+  background: var(--color_bg1);
   width: 100%;
   padding: 10px;
   font-family: "Poppins", sans-serif;
@@ -451,8 +451,7 @@ footer span a:hover {
   color: var(--color_primary);
 }
 
-footer span button {
-  width: 120px;
+footer span button.button_theme {
   border: 0;
   padding: 12px 10px;
   outline: none;
