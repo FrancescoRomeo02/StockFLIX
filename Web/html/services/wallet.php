@@ -53,6 +53,41 @@ foreach ($data2 as $key => $value) {
     }
 }
 
+
+// DEMO
+if (isset($_POST['add'])) {
+    $verifica = "select user.patrimonio, stock_info.prezzo 
+                    FROM user, stock_info WHERE user.user_id = '$_SESSION[user_id]'
+                    and stock_info.stock_id = 
+                        ( SELECT `stock_id` from stock where symbol = '$_POST[add]')";
+    $temp = mysqli_query($con, $verifica);
+    $data = mysqli_fetch_array($temp);
+    $value = $_POST['azioni'] * $data['prezzo'];
+    if ($data['patrimonio'] > $value) {
+        $query = "UPDATE user SET patrimonio = (patrimonio - '$value') WHERE user_id = '$_SESSION[user_id]'";
+        $query2 = "UPDATE wallet_stock SET stock_owned = (stock_owned + $_POST[azioni]) 
+                    where wallet_id = $_SESSION[wallet_id] 
+                    and stock_id = ( SELECT `stock_id` from stock where symbol = '$_POST[add]')";
+        mysqli_query($con, $query);
+        mysqli_query($con, $query2);
+    }
+}
+
+if (isset($_POST['sell'])) {
+    $query = "select stock_owned, stock_info.prezzo FROM wallet_stock, stock_info 
+    			 WHERE wallet_stock.stock_id = stock_info.stock_id and wallet_stock.stock_id = ( SELECT `stock_id` from stock where symbol = '$_POST[sell]' ) and wallet_id = $_SESSION[wallet_id]";
+    $temp = mysqli_query($con, $query);
+    $data = mysqli_fetch_array($temp);
+    $value = $data['stock_owned'] - $_POST['azioni'];
+    $guadagno = $_POST['azioni'] * $data['prezzo'];
+    if ($value >= 0) {
+        $query = "update user SET patrimonio = patrimonio + $guadagno where user_id = $_SESSION[user_id]";
+        $query2 = "update wallet_stock SET stock_owned = $value where wallet_id = $_SESSION[wallet_id] 
+        and stock_id = ( SELECT `stock_id` from stock where symbol = '$_POST[sell]')";
+        mysqli_query($con, $query);
+        mysqli_query($con, $query2);
+    }
+}
 /* STOCKS NAME FROM DB  */
 ?>
 <!DOCTYPE html>
@@ -66,6 +101,7 @@ foreach ($data2 as $key => $value) {
     <link rel="stylesheet" href="../../css/home_page.css" />
     <link rel="stylesheet" href="../../css/button.css" />
     <link rel="stylesheet" href="../../css/wallet.css" />
+    <link rel="stylesheet" href="../../css/list_buy_sell.css" />
     <!-- css animazioni -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- js icone  -->
@@ -130,8 +166,9 @@ foreach ($data2 as $key => $value) {
         echo '<div class="cards_info">';
         for ($i = 0; $i < sizeof($info); $i++) {
             $card['symbol'] = $info[$i]['symbol'];
-            $card['stock_owned'] = 10;
+            $card['stock_owned'] = $info[$i]['stock_owned'];
             $card['value'] = $info[$i]['prezzo'];
+            $card['name'] = $info[$i]['security_name'];
             substr(strval($card['value']), 0, 1) == "-" ? $card['style_value'] = 'down_stock' : $card['style_value'] = 'up_stock';
             $card['variazione'] = $info[$i]['variazione'];
             include('../obj/data_card.php');

@@ -4,32 +4,6 @@ ol.gradient-list > li {
     0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
 }
 
-/*** STYLE ***/
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: #fafafa;
-  color: #1d1f20;
-  font-family: "Raleway", sans-serif;
-}
-
-main {
-  display: block;
-  margin: 0 auto;
-  max-width: 40rem;
-  padding: 1rem;
-}
-
 li {
   display: flex;
   flex-direction: row;
@@ -44,7 +18,7 @@ ol.gradient-list {
 }
 
 ol.gradient-list > li {
-  background: white;
+  background: var(--color_white);
   border-radius: 0 0.5rem 0.5rem 0.5rem;
   counter-increment: gradient-counter;
   margin-top: 1rem;
@@ -55,7 +29,11 @@ ol.gradient-list > li {
 
 ol.gradient-list > li::before,
 ol.gradient-list > li::after {
-  background: linear-gradient(135deg, #83c0e4 0%, #9756ed 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color_primary) 0%,
+    var(--color_secondary) 100%
+  );
   border-radius: 1rem 1rem 0 1rem;
   content: "";
   height: 3rem;
@@ -69,7 +47,7 @@ ol.gradient-list > li::after {
 ol.gradient-list > li::before {
   align-items: flex-end;
   content: counter(gradient-counter);
-  color: #1d1f20;
+  color: var(--color_text);
   display: flex;
   font: 900 1.5em/1 "Montserrat";
   justify-content: flex-end;

@@ -21,5 +21,22 @@
     <!-- end card -->
   </div>
 </div>
-
+<!-- demo  -->
+<form action="#" method="post">
+  <ol class="gradient-list">
+    <li>
+      <div class="symbol"><?php echo $card['symbol'] ?></div>
+      <div class="name"><?php echo $card['name'] ?></div>
+      <div class="price"><?php echo $card['value'] ?> $</div>
+      <form action="" method="post">
+        <div class="qnt">
+          <input type="number" name="azioni" id="" min="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+        </div>
+        <button name="add" type="submit" value="<?php echo $card['symbol'] ?>">buy</button>
+        <button name="sell" type="submit" value="<?php echo $card['symbol'] ?>">sell</button>
+      </form>
+    </li>
+  </ol>
+</form>
+<!-- demo  -->
 <!-- end container -->
