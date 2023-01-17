@@ -5,7 +5,6 @@ Progetto esame di maturita' 2020/2021
 
 # Cose da finire:
 
-- pagina di abbonamento( PAGINE PAY E ABBONAMNETI)
 - risolvere erroe banner
   - fix testo aggiungi/rimuovi azione
 - css per utenti pro
@@ -19,7 +18,4 @@ Progetto esame di maturita' 2020/2021
 - css wallet vuoto
 - fix creazione wallet su verifica della mail
 - AOS animation nella pagina referenze
-- bloccare furto di sessione
-- bloccare attacchi forza bruta
-- bloccare sql injection
-  -iG9uvSgT4uaTS6F
+
