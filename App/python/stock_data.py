@@ -1,8 +1,8 @@
-import time
+timport time
 from alpha_vantage.timeseries import TimeSeries
 import os
 
-api_key = "D99JTY63MSIF56G9"
+api_key = my_key
 symbols = []
 data_input = 'y'
 
